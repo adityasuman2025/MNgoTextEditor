@@ -1,6 +1,6 @@
 {
   "name": "mngo-text-editor",
-  "version": "0.12.0",
+  "version": "0.12.1",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "homepage": "./",
@@ -36,7 +36,8 @@
     "start": "react-scripts start",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "eject": "react-scripts eject",
-    "babel-build": "NODE_ENV=production babel src/lib --out-dir dist --extensions '.ts,.tsx,.jsx' --ignore 'src/lib/**/*.test.tsx' --copy-files --no-copy-ignored"
+    "babel-build": "NODE_ENV=production babel src/lib --out-dir dist --extensions '.ts,.tsx,.jsx' --ignore 'src/lib/**/*.test.tsx' --copy-files --no-copy-ignored",
+    "build-publish": "NODE_ENV=production babel src/lib --out-dir dist --extensions '.ts,.tsx,.jsx' --ignore 'src/lib/**/*.test.tsx' --copy-files --no-copy-ignored && npm publish"
   },
   "eslintConfig": {
     "extends": [
