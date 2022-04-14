@@ -186,7 +186,7 @@ body {
 .fileContainer {
 	font-family: 'Roboto Mono', monospace;
 	margin: 18px 50px;
-	font-size: 14px;
+	font-size: 13px !important;
 }
 
 .fileTitle {

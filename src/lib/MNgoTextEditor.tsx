@@ -1,6 +1,8 @@
 import React, { useState, CSSProperties } from 'react';
 import './editor.css';
+//@ts-ignore
 import folderIcon from './img/folder.png';
+//@ts-ignore
 import fileIcon from './img/file.png';
 
 function MNgoTextEditor({

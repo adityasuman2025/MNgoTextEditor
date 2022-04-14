@@ -1,6 +1,6 @@
 {
   "name": "mngo-text-editor",
-  "version": "0.10.2",
+  "version": "0.12.0",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "homepage": "./",

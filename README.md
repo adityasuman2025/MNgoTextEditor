@@ -1,5 +1,5 @@
 # mngo-text-editor
-This library available at [mngo-text-editor](https://www.npmjs.com/package/mngo-text-editor)
+This library is available at [mngo-text-editor](https://www.npmjs.com/package/mngo-text-editor)
 
 ## Brief:
 
@@ -17,7 +17,7 @@ In the project directory, you can run
 ### `npm start`
 
 Runs the app in the development mode
-Open [http://localhost:3006](http://localhost:3006) to view it in the browser.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### `npm run babel-build`
 
@@ -26,7 +26,8 @@ it is for final package build which create `dist` folder.
 ### `npm publish`
 
 to publish the project on npm
-`Note`: do `npm run babel-build` before `npm publish` because npm publishes dist folder as defined as key main, module, files in package.json, and do not forget to login in npm using `npm login`
+
+`Note`: do `npm run babel-build` before `npm publish` because it publishes dist folder as defined as key main, module, files in package.json, and do not forget to login in npm using `npm login`
 
 
 ## License
