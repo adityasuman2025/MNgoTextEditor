@@ -1,0 +1,427 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #181915;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+}
+
+.editorWindow {
+	background: #181915;
+}
+
+.clamplines {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 1 !important;
+    -webkit-box-orient: vertical !important;
+    text-overflow: clip !important;
+    overflow: hidden !important;
+    word-break: break-all !important;
+}
+
+
+/*------------------title bar-----------------*/
+.titleBar {
+	max-width: 100% !important;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0px 5px;
+	height: var(--titleBarHeight);
+}
+
+.titleBarBtns {
+	display: flex;
+}
+
+.closBtn {
+	height: 12px;
+	width: 12px;
+	border-radius: 100%;
+	margin-right: 7px;
+	background: #fe6254;	
+}
+
+.miniBtn {
+	height: 12px;
+	width: 12px;
+	border-radius: 100%;
+	margin-right: 7px;
+	background: #fdc92d;
+}
+
+.maxiBtn {
+	height: 12px;
+	width: 12px;
+	border-radius: 100%;
+	margin-right: 7px;
+	background: #28d33f;
+}
+
+.titleBarTitle {
+	display: flex;
+	flex: 1;
+	color: #9a9a98;
+	font-size: 13px;
+	justify-content: center;
+}
+/*------------------title bar-----------------*/
+
+
+.mainWindow {
+	height: calc(100vh - var(--titleBarHeight));
+	width: 100vw;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #282923;
+}
+
+
+/*------------------files listing bar---------*/
+.filesListBar {
+	min-width: var(--filesListBarWidth);
+	max-width: var(--filesListBarWidth);
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background: #181915;
+	padding: 10px;
+}
+
+.filesListBarTitle {
+    color: #9a9a98;
+    font-weight: 700;
+	position: sticky;
+	top: 0px;
+	background: #181915;
+	padding: 5px;
+}
+
+.filesListBarList {
+	padding: 5px 0px;
+	color: #c8c9c7;
+	font-size: 14px;
+}
+
+.family {
+	padding-left: 5px;
+}
+
+.parent {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	padding: 3px 0px;
+}
+
+.child {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	
+	padding: 3px;
+	padding-left: 5px;
+}
+
+.fileIcon {
+	width: 18px;
+	margin-right: 5px;
+}
+/*------------------files listing bar---------*/
+
+
+/*------------------file window---------------*/
+.fileWindow {
+	min-width: calc(100vw - var(--filesListBarWidth));
+	max-width: calc(100vw - var(--filesListBarWidth));
+	height: 100%;
+}
+
+.tabBar {
+	background: #181915;
+	width: 100%;
+	height: var(--tabBarHeight);
+	display: flex;
+	align-items: flex-end;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+.tabBarItem {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+    margin: 0px 5px;
+	padding: 5px;
+    font-size: 13px;
+    max-height: 100%;
+    min-width: 150px;
+	max-width: 150px;
+    background: #21221d;
+	color: #9a9a98;
+    border-radius: 10px 10px 0px 0px;
+    cursor: pointer;
+}
+
+.active {
+	background: #282923;
+    color: #e2e2e2;
+}
+
+/*------------------file window---------------*/
+
+/*------for content of the pages-------------*/
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin&family=Ubuntu:wght@300;400&display=swap');
+
+.fileContainer {
+	font-family: 'Roboto Mono', monospace;
+	margin: 18px 50px;
+	font-size: 14px;
+}
+
+.fileTitle {
+	font-size: 150%;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 5px;
+	color: #f3246f;
+}
+
+.fileContent {
+	margin-left: 20px;
+	line-height: 20px;
+	color: #c8c9c7;
+}
+
+.fileContent ul {
+	margin: 0;
+	padding: 0;
+	margin-left: 20px;
+	line-height: 20px;
+
+	word-wrap: break-word;
+}
+
+.fileContent li {
+	padding: 0;
+	margin: 5px;
+	margin-left: 10px;
+
+	word-wrap: break-word;
+}
+
+.fileContent a {
+	color: #5cbbce;
+	text-decoration: none;
+}
+
+.fileContent b {
+	font-weight: normal;
+	color: #9ed72b;
+}
+
+.floatRight {
+	float: right;
+}
+
+.resumeBtn {
+	background-color: #5cbbce;
+	color: #e1e1e1 !important;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+/*----preloader stuffs----------*/
+	.preloader_container
+	{
+		z-index: 100000;
+		position: fixed;
+		top:0;
+		left:0;
+		height: 100%;
+		width: 100%;
+		background: #181915;
+	}
+
+	.splash_container
+	{	
+		position:absolute; /*it can be fixed too*/
+		left:0; right:0;
+		top:0; bottom:0;
+		margin:auto;
+
+		width: 500px;
+		height: 250px;
+
+		/*this to solve "the content will not be cut when the window is smaller than the content": */
+		max-width:100%;
+		max-height:100%;
+		overflow:auto;
+
+		background-color: #e5e5e5;
+		background-image: linear-gradient(to bottom, #e5e5e5 0%, #d5d5d5 74%);
+
+		box-shadow: 0px 0px 5px grey;
+	}
+
+	.title_n_logo
+	{
+		margin:auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: left;
+
+		padding: 40px;
+		word-wrap: break-word;
+	}
+
+	#preloader_logo
+	{
+		width: 100%;		
+	}
+
+	#preloader_title
+	{
+		font-size: 120%;
+	}
+
+	.loading_bar
+	{
+		position: absolute;
+		bottom: 10px;
+		text-align: center;
+		width: 100%;
+		/*background: red;*/
+	}
+
+	.loading_gif
+	{
+		margin: auto;
+		width: 50px;
+	}
+
+	/*-----blank page animation-------*/
+	.welcome_msg
+	{		
+		text-align: left;
+		font-size: 120%;
+		letter-spacing: 2px;
+	}
+
+	.line-1
+	{					    
+		width: 150px;	    
+		border-right: 2px solid rgba(255,255,255,.75);	    
+		white-space: nowrap;
+		overflow: hidden;	 
+		font-family: mech;
+	}
+
+	.line-1 b
+	{
+		color: #5cbbce;
+	}
+
+	.line-1 a
+	{
+		color: #f3246f;
+		text-decoration: none;
+	}
+
+	/* Animation */
+	.anim-typewriter
+	{
+		animation: typewriter 2s steps(30) normal,
+					blinkTextCursor .7s ease-in-out infinite
+	}
+
+	.anim-typewriter-remove
+	{
+		animation: typewriter_remove 2s steps(30) normal both,
+				blinkTextCursor .7s ease-in-out infinite
+	}
+
+	.anim-typewriter2
+	{
+		animation: typewriter2 3s steps(30) normal,
+					blinkTextCursor .7s ease-in-out infinite
+	}
+
+	.anim-typewriter-remove2
+	{
+		animation: typewriter_remove2 3s steps(30) normal both,
+				blinkTextCursor .7s ease-in-out infinite
+	}
+
+	@keyframes typewriter
+	{
+		from{width: 0;}
+		to{width: 150px;}
+	}
+
+	@keyframes typewriter_remove
+	{
+		from{width: 150px;}
+		to{width: 0px;}
+	}
+
+	@keyframes typewriter2
+	{
+		from{width: 0;}
+		to{width: 250px;}
+	}
+
+	@keyframes typewriter_remove2
+	{
+		from{width: 250px;}
+		to{width: 0px;}
+	}
+
+	@keyframes blinkTextCursor
+	{
+		from{border-right-color: rgba(255,255,255,.75);}
+		to{border-right-color: transparent;}
+	}
+
+
+/*--------media query--------*/
+	@media screen and (max-width: 800px)
+	{
+		.file_name_address
+		{
+			display: none;
+		}
+
+		.splash_container
+		{	
+			position:absolute; /*it can be fixed too*/
+	        left:0; right:0;
+	        top:0; bottom:0;
+	        margin:auto;
+
+			width: 300px;
+			height: 200px;
+		}
+
+		.title_n_logo
+		{
+			padding: 20px;
+		}
+
+		.loading_gif
+		{
+			margin: auto;
+			width: 35px;
+		}
+	}
