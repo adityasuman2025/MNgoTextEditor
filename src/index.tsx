@@ -236,6 +236,8 @@ ReactDOM.render(
     <React.StrictMode>
         <MNgoTextEditor
             title={"adityasuman"}
+            typeWriterText1={"Hello <b>World</b>"}
+            typeWriterText2={"This is <b>Aditya</b> <a>Suman</a>"}
             files={FILES}
             filesContent={FILES_CONTENT}
         />
