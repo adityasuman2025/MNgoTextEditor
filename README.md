@@ -5,6 +5,52 @@ This library is available at [mngo-text-editor](https://www.npmjs.com/package/mn
 
 It is a javascript library which can be used in react to create a personal profile which memic the design of Sublime Text Editor.
 
+## usage
+    <MNgoTextEditor
+        titleBarHeight={string}
+        tabBarHeight={string}
+        filesListBarWidth={string}
+        title={string}
+        typeWriterText1={string}
+        typeWriterText2={string}
+        files={array}
+        filesContent={object}
+    />
+
+`props example`
+
+1. `titleBarHeight` "25px"
+2. `tabBarHeight` "30px"
+3. `filesListBarWidth` "250px"
+4. `title` "adityasuman2025
+5. `typeWriterText1` "Hello <b>World</b>" (html string)
+6. `typeWriterText2` "This is <b>Aditya</b> <a>Suman</a>" (html string)
+7. `files`  [
+                {
+                    "type": "folder", "srcKey": "adityasuman", "defaultOpen": true,
+                    "files": [
+                        { "type": "file", "srcKey": "about_me.html" },
+                        { "type": "file", "srcKey": "contact_me.html" },
+                        {
+                            "type": "folder", "srcKey": "work_experience",
+                            "files": [ ]
+                        }
+                    ]
+                },
+                { "type": "file", "srcKey": "follow_me.html" },
+            ]
+    1. `type` can be `file` or `folder`
+    2. `srcKey` is the name of the file that will appear in left side bar and the same `key` is used in `filesContent` props to contain content of that file
+8. `filesContent`  {
+                        "about_me.html": {
+                            "title": "<About Me>",
+                            "content": 'I\'m a programmer and a computer geek.<br>I have professional skill in Mobile & Web Application Development. <br>Currently I am Full Time Software Engineer at <a href="https://www.byjus.com/" target="_blank" class="title_a">Byjus</a> and have done internship at <b>ISRO, UpBrinGO & 4 other startups</b>.<br>Other than programming I use to spend time in reading novels, listening songs, graphics designing and nature photography.'
+                        },
+                    }
+    1. key (about_me.html) is the `srcKey` from `files` props
+    2. `title` is the title of the file (string)
+    3. `content` is the content of the file (html string)
+
 ## Installation
 
 1. npm install
