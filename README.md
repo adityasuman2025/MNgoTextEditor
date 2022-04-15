@@ -26,7 +26,7 @@ It is a javascript library which can be used in react to create a personal profi
 5. `typeWriterText1` "Hello <b>World</b>" (html string)
 6. `typeWriterText2` "This is <b>Aditya</b> <a>Suman</a>" (html string)
 7. `files`  
-        ```
+        ```json
             [
                 {
                     "type": "folder", "srcKey": "adityasuman", "defaultOpen": true,
@@ -45,7 +45,7 @@ It is a javascript library which can be used in react to create a personal profi
     1. `type` can be `file` or `folder`
     2. `srcKey` is the name of the file that will appear in left side bar and the same `key` is used in `filesContent` props to contain content of that file
 8. `filesContent`  
-        ```
+        ```json
             {
                 "about_me.html": {
                     "title": "<About Me>",
