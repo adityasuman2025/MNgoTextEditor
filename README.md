@@ -26,7 +26,7 @@ It is a javascript library which can be used in react to create a personal profi
 5. `typeWriterText1` "Hello <b>World</b>" (html string)
 6. `typeWriterText2` "This is <b>Aditya</b> <a>Suman</a>" (html string)
 7. `files`  
-        ```
+        
 
             [
                 {
@@ -43,11 +43,11 @@ It is a javascript library which can be used in react to create a personal profi
                 { "type": "file", "srcKey": "follow_me.html" },
             ]
 
-        ```
+        
     1. `type` can be `file` or `folder`
     2. `srcKey` is the name of the file that will appear in left side bar and the same `key` is used in `filesContent` props to contain content of that file
 8. `filesContent`  
-        ```
+        
 
             {
                 "about_me.html": {
@@ -56,7 +56,7 @@ It is a javascript library which can be used in react to create a personal profi
                 },
             }
 
-        ```
+        
     1. key (about_me.html) is the `srcKey` from `files` props
     2. `title` is the title of the file (string)
     3. `content` is the content of the file (html string)
