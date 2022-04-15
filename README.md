@@ -1,6 +1,10 @@
 # mngo-text-editor
 This library is available at [mngo-text-editor](https://www.npmjs.com/package/mngo-text-editor)
 
+## demo
+[mngo.in](http://mngo.in)
+[adityasuman.tech](http://adityasuman.tech)
+
 ## Brief:
 
 It is a javascript library which can be used in react to create a personal profile which memic the design of Sublime Text Editor.
