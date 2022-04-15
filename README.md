@@ -1,7 +1,7 @@
 # mngo-text-editor
 This library is available at [mngo-text-editor](https://www.npmjs.com/package/mngo-text-editor)
 
-## demo
+## Demo
 [mngo.in](http://mngo.in)
 
 [adityasuman.tech](http://adityasuman.tech)
