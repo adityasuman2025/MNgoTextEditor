@@ -26,6 +26,8 @@ It is a javascript library which can be used in react to create a personal profi
 5. `typeWriterText1` "Hello <b>World</b>" (html string)
 6. `typeWriterText2` "This is <b>Aditya</b> <a>Suman</a>" (html string)
 7. `files`  
+        ```json
+
             [
                 {
                     "type": "folder", "srcKey": "adityasuman", "defaultOpen": true,
@@ -40,15 +42,21 @@ It is a javascript library which can be used in react to create a personal profi
                 },
                 { "type": "file", "srcKey": "follow_me.html" },
             ]
+
+        ```
     1. `type` can be `file` or `folder`
     2. `srcKey` is the name of the file that will appear in left side bar and the same `key` is used in `filesContent` props to contain content of that file
 8. `filesContent`  
-                    {
-                        "about_me.html": {
-                            "title": "<About Me>",
-                            "content": 'I\'m a programmer and a computer geek.<br>I have professional skill in Mobile & Web Application Development. <br>Currently I am Full Time Software Engineer at <a href="https://www.byjus.com/" target="_blank" class="title_a">Byjus</a> and have done internship at <b>ISRO, UpBrinGO & 4 other startups</b>.<br>Other than programming I use to spend time in reading novels, listening songs, graphics designing and nature photography.'
-                        },
-                    }
+        ```json
+        
+            {
+                "about_me.html": {
+                    "title": "<About Me>",
+                    "content": 'I\'m a programmer and a computer geek.<br>I have professional skill in Mobile & Web Application Development. <br>Currently I am Full Time Software Engineer at <a href="https://www.byjus.com/" target="_blank" class="title_a">Byjus</a> and have done internship at <b>ISRO, UpBrinGO & 4 other startups</b>.<br>Other than programming I use to spend time in reading novels, listening songs, graphics designing and nature photography.'
+                },
+            }
+
+        ```
     1. key (about_me.html) is the `srcKey` from `files` props
     2. `title` is the title of the file (string)
     3. `content` is the content of the file (html string)
