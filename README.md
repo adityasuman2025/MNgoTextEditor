@@ -2,9 +2,9 @@
 This library is available at [mngo-text-editor](https://www.npmjs.com/package/mngo-text-editor)
 
 ## Demo
-[mngo.in](http://mngo.in)
+[mngo.in](https://mngo.in)
 
-[adityasuman.tech](http://adityasuman.tech)
+[adityasuman.mngo.in](https://adityasuman.mngo.in)
 
 ## Brief:
 
