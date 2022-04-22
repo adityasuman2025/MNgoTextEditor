@@ -228,7 +228,7 @@ const FILES_CONTENT = {
     },
     "info.html": {
         "title": "<Info>",
-        "content": '<div>@adityasuman profile<br /><b>version:</b> 3.0<br /><b>latest release:</b> 16 april 2022<br /><b>release date:</b> 24 January 2020<br /><b>first release:</b> 15 March 2017<br /><b>developer:</b> Aditya Suman<br /><b>contact:</b> aditya@mngo.in<br><b>technologies used:</b> JavaScript, React.js<br /><b>declaration:</b> owner declares 100% hand-written code and no use of any other library in creation of MNgoTextEditor. This library owns the name of "MNgo Text Editor" and is a open-source software under MIT license.<br /><br />&copy 2017-22 This property belongs to Aditya Suman</div>'
+        "content": '<div>@adityasuman profile<br /><b>version:</b> 3.15.0<br /><b>latest release:</b> 22 april 2022<br /><b>release date:</b> 24 January 2020<br /><b>first release:</b> 15 March 2017<br /><b>developer:</b> Aditya Suman<br /><b>contact:</b> adityasuman2025@gmail.com<br><b>technologies used:</b> JavaScript, React.js<br /><b>declaration:</b> owner declares 100% hand-written code and no use of any other library in creation of MNgoTextEditor. This library owns the name of "MNgo Text Editor" and is a open-source software under MIT license.<br /><br />&copy 2017-22 This property belongs to Aditya Suman</div>'
     },
 }
 
