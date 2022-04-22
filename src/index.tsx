@@ -81,7 +81,7 @@ const FILES_CONTENT = {
 
     "byjus_fte.html": {
         "title": "<Software Development Engineer>",
-        "content": '<div class="floatRight">August 2020 - Current</div><a href="https://www.byjus.com/" target="_blank" class="title_a">Byjus, Bangalore</a><br /><br /><ul><li>Working in <a href="https://assessed.co.in/">Assess Ed</a> POD as a <b>Full Stack Developer</b></li><li><b>Technologies:</b> React.js, Redux, Node.js, mongoDB, MySQL, Laravel</li></ul>'
+        "content": '<div class="floatRight">August 2020 - Current</div><a href="https://www.byjus.com/" target="_blank" class="title_a">Byjus, Bangalore</a><br /><br /><ul><li>Working in <a href="https://assessed.co.in/">Assess Ed</a> POD as a <b>Full Stack Developer</b></li><li><b>Technologies:</b> Node.js, mongoDB, Kafka, React.js, Redux, MySQL, Laravel</li></ul>'
     },
     "mlcertific_intern.html": {
         "title": "<Full-Stack Web Development Intern>",
@@ -228,7 +228,7 @@ const FILES_CONTENT = {
     },
     "info.html": {
         "title": "<Info>",
-        "content": '<div>@adityasuman profile<br /><b>version:</b> 3.0<br /><b>latest release:</b> 16 april 2022<br /><b>release date:</b> 24 January 2020<br /><b>first release:</b> 15 March 2017<br /><b>developer:</b> Aditya Suman<br /><b>contact:</b> aditya@mngo.in<br><b>technologies used:</b> JavaScript, React.js<br /><b>declaration:</b> owner declares 100% hand-written code and no use of any other library in creation of MNgoTextEditor. This library owns the name of "MNgo Text Editor" and is a open-source software under MIT license.<br /><br />&copy 2017-20 This property belongs to Aditya Suman</div>'
+        "content": '<div>@adityasuman profile<br /><b>version:</b> 3.0<br /><b>latest release:</b> 16 april 2022<br /><b>release date:</b> 24 January 2020<br /><b>first release:</b> 15 March 2017<br /><b>developer:</b> Aditya Suman<br /><b>contact:</b> aditya@mngo.in<br><b>technologies used:</b> JavaScript, React.js<br /><b>declaration:</b> owner declares 100% hand-written code and no use of any other library in creation of MNgoTextEditor. This library owns the name of "MNgo Text Editor" and is a open-source software under MIT license.<br /><br />&copy 2017-22 This property belongs to Aditya Suman</div>'
     },
 }
 

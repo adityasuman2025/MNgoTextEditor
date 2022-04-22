@@ -1,11 +1,8 @@
 module.exports = function(api) {
     api.cache(true);
 
-    const presets = ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript"];
+    const presets = ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript", "minify"];
     const plugins = ["macros"];
 
-    return {
-        presets,
-        plugins
-    };
+    return { presets, plugins };
 }
