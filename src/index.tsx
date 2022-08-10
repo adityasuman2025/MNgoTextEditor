@@ -68,11 +68,11 @@ const FILES = [
 const FILES_CONTENT = {
     "about_me.html": {
         "title": "<About Me>",
-        "content": 'I\'m a programmer and a computer geek.<br>I have professional skill in Mobile & Web Application Development. <br>Currently I am Full Time Software Engineer at <a href="https://www.byjus.com/" target="_blank" class="title_a">Byjus</a> and have done internship at <b>ISRO, UpBrinGO & 4 other startups</b>.<br>Other than programming I use to spend time in reading novels, listening songs, graphics designing and nature photography.'
+        "content": 'I\'m a programmer and a computer geek.<br>I have professional skill in Mobile & Web Application Development. <br>Currently I am Full Time Senior Software Engineer(SDE-2) at <a href="https://www.byjus.com/" target="_blank" class="title_a">Byjus</a> and have done internship at <b>ISRO, UpBrinGO & 4 other startups</b>.<br>Other than programming I use to spend time in reading novels, listening songs, graphics designing and nature photography.'
     },
     "contact_me.html": {
         "title": "<Contact Me>",
-        "content": '<b>Homepage: </b><a href="#"> http://adityasuman.tech</a><br><b>Email: </b><a href="mailto:adityasuman2025@gmail.com">adityasuman2025@gmail.com</a>,<a href="mailto:aditya.me16@iitp.ac.in">aditya.me16@iitp.ac.in</a>, <a href="mailto:aditya.suman@byjus.com">aditya.suman@byjus.com</a><br><b>Phone: </b><a href="tel:+917424947945">+91-7424947945</a><br><b>LinkedIn: </b> <a target="_blank" href="https://www.linkedin.com/in/adityasuman2025">https://www.linkedin.com/in/adityasuman2025</a><br><b>GitHub: </b> <a target="_blank" href="https://github.com/adityasuman2025">https://github.com/adityasuman2025</a>'
+        "content": '<b>Homepage: </b><a target="_blank" href="https://adityasuman.mngo.in">https://adityasuman.mngo.in</a><br><b>Email: </b><a href="mailto:adityasuman2025@gmail.com">adityasuman2025@gmail.com</a>, <a href="mailto:aditya.me16@iitp.ac.in">aditya.me16@iitp.ac.in</a>, <a href="mailto:aditya.suman@byjus.com">aditya.suman@byjus.com</a><br><b>Phone: </b><a href="tel:+917424947945">+91-7424947945</a><br><b>LinkedIn: </b> <a target="_blank" href="https://www.linkedin.com/in/adityasuman2025">https://www.linkedin.com/in/adityasuman2025</a><br><b>GitHub: </b> <a target="_blank" href="https://github.com/adityasuman2025">https://github.com/adityasuman2025</a>'
     },
     "education.html": {
         "title": "<Education>",
@@ -80,8 +80,8 @@ const FILES_CONTENT = {
     },
 
     "byjus_fte.html": {
-        "title": "<Software Development Engineer>",
-        "content": '<div class="floatRight">August 2020 - Current</div><a href="https://www.byjus.com/" target="_blank" class="title_a">Byjus, Bangalore</a><br /><br /><ul><li>Working in <a href="https://assessed.co.in/">Assess Ed</a> POD as a <b>Full Stack Developer</b></li><li><b>Technologies:</b> Node.js, mongoDB, Kafka, React.js, Redux, MySQL, Laravel</li></ul>'
+        "title": "<Senior Software Development Engineer>",
+        "content": '<div class="floatRight">August 2020 - Current</div><a href="https://www.byjus.com/" target="_blank" class="title_a">Byjus, Bangalore</a><br /><br /><ul><li>Working in <a target="_blank" href="https://assessed.co.in/">AssessEd</a> POD as a <b>Full Stack Developer</b></li><li><b>Technologies:</b> Node.js, mongoDB, AWS, React.js, Redux, Angular.js, MySQL, Python</li></ul>'
     },
     "mlcertific_intern.html": {
         "title": "<Full-Stack Web Development Intern>",
@@ -212,7 +212,7 @@ const FILES_CONTENT = {
     },
     "skills_n_intr.html": {
         "title": "<Skills & Interests>",
-        "content": '<ul><li><b>General:</b> Web Application Development, Mobile App Development, API Development</li><li><b>Programming language:</b> Java, JavaScript, PHP, Python</li><li><b>Database:</b> MySQL, mongoDB</li><li><b>Web & App Technologies:</b> React-Native, React.js, Redux, Redux Saga, jQuery, Node.js, Django, Web-Socket, REST API, GraphQL, express.js, socket.io, CodeIgniter, Bootstrap, HTML, CSS</li><li><b>Other Tools:</b> Android Studio, Git, Heroku, cPanel, Google Cloud Platform Compute Engine, Google Firebase, AWS EC2</li><li><b>Operating System:</b> Linux, Mac OS, Windows</li></ul>'
+        "content": '<ul><li><b>General:</b> Web Application Development, Mobile App Development, API Development</li><li><b>Programming language:</b> Java, JavaScript, Python</li><li><b>Database:</b> MySQL, mongoDB</li><li><b>Web & App Technologies:</b> React-Native, React.js, Redux, Redux Saga, jQuery, Node.js, Django, Web-Socket, REST API, GraphQL, express.js, socket.io, kafka, Bootstrap, HTML, CSS</li><li><b>Other Tools:</b> AWS, Android Studio, Git, Heroku, cPanel, Google Cloud Platform Compute Engine, Google Firebase</li><li><b>Operating System:</b> Linux, Mac OS, Windows</li></ul>'
     },
     "por.html": {
         "title": "<Position Of Responsibility>",
@@ -220,7 +220,7 @@ const FILES_CONTENT = {
     },
     "resume.html": {
         "title": "<Resume>",
-        "content": '<div style="text-align: center;"><a class="resumeBtn" target="_blank" href="http://mngo.in/resume/">Download Resume</a></div>'
+        "content": '<div style="text-align: center;"><a class="resumeBtn" target="_blank" href="#">Download Resume</a></div>'
     },
     "follow_me.html": {
         "title": "<Follow Me>",
@@ -228,7 +228,7 @@ const FILES_CONTENT = {
     },
     "info.html": {
         "title": "<Info>",
-        "content": '<div>@adityasuman profile<br /><b>version:</b> 3.15.0<br /><b>latest release:</b> 22 april 2022<br /><b>release date:</b> 24 January 2020<br /><b>first release:</b> 15 March 2017<br /><b>developer:</b> Aditya Suman<br /><b>contact:</b> adityasuman2025@gmail.com<br><b>technologies used:</b> JavaScript, React.js<br /><b>declaration:</b> owner declares 100% hand-written code and no use of any other library in creation of MNgoTextEditor. This library owns the name of "MNgo Text Editor" and is a open-source software under MIT license.<br /><br />&copy 2017-22 This property belongs to Aditya Suman</div>'
+        "content": '<div>@adityasuman profile<br /><b>version:</b> 3.15.0<br /><b>latest release:</b> 22 april 2022<br /><b>release date:</b> 24 January 2020<br /><b>first release:</b> 15 March 2017<br /><b>developer:</b> Aditya Suman<br /><b>contact:</b> adityasuman2025@gmail.com<br><b>technologies used:</b> JavaScript, React.js<br /><b>NPM Package:</b> <a href="https://www.npmjs.com/package/mngo-text-editor" target="_blank">https://www.npmjs.com/package/mngo-text-editor</a><br /><b>declaration:</b> owner declares 100% hand-written code and no use of any other library in creation of MNgoTextEditor. This library owns the name of "MNgo Text Editor" and is a open-source software under MIT license.<br /><br />&copy 2017-22 This property belongs to Aditya Suman</div>'
     },
 }
 
