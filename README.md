@@ -1,14 +1,22 @@
 # mngo-text-editor
 This library is available at [mngo-text-editor](https://www.npmjs.com/package/mngo-text-editor)
 
+
 ## Demo
 [mngo.in](https://mngo.in)
 
 [adityasuman.mngo.in](https://adityasuman.mngo.in)
 
-## Brief:
 
+## Brief:
 A JavaScript Library (npm package ) to memic the design of Sublime Text Editor. One can easily create his web profile in react.js by installing `mngo-text-editor` package
+
+
+## Screenshots:
+<img src="screenshots/1.png" alt="screenshot 1">
+
+<img src="screenshots/2.png" alt="screenshot 2">
+
 
 ## Usage
     <MNgoTextEditor
@@ -66,10 +74,11 @@ A JavaScript Library (npm package ) to memic the design of Sublime Text Editor. 
     2. `title` is the title of the file (string)
     3. `content` is the content of the file (html string)
 
-## Installation
 
+## Installation
 1. npm install
 2. npm start
+
 
 ## Available Scripts
 

@@ -1,11 +1,14 @@
 import React, { useEffect, useState, CSSProperties } from 'react';
 import './MNgoTextEditor.css';
-//@ts-ignore
-import folderIcon from './img/folder.png';
-//@ts-ignore
-import fileIcon from './img/file.png';
+import folderIcon from './img/folder.svg';
+import fileIcon from './img/file.svg';
 
-function MNgoTextEditor({
+const ICON_HEIGHT = 20, FILE = "file", FOLDER = "folder";
+function renderIcon(iconSrc: string) {
+    return <img alt="icon" className="fileIcon" width={ICON_HEIGHT} height={ICON_HEIGHT} src={iconSrc} />
+}
+
+export default function MNgoTextEditor({
     titleBarHeight = "25px",
     tabBarHeight = "30px",
     filesListBarWidth = "220px",
@@ -85,53 +88,41 @@ function MNgoTextEditor({
     function handleTabBarItemCloseClick(e: any, index: number) {
         e.stopPropagation();
         setActiveTabFileIndex(index === 0 ? index : index - 1);
-        setTabBarFileKeys(prevKeys => prevKeys.filter((item, i) => { console.log(item); return index !== i }));
+        setTabBarFileKeys(prevKeys => prevKeys.filter((_, i) => index !== i));
     }
 
     function handleTabBarItemClick(index: number) {
         setActiveTabFileIndex(index);
     }
 
-    function renderFolder(thisItem: { [key: string]: any }, i: number) {
-        const type = thisItem?.['type'];
-        const srcKey = thisItem?.['srcKey'];
-        const defaultOpen = thisItem?.['defaultOpen'];
-        const childrenFiles = thisItem?.['files'];
+    function renderFileOrFolder(idx: number, item: { [key: string]: any } = {}, key: string) {
+        const { type = "", srcKey: title = "" } = item || {};
 
+        if (type === FOLDER) return renderFolder(item, idx);
+        else if (type === FILE)
+            return (
+                <div
+                    className='child' key={key} title={title}
+                    onClick={() => handleFileClick(title)}
+                >
+                    {renderIcon(fileIcon)}<div className='clamplines'>{title}</div>
+                </div>
+            )
+        else return "";
+    }
+
+    function renderFolder({ type = "", srcKey = "", defaultOpen = false, files: childrenFiles = [] } = {}, i: number) {
         return (
             <div className='family' key={i + "_" + type}>
                 <div className='parent' onClick={() => handleFolderClick(srcKey)} title={srcKey}>
-                    <img alt="icon" className="fileIcon" src={folderIcon} /><div className='clamplines'>{srcKey}</div>
+                    {renderIcon(folderIcon)}<div className='clamplines'>{srcKey}</div>
                 </div>
 
-                <div className='children'>
-                    {
-                        childrenFiles?.length && (expandedFolderKeys.includes(srcKey) || defaultOpen) ?
-                            childrenFiles?.map((thisChild: any, index: number) => {
-                                const childType = thisChild?.['type'];
-                                const childSrcKey = thisChild?.['srcKey'];
-                                const key = i + "_" + type + "-" + index + "_child_" + childType;
-
-                                if (childType === "folder") {
-                                    return renderFolder(thisChild, index);
-                                } else if (childType === "file") {
-                                    return (
-                                        <div
-                                            className='child'
-                                            key={key}
-                                            title={childSrcKey}
-                                            onClick={() => handleFileClick(childSrcKey)}
-                                        >
-                                            <img alt="icon" className="fileIcon" src={fileIcon} /><div className='clamplines'>{childSrcKey}</div>
-                                        </div>
-                                    );
-                                } else {
-                                    return "";
-                                }
-                            })
-                            : null
-                    }
-                </div>
+                <div className='children'>{
+                    childrenFiles?.length && (expandedFolderKeys.includes(srcKey) || defaultOpen) ?
+                        childrenFiles?.map((thisChild: any, idx: number) => renderFileOrFolder(idx, thisChild, i + "_" + type + "-" + idx + "_child_" + thisChild?.['type']))
+                        : null
+                }</div>
             </div>
         );
     }
@@ -149,37 +140,18 @@ function MNgoTextEditor({
             } as CSSProperties}
         >
             <div className='titleBar' >
-                <div className="titleBarBtns" >
-                    <div className="closBtn" />
-                    <div className="miniBtn" />
-                    <div className="maxiBtn" />
+                <div className="titleBarBtns">
+                    <div className="closBtn" /><div className="miniBtn" /><div className="maxiBtn" />
                 </div>
 
-                <div className='titleBarTitle' > {title} - MNgo Text Editor </div>
+                <div className='titleBarTitle'> {title} - MNgo Text Editor </div>
             </div>
 
             <div className='mainWindow' >
                 <div className='filesListBar' >
-                    <div className='filesListBarTitle' > FOLDERS </div>
-                    <div className='filesListBarList' >
-                        {
-                            files?.map((thisItem: any, i: number) => {
-                                const type = thisItem?.['type'];
-                                const srcKey = thisItem?.['srcKey'];
-                                if (type === "folder") {
-                                    return renderFolder(thisItem, i);
-                                } else if (type === "file") {
-                                    return (
-                                        <div className='child' key={i + "_" + type
-                                        } title={srcKey} onClick={() => handleFileClick(srcKey)}>
-                                            <img alt="icon" className="fileIcon" src={fileIcon} /> <div className='clamplines'> {srcKey} </div>
-                                        </div>
-                                    );
-                                } else {
-                                    return "";
-                                }
-                            })
-                        }
+                    <div className='filesListBarTitle'>FOLDERS</div>
+                    <div className='filesListBarList'>
+                        {files?.map((item: any, idx: number) => renderFileOrFolder(idx, item, idx + "_" + item?.type))}
                     </div>
                 </div>
 
@@ -193,7 +165,7 @@ function MNgoTextEditor({
                                     onClick={() => handleTabBarItemClick(index)}
                                 >
                                     <div className='clamplines' > {fileKey} </div>
-                                    < div onClick={(e) => handleTabBarItemCloseClick(e, index)}>x</div>
+                                    <div onClick={(e) => handleTabBarItemCloseClick(e, index)}>x</div>
                                 </div>
                             ))
                         }
@@ -217,5 +189,3 @@ function MNgoTextEditor({
         </div>
     );
 }
-
-export default MNgoTextEditor;

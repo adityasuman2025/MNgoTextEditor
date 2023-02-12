@@ -1,6 +1,6 @@
 {
   "name": "mngo-text-editor",
-  "version": "0.15.0",
+  "version": "3.16.0",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "homepage": "./",
@@ -31,10 +31,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
-    "eject": "react-scripts eject",
-    "babel-build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --extensions '.ts,.tsx,.jsx' --ignore 'src/lib/**/*.test.tsx' --copy-files --no-copy-ignored && cp src/minifiedcss/MNgoTextEditor.css dist",
-    "build-publish": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --extensions '.ts,.tsx,.jsx' --ignore 'src/lib/**/*.test.tsx' --copy-files --no-copy-ignored && cp src/minifiedcss/MNgoTextEditor.css dist && npm publish",
-    "demo-publish": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --extensions '.ts,.tsx,.jsx' --ignore 'src/lib/**/*.test.tsx' --copy-files --no-copy-ignored && cp src/minifiedcss/MNgoTextEditor.css dist && rm -rf demo/node_modules/mngo-text-editor/dist && mv dist demo/node_modules/mngo-text-editor/dist"
+    "babel-build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --extensions '.ts,.tsx,.jsx' --ignore 'src/lib/**/*.test.tsx' --copy-files --no-copy-ignored",
+    "build-publish": "npm run babel-build && npm publish",
+    "demo": "cd demo rm-rf node_modules && npm install && npm start"
   },
   "eslintConfig": {
     "extends": [

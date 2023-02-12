@@ -47,11 +47,12 @@ const FILES = [
             {
                 "type": "folder", "srcKey": "other_projects",
                 "files": [
-                    { "type": "file", "srcKey": "mngo_chatapp.html" },
-                    { "type": "file", "srcKey": "mngo_notes.html" },
-                    { "type": "file", "srcKey": "mngo_text_editor_npm_package.html" },
-                    { "type": "file", "srcKey": "mngo_resume.html" },
-                    { "type": "file", "srcKey": "mngo_qr.html" },
+                    { "type": "file", "srcKey": "text_editor_npm_package.html" },
+                    { "type": "file", "srcKey": "react_image_annotate_npm_package.html" },
+                    { "type": "file", "srcKey": "notes.html" },
+                    { "type": "file", "srcKey": "chatapp.html" },
+                    { "type": "file", "srcKey": "resume_builder.html" },
+                    { "type": "file", "srcKey": "qr.html" },
                     { "type": "file", "srcKey": "anwesha_2k18.html" },
                     { "type": "file", "srcKey": "iitp_motor.html" },
                 ],
@@ -68,11 +69,16 @@ const FILES = [
 const FILES_CONTENT = {
     "about_me.html": {
         "title": "<About Me>",
-        "content": 'I\'m a programmer and a computer geek.<br>I have professional skill in Mobile & Web Application Development. <br>Currently I am Full Time Senior Software Engineer(SDE-2) at <a href="https://www.byjus.com/" target="_blank" class="title_a">Byjus</a> and have done internship at <b>ISRO, UpBrinGO & 4 other startups</b>.<br>Other than programming I use to spend time in reading novels, listening songs, graphics designing and nature photography.'
+        "content": `
+            Hello World, My name is <a>Aditya Suman</a><br/>
+            I\'m a programmer and a computer geek.<br>I have professional skill in Mobile & Web Application Development. <br>
+            Currently I am Full Time Senior Software Engineer(SDE-2) at <a href="https://www.byjus.com/" target="_blank" class="title_a">Byjus</a> and have done internship at <b>ISRO, UpBrinGO & 4 other startups</b>.<br>
+            Other than programming I use to spend time in reading novels, listening songs, graphics designing and nature photography.
+        `
     },
     "contact_me.html": {
         "title": "<Contact Me>",
-        "content": '<b>Homepage: </b><a target="_blank" href="https://adityasuman.mngo.in">https://adityasuman.mngo.in</a><br><b>Email: </b><a href="mailto:adityasuman2025@gmail.com">adityasuman2025@gmail.com</a>, <a href="mailto:aditya.me16@iitp.ac.in">aditya.me16@iitp.ac.in</a>, <a href="mailto:aditya.suman@byjus.com">aditya.suman@byjus.com</a><br><b>Phone: </b><a href="tel:+917424947945">+91-7424947945</a><br><b>LinkedIn: </b> <a target="_blank" href="https://www.linkedin.com/in/adityasuman2025">https://www.linkedin.com/in/adityasuman2025</a><br><b>GitHub: </b> <a target="_blank" href="https://github.com/adityasuman2025">https://github.com/adityasuman2025</a>'
+        "content": '<b>Homepage: </b><a target="_blank" href="https://adityasuman.mngo.in">https://adityasuman.mngo.in</a><br><b>Email: </b><a href="mailto:adityasuman2025@gmail.com">adityasuman2025@gmail.com</a>, <a href="mailto:aditya.me16@iitp.ac.in">aditya.me16@iitp.ac.in</a><br><b>Phone: </b><a href="tel:+917424947945">+91-7424947945</a><br><b>LinkedIn: </b> <a target="_blank" href="https://www.linkedin.com/in/adityasuman2025">https://www.linkedin.com/in/adityasuman2025</a><br><b>GitHub: </b> <a target="_blank" href="https://github.com/adityasuman2025">https://github.com/adityasuman2025</a>'
     },
     "education.html": {
         "title": "<Education>",
@@ -80,8 +86,16 @@ const FILES_CONTENT = {
     },
 
     "byjus_fte.html": {
-        "title": "<Senior Software Development Engineer>",
-        "content": '<div class="floatRight">August 2020 - Current</div><a href="https://www.byjus.com/" target="_blank" class="title_a">Byjus, Bangalore</a><br /><br /><ul><li>Working in <a target="_blank" href="https://assessed.co.in/">AssessEd</a> POD as a <b>Full Stack Developer</b></li><li><b>Technologies:</b> Node.js, mongoDB, AWS, React.js, Redux, Angular.js, MySQL, Python</li></ul>'
+        "title": "<Senior Software Engineer>",
+        "content": `<div class="floatRight">August 2020 - Current</div><a href="https://www.byjus.com/" target="_blank" class="title_a">Byjus, Bangalore</a><br /><br />
+            <ul>
+                <li>Currently Working in <b>Subjective Assessment</b> team as a <b>Frontend Developer</b>.</li>
+                <li>Have prepared <b>HLD & LLD</b> of Subjective Assessment Frontend and have setup its repo from scratch</li>
+                <li>Have done POC & created an <b>Annotate Image Component</b> which has complete custom written code and <b>no any external library/package</b> used.</li>
+                <li>Earlier used to work with <b>Objective Assessment</b> team and did <b>HLD & LLD</b> and setup repo of Quiz-OPS, and had developed custom plugins for <b>TinyMCE editor</b>, like <b>music notation(abc.js)</b>, fill in the blanks questions, etc.</li>
+                <li><b>Technologies:</b> JavaScript, Node.js, vite, React.js, Redux, Next.js, tailwindcss, Socket, firebase, AWS</li>
+            </ul>
+        `
     },
     "mlcertific_intern.html": {
         "title": "<Full-Stack Web Development Intern>",
@@ -177,24 +191,87 @@ const FILES_CONTENT = {
         "content": '<ul><li>Implemented <b>Infix to Postfix</b> conversion algorithm and stacks data structure in Java to develop a standard calculator in Android.</li><li>Also implemented different string functions to extract data in useful form from the entered calculation statements in the App.</li><li>Developed this as a semester project for course <b>CS382</b> at IIT Patna. </li><li><b>Technologies:</b> Java, Android Studio</li><li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoCalc">https://github.com/adityasuman2025/MNgoCalc</a></li></ul>'
     },
 
-    "mngo_chatapp.html": {
-        "title": "<MNgo ChatApp>",
-        "content": '<ul><li>Created <b>Socket Server</b> on Node.js using <b>socket.io</b> library and express.js framework.</li><li>Used <b>Socket Programming</b> libraries of Java to create <b>Socket Client</b> on Android to connect to socket.io Node.js Server and to handle specific message coming to a specific user.</li><li>Used <b>REST API</b> written on <b>Node.js</b> to get user data & old messages and store new user data & new messages in <b>mongoDB</b> database.</li><li>Used <b>Firebase Storage</b> to store multimedia messages (images).</li><li>Implemented <b>SharedPreferences</b> in Android to store and retrieve data of the logged user and his old chats even when internet connection is not available.</li><li>Implemented <b>Service & Foreground Process</b> in Android to keep <b>Socket Client</b> running in background in the app even when the app is minimized or closed to get push notification of new message or unseen messages.</li><li>Used <b>Multithreading</b> feature of Java to perform different task in different thread to make the App faster and to minimize load on UI thread of the App.</li><li><b>Technologies:</b> Node.js, mongoDB, express.js, socket.io, Android Studio, Java, Firebase, REST API</li><li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoChat3Web">https://github.com/adityasuman2025/MNgoChat3Web</a></li></ul>'
+    "text_editor_npm_package.html": {
+        "title": "<Text Editor NPM Package>",
+        "content": `
+            <ul>
+                <li>Created a npm package/library and a personalized stylesheet to memic the design of <b>Sublime Text Editor</b>.</li>
+                <li>One can easily create his <b>web profile</b> by installing the package in their react/javascript project</li>
+                <li>Implemented this library to develop my <a target="_blank" href="https://adityasuman.mngo.in">web profile.</a></li>
+                <li><b>Technologies:</b> JavaScript, React.js</li>
+
+                <li></li>
+                <li><b>Demo:</b> <a target="_blank" href="https://mngo.in">https://mngo.in</a></li>
+                <li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoTextEditor">https://github.com/adityasuman2025/MNgoTextEditor</a></li>
+            </ul>
+        `
     },
-    "mngo_notes.html": {
-        "title": "<MNgo Notes>",
-        "content": '<ul><li>Developed a <b>Notes App</b>, that can be used to store notes and to do\'s. </li><li>Used <b>React Native</b> for Mobile App and <b>React.js</b> for Web Frontend.</li><li>Used <b>MySQL</b> database to store user data in encrypted format.</li><li>Used <b>AsyncStorage</b> to store and retrieve data of the logged user which makes the app read-only when user uses the App withount internet connection.</li><li><b>Technologies:</b> React.js, React Native, MySQL, PHP</li><li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoNotes">https://github.com/adityasuman2025/MNgoNotes</a></li></ul>'
+    "react_image_annotate_npm_package.html": {
+        "title": "<React Image Annotate NPM Package>",
+        "content": `
+            <ul>
+                <li>Created a npm package/library using which user can annotate/markup/write over any image.</li>
+                <li>Annotations of all type are supported like <b>any shape/image, text, hand drawing,</b> etc.</li>
+                <li>One can add <b>annotation feature</b> in their project by installing the package in their react/javascript project.</li>
+                <li><b>Technologies:</b> JavaScript, React.js</li>
+
+                <li></li>
+                <li><b>Demo:</b> <a target="_blank" href="https://annotate.mngo.in">https://annotate.mngo.in</a></li>
+                <li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoImageAnnotate">https://github.com/adityasuman2025/MNgoImageAnnotate</a></li>
+            </ul>
+        `
     },
-    "mngo_text_editor_npm_package.html": {
-        "title": "<MNgo Text Editor NPM Package>",
-        "content": '<ul><li>Created a npm package/library and a personalized stylesheet to memic the design of <b>Sublime Text Editor</b>.</li><li>One can easily create his <b>web profile</b> by installing the package in their node/javascript project</li><li>Implemented this library to develop my <a target="_blank" href="http://adityasuman.tech">web profile.</a></li><li><b>Technologies:</b> JavaScript, React.js</li><li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoTextEditor">https://github.com/adityasuman2025/MNgoTextEditor</a></li></ul>'
+    "notes.html": {
+        "title": "<Notes>",
+        "content": `
+            <ul>
+                <li>Developed a <b>Notes Web/Mobile App, Chrome Extension and PWA App</b> that can be used to crete notes and to do\'s and it also have <b>Offline Support</b>, which can work in offline mode too and will update the db when internet is back.</li>
+                <li>Used <b>React Native</b> for Mobile App and <b>React.js</b> for Web App.</li>
+                <li>Used <a>Firebase</a> as database and <b>AsyncStorage</b> in Mobile & <b>localStorage</b> in Web for storing user's data in local to support Offline Support Feature</li>
+                <li><b>Technologies:</b> React.js, React Native, JavaScript, PWA, Firebase</li>
+
+                <li></li>
+                <li><b>Demo:</b> <a target="_blank" href="https://notes.mngo.in">https://notes.mngo.in</a></li>
+                <li><b>Chrome Extension:</b> <a target="_blank" href="https://chrome.google.com/webstore/detail/mngo-notes-text-notes-to/ennpnglofmhmbpijnambnccoaklahfno">MNgo Notes: Text Notes & To Dos</a></li>
+                <li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoNotesWeb">https://github.com/adityasuman2025/MNgoNotesWeb</a></li>
+            </ul>
+        `
     },
-    "mngo_resume.html": {
-        "title": "<MNgo Resume Builder>",
-        "content": '<ul><li>Developed a resume builder which follows a standard resume design and contains all layouts of a general resume like, education, experience, projects, achievements, courses, skills, etc.</li><li>One can create, print, save as pdf, export, import data of his resume.</li><li>Data of resume is also saved in an external JSON file which prevents loss of user data & he can continue modifying his resume without any data loss. This storage JSON file can also be exported and downloded. </li><li>User can also import data from a valid JSON file and can continue modifying his resume.</li><li><b>Technologies:</b> JavaScript, jQuery, Bootstrap, PHP</li><li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoResumeBuilder">https://github.com/adityasuman2025/MNgoResumeBuilder</a></li></ul>'
+    "chatapp.html": {
+        "title": "<ChatApp>",
+        "content": `
+            <ul>
+                <li>Developed a A <b>Real-time Chatting Web App & PWA</b> with awesome look, super fast and smooth messaging feature and other cool features. One can connect with any of the users registered on the app and can send them message.</li>
+                <li>It supports <a>Text, Image & Video</a> message and call and have <a>Offline Support</a> too.</li>
+                <li>Used <b>Firebase Realtime Database</b> as database and <b>Firebase Storage</b> to store multimedia messages (images) and <a>AES Encryption</a> algorithms for encrypting messages.</li>
+                <li>Implemented <b>Offline Support</b> using <a>localStorage</a> and used <a>WebRTC</a> & google stun servers for video calls</li>
+                <li><b>Technologies:</b> JavaScript, React.js, Redux, PWA, Firebase, WebRTC</li>
+
+                <li></li>
+                <li><b>Demo:</b> <a target="_blank" href="https://chat.mngo.in">https://chat.mngo.in</a></li>
+                <li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoChat3Web">https://github.com/adityasuman2025/MNgoChat3Web</a></li>
+            </ul>
+        `
     },
-    "mngo_qr.html": {
-        "title": "<MNgo QR>",
+
+    "resume_builder.html": {
+        "title": "<Resume Builder>",
+        "content": `
+            <ul>
+                <li>Developed a resume builder which follows a standard resume design and contains all layouts of a general resume like, education, experience, projects, achievements, courses, skills, etc.</li>
+                <li>One can create, <a>print, save as pdf</a>, export, import data of his resume.</li>
+                <li>Data of resume can be exported in an <b>external JSON</b> file which prevents loss of user data & he can continue modifying his resume without any data loss.</li>
+                <li>User can also import data from a valid JSON file and can continue modifying his resume.</li>
+                <li><b>Technologies:</b> JavaScript, jQuery, Bootstrap</li>
+
+                <li></li>
+                <li><b>Demo:</b> <a target="_blank" href="https://resume.mngo.in">https://resume.mngo.in</a></li>
+                <li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoResumeBuilder">https://github.com/adityasuman2025/MNgoResumeBuilder</a></li>
+            </ul>
+        `
+    },
+    "qr.html": {
+        "title": "<QR>",
         "content": '<ul><li>An App to create any custom QR code and read any QR code.</li><li>Implemented Zxing Java library in Android to <b>decode</b> scanned QR code from smartphone camera and to generate QR Code Image from any text.</li><li><b>Technologies:</b> Android Studio, Java, Zxing library</li><li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoQR">https://github.com/adityasuman2025/MNgoQR</a></li></ul>'
     },
     "anwesha_2k18.html": {
@@ -228,7 +305,7 @@ const FILES_CONTENT = {
     },
     "info.html": {
         "title": "<Info>",
-        "content": '<div>@adityasuman profile<br /><b>version:</b> 3.15.0<br /><b>latest release:</b> 22 april 2022<br /><b>release date:</b> 24 January 2020<br /><b>first release:</b> 15 March 2017<br /><b>developer:</b> Aditya Suman<br /><b>contact:</b> adityasuman2025@gmail.com<br><b>technologies used:</b> JavaScript, React.js<br /><b>NPM Package:</b> <a href="https://www.npmjs.com/package/mngo-text-editor" target="_blank">https://www.npmjs.com/package/mngo-text-editor</a><br /><b>declaration:</b> owner declares 100% hand-written code and no use of any other library in creation of MNgoTextEditor. This library owns the name of "MNgo Text Editor" and is a open-source software under MIT license.<br /><br />&copy 2017-22 This property belongs to Aditya Suman</div>'
+        "content": '<div>@adityasuman profile<br /><b>version:</b> 3.16.0<br /><b>latest release:</b> 15 February 2023<br /><b>release date:</b> 24 January 2020<br /><b>first release:</b> 15 March 2017<br /><b>developer:</b> Aditya Suman<br /><b>contact:</b> adityasuman2025@gmail.com<br><b>technologies used:</b> JavaScript, React.js<br /><b>NPM Package:</b> <a href="https://www.npmjs.com/package/mngo-text-editor" target="_blank">https://www.npmjs.com/package/mngo-text-editor</a><br /><b>declaration:</b> owner declares 100% hand-written code and no use of any other library in creation of MNgoTextEditor. This library owns the name of "MNgo Text Editor" and is a open-source software under MIT license.<br /><br />&copy 2017-23 This property belongs to Aditya Suman</div>'
     },
 }
 
