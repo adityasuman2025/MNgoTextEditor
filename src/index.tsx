@@ -47,11 +47,11 @@ const FILES = [
             {
                 "type": "folder", "srcKey": "other_projects",
                 "files": [
-                    { "type": "file", "srcKey": "text_editor_npm_package.html" },
                     { "type": "file", "srcKey": "react_image_annotate_npm_package.html" },
+                    { "type": "file", "srcKey": "react_secure_pdf_viewer_npm_package.html" },
+                    { "type": "file", "srcKey": "text_editor_npm_package.html" },
                     { "type": "file", "srcKey": "notes.html" },
                     { "type": "file", "srcKey": "chatapp.html" },
-                    { "type": "file", "srcKey": "resume_builder.html" },
                     { "type": "file", "srcKey": "qr.html" },
                     { "type": "file", "srcKey": "anwesha_2k18.html" },
                     { "type": "file", "srcKey": "iitp_motor.html" },
@@ -191,6 +191,44 @@ const FILES_CONTENT = {
         "content": '<ul><li>Implemented <b>Infix to Postfix</b> conversion algorithm and stacks data structure in Java to develop a standard calculator in Android.</li><li>Also implemented different string functions to extract data in useful form from the entered calculation statements in the App.</li><li>Developed this as a semester project for course <b>CS382</b> at IIT Patna. </li><li><b>Technologies:</b> Java, Android Studio</li><li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoCalc">https://github.com/adityasuman2025/MNgoCalc</a></li></ul>'
     },
 
+    "react_image_annotate_npm_package.html": {
+        "title": "<React Image Annotate NPM Package>",
+        "content": `
+            <ul>
+                <li>Created a npm package/react library using which user can annotate/markup/write over any image.</li>
+                <li>Annotations of all type are supported like <b>any shape/image, text, hand drawing,</b> etc.</li>
+                <li>One can add <b>annotation feature</b> in their project by installing the package in their react/javascript project.</li>
+                <li><b>Technologies:</b> JavaScript, React.js</li>
+
+                <li></li>
+                <li><b>Demo:</b> <a target="_blank" href="https://annotate.mngo.in">https://annotate.mngo.in</a></li>
+                <li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoImageAnnotate">https://github.com/adityasuman2025/MNgoImageAnnotate</a></li>
+            </ul>
+        `
+    },
+    "react_secure_pdf_viewer_npm_package.html": {
+        "title": "<React Secure PDF Viewer NPM Package>",
+        "content": `
+            <ul>
+                <li>Created a npm package/react library using which can be used to open to open any pdf (password protected or non-protected both) having thumbnail, jump to page, zoom features and other security features like:</li>
+                <ol>
+                    <li>✅ block right click</li>
+                    <li>✅ disable user select</li>
+                    <li>✅ block download</li>
+                    <li>✅ block getting pdf url by inspecting elements</li>
+                    <li>✅ block printing of the page/pdf</li>
+                    <li>❌ screenshot</li>
+                    <li>❌ screen recording</li>
+                    <li>✅ open pdf in pdf viewer using the given password programmatically</li>
+                </ol>
+                <li><b>Technologies:</b> JavaScript, React.js, react-pdf</li>
+
+                <li></li>
+                <li><b>Demo:</b> <a target="_blank" href="https://pdf.mngo.in">https://pdf.mngo.in</a></li>
+                <li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoSecurePdfViewer">https://github.com/adityasuman2025/MNgoSecurePdfViewer</a></li>
+            </ul>
+        `
+    },
     "text_editor_npm_package.html": {
         "title": "<Text Editor NPM Package>",
         "content": `
@@ -203,21 +241,6 @@ const FILES_CONTENT = {
                 <li></li>
                 <li><b>Demo:</b> <a target="_blank" href="https://mngo.in">https://mngo.in</a></li>
                 <li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoTextEditor">https://github.com/adityasuman2025/MNgoTextEditor</a></li>
-            </ul>
-        `
-    },
-    "react_image_annotate_npm_package.html": {
-        "title": "<React Image Annotate NPM Package>",
-        "content": `
-            <ul>
-                <li>Created a npm package/library using which user can annotate/markup/write over any image.</li>
-                <li>Annotations of all type are supported like <b>any shape/image, text, hand drawing,</b> etc.</li>
-                <li>One can add <b>annotation feature</b> in their project by installing the package in their react/javascript project.</li>
-                <li><b>Technologies:</b> JavaScript, React.js</li>
-
-                <li></li>
-                <li><b>Demo:</b> <a target="_blank" href="https://annotate.mngo.in">https://annotate.mngo.in</a></li>
-                <li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoImageAnnotate">https://github.com/adityasuman2025/MNgoImageAnnotate</a></li>
             </ul>
         `
     },
@@ -253,23 +276,6 @@ const FILES_CONTENT = {
             </ul>
         `
     },
-
-    "resume_builder.html": {
-        "title": "<Resume Builder>",
-        "content": `
-            <ul>
-                <li>Developed a resume builder which follows a standard resume design and contains all layouts of a general resume like, education, experience, projects, achievements, courses, skills, etc.</li>
-                <li>One can create, <a>print, save as pdf</a>, export, import data of his resume.</li>
-                <li>Data of resume can be exported in an <b>external JSON</b> file which prevents loss of user data & he can continue modifying his resume without any data loss.</li>
-                <li>User can also import data from a valid JSON file and can continue modifying his resume.</li>
-                <li><b>Technologies:</b> JavaScript, jQuery, Bootstrap</li>
-
-                <li></li>
-                <li><b>Demo:</b> <a target="_blank" href="https://resume.mngo.in">https://resume.mngo.in</a></li>
-                <li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoResumeBuilder">https://github.com/adityasuman2025/MNgoResumeBuilder</a></li>
-            </ul>
-        `
-    },
     "qr.html": {
         "title": "<QR>",
         "content": '<ul><li>An App to create any custom QR code and read any QR code.</li><li>Implemented Zxing Java library in Android to <b>decode</b> scanned QR code from smartphone camera and to generate QR Code Image from any text.</li><li><b>Technologies:</b> Android Studio, Java, Zxing library</li><li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoQR">https://github.com/adityasuman2025/MNgoQR</a></li></ul>'
@@ -297,7 +303,7 @@ const FILES_CONTENT = {
     },
     "resume.html": {
         "title": "<Resume>",
-        "content": '<div style="text-align: center;"><a class="resumeBtn" target="_blank" href="#">Download Resume</a></div>'
+        "content": '<div style="text-align: center;"><a class="resumeBtn" target="_blank" href="https://resume.mngo.in">Download Resume</a></div>'
     },
     "follow_me.html": {
         "title": "<Follow Me>",
