@@ -50,9 +50,10 @@ const FILES = [
                     { "type": "file", "srcKey": "react_image_annotate_npm_package.html" },
                     { "type": "file", "srcKey": "react_secure_pdf_viewer_npm_package.html" },
                     { "type": "file", "srcKey": "text_editor_npm_package.html" },
-                    { "type": "file", "srcKey": "notes.html" },
-                    { "type": "file", "srcKey": "chatapp.html" },
-                    { "type": "file", "srcKey": "qr.html" },
+                    { "type": "file", "srcKey": "pomodoro_web_app.html" },
+                    { "type": "file", "srcKey": "notes_web_app.html" },
+                    { "type": "file", "srcKey": "chat_web_app.html" },
+                    { "type": "file", "srcKey": "qr_mobile_app.html" },
                     { "type": "file", "srcKey": "anwesha_2k18.html" },
                     { "type": "file", "srcKey": "iitp_motor.html" },
                 ],
@@ -71,9 +72,22 @@ const FILES_CONTENT = {
         "title": "<About Me>",
         "content": `
             Hello World, My name is <a>Aditya Suman</a><br/>
-            I\'m a programmer and a computer geek.<br>I have professional skill in Mobile & Web Application Development. <br>
-            Currently I am Full Time Senior Software Engineer(SDE-2) at <a href="https://www.byjus.com/" target="_blank" class="title_a">Byjus</a> and have done internship at <b>ISRO, UpBrinGO & 4 other startups</b>.<br>
-            Other than programming I use to spend time in reading novels, listening songs, graphics designing and nature photography.
+            I\'m a programmer and a computer geek. I have professional skill in <a>Web & Mobile Application Development</a>.<br>
+            I graduated from <b>IIT Patna</b> in 2020.<br/>
+            I have been employed as a <b>Full Time Senior Software Engineer</b> at <a href="https://www.byjus.com/" target="_blank" class="title_a">Byjus</a> for the past 3.3 years, and have also completed <b>internships at ISRO</b>, UpBrinGO, and 4 other startups.<br><br>
+
+            <ul>
+                <li>With <a>3+ years</a> of professional experience in <b>Web Application Development</b>, I have primarily utilized <b>JavaScript</b>, TypeScript, <b>React.js</b>, Next.js, Node.js, Redux, TailwindCSS, HTML and CSS as my tech stacks.</li>
+                <li>I am currently <b>managing 2 junior</b> developers and was <b>leading, owning</b> and maintaining the <b>frontend</b> of my previous team consisting of <b>3 developers</b>. I am actively involved in <b>brainstorming sessions, PRD & solution</b> discussion and <b>code reviews</b>.</li>
+                <li>Having collaborated closely with <b>product managers and designers</b> to successfully implement <b>numerous features</b> and address bugs throughout my career, I understand the importance of seamlessly <b>integrating design concepts</b> into <b>functional features</b>.</li>
+                <li>I’ve also been instrumental in several <b>initiatives</b> that resulted in significant <b>cost savings</b> and increased signups for my current company, such as reducing <b>infrastructure costs by 50%</b> and <b>boosting signups by 40%</b>.</li>
+                <li>Moreover, I have a track record of successfully <b>integrating products/SDKs</b> into various client/team systems.</li>
+                <li>Additionally, I've implemented numerous internal and <b>external tools</b> that have greatly contributed to <b>informed business decision-making</b>.</li>
+                <li>Finally, I thrive in <b>fast-paced environments</b> and excel at solving complex problems to <b>deliver high-quality solutions</b> on time. This <b>adaptability</b> and problem-solving mindset are attributes I believe will be invaluable in meeting the challenges and demands of the company.</li>
+            </ul>
+            <br>
+            
+            Other than programming I use to spend time in watching movies and youtube, listening songs and nature photography.
         `
     },
     "contact_me.html": {
@@ -87,23 +101,24 @@ const FILES_CONTENT = {
 
     "byjus_fte.html": {
         "title": "<Senior Software Engineer>",
-        "content": `<div class="floatRight">August 2020 - Current</div><a href="https://www.byjus.com/" target="_blank" class="title_a">Byjus, Bangalore</a><br /><br />
+        "content": `<div class="floatRight">August 2020 - Current</div><a href="https://www.byjus.com/" target="_blank" class="title_a">Byjus, Remote</a><br /><br />
             <ul>
-                <li>Currently Working in <b>Subjective Assessment</b> team as a <b>Frontend Developer</b>.</li>
-                <li>Have prepared <b>HLD & LLD</b> of Subjective Assessment Frontend and have setup its repo from scratch</li>
-                <li>Have done POC & created an <b>Annotate Image Component</b> which has complete custom written code and <b>no any external library/package</b> used.</li>
-                <li>Earlier used to work with <b>Objective Assessment</b> team and did <b>HLD & LLD</b> and setup repo of Quiz-OPS, and had developed custom plugins for <b>TinyMCE editor</b>, like <b>music notation(abc.js)</b>, fill in the blanks questions, etc.</li>
+                <li>I am currently <b>managing 2 junior</b> developers and was <b>leading, owning</b> and maintaining the <b>frontend</b> of my previous team consisting of <b>3 developers</b>. I am actively involved in <b>brainstorming sessions, PRD & solution</b> discussion and <b>code reviews</b>.</li>
+                <li>Having collaborated closely with <b>product managers and designers</b> to successfully implement <b>numerous features</b> and address bugs throughout my career, I understand the importance of seamlessly <b>integrating design concepts</b> into <b>functional features</b>.</li>
+                <li>I’ve also been instrumental in several <b>initiatives</b> that resulted in significant <b>cost savings</b> and increased signups for my current company, such as reducing <b>infrastructure costs by 50%</b> and <b>boosting signups by 40%</b>.</li>
+                <li>Moreover, I have a track record of successfully <b>integrating products/SDKs</b> into various client/team systems.</li>
+                <li>Additionally, I've implemented numerous internal and <b>external tools</b> that have greatly contributed to <b>informed business decision-making</b>.</li>
                 <li><b>Technologies:</b> JavaScript, Node.js, vite, React.js, Redux, Next.js, tailwindcss, Socket, firebase, AWS</li>
             </ul>
         `
     },
     "mlcertific_intern.html": {
         "title": "<Full-Stack Web Development Intern>",
-        "content": '<div class="floatRight">July 2020</div><a href="https://mlcertific.com" target="_blank" class="title_a">MLCertific, Noida</a><br /><br /><ul><li>Worked as a <b>Web Developer</b> to develop a Certification Website.</li><li>Developed the complete website on React and created its api on PHP</li><li>Website contains features like user\'s cart, razorpay payment, online exam/test, certificate generation, validation and sharing</li><li><b>Technologies:</b> React.js, PHP, MySQL, Bootstrap</li></ul>'
+        "content": '<div class="floatRight">July 2020</div><a href="https://mlcertific.com" target="_blank" class="title_a">MLCertific, Remote</a><br /><br /><ul><li>Worked as a <b>Web Developer</b> to develop a Certification Website.</li><li>Developed the complete website on React and created its api on PHP</li><li>Website contains features like user\'s cart, razorpay payment, online exam/test, certificate generation, validation and sharing</li><li><b>Technologies:</b> React.js, PHP, MySQL, Bootstrap</li></ul>'
     },
     "upbringo_intern.html": {
         "title": "<App Development Intern>",
-        "content": '<div class="floatRight">April 2020 – June 2020</div><a href="https://www.upbringo.com/#/" target="_blank" class="title_a">UpBrinGO, Bangalore</a><br /><br /><ul><li>Worked as an <b>App Developer</b> to develop a Mobile App compatible on Android & iOS both.</li><li>Added features like <b>QR based Attendance, Offline first, Billing Module, Homework Module</b>, etc in the existing App.</li><li>Developed complete <b>Billing & Homework module</b> which includes front-end, database design and back-end.</li><li>Updated front-end of the complete App.</li><li><b>Technologies:</b> React Native, Node.js, Serverless, GraphQL, MySQL</li></ul>'
+        "content": '<div class="floatRight">April 2020 – June 2020</div><a href="https://www.upbringo.com/#/" target="_blank" class="title_a">UpBrinGO, Remote</a><br /><br /><ul><li>Worked as an <b>App Developer</b> to develop a Mobile App compatible on Android & iOS both.</li><li>Added features like <b>QR based Attendance, Offline first, Billing Module, Homework Module</b>, etc in the existing App.</li><li>Developed complete <b>Billing & Homework module</b> which includes front-end, database design and back-end.</li><li>Updated front-end of the complete App.</li><li><b>Technologies:</b> React Native, Node.js, Serverless, GraphQL, MySQL</li></ul>'
     },
     "isro_intern.html": {
         "title": "<Engineering Intern>",
@@ -115,11 +130,11 @@ const FILES_CONTENT = {
     },
     "ngcn_intern.html": {
         "title": "<Software Development Intern>",
-        "content": '<div class="floatRight">May 2018 – July 2018</div><a href="http://ngcn.co.uk/" target="_blank" class="title_a">NGCN Infosolutions Pvt Ltd, Suratkal </a> <br /> <br /><ul><li>Developed an <b>ERP Software</b> used for <b>Billing and Inventory</b> purpose with facilities like Multi Branch, Multi User and can handle Inventory, Purchases, Stock, Billing, Reports, etc.</b></li><li>Created a <b>Single Page Application</b> using <b>AJAX</b> where different pages for different tasks of the user loads without refreshing or redirecting to any other page.</li><li>Used <b>AJAX</b> to perform all the task in background to minimize slow loading and to prevent loading of same UI again and again which results in improvement of speed of the application.</li><li><b>Technologies:</b> PHP, jQuery, JavaScript, AJAX, MySQL</li><li><b>Demo:</b> <a target="_blank" href="http://demoerp.pnds.in">http://demoerp.pnds.in</a></li><li>Received a <b>Return Offer</b> and <b>Recommendation</b> on LinkedIn Profile for completing the project much earlier than the assigned time period and outstanding performance during the internship.</li></ul>'
+        "content": '<div class="floatRight">May 2018 – July 2018</div><a href="http://ngcn.co.uk/" target="_blank" class="title_a">NGCN Infosolutions Pvt Ltd, Remote </a> <br /> <br /><ul><li>Developed an <b>ERP Software</b> used for <b>Billing and Inventory</b> purpose with facilities like Multi Branch, Multi User and can handle Inventory, Purchases, Stock, Billing, Reports, etc.</b></li><li>Created a <b>Single Page Application</b> using <b>AJAX</b> where different pages for different tasks of the user loads without refreshing or redirecting to any other page.</li><li>Used <b>AJAX</b> to perform all the task in background to minimize slow loading and to prevent loading of same UI again and again which results in improvement of speed of the application.</li><li><b>Technologies:</b> PHP, jQuery, JavaScript, AJAX, MySQL</li><li><b>Demo:</b> <a target="_blank" href="http://demoerp.pnds.in">http://demoerp.pnds.in</a></li><li>Received a <b>Return Offer</b> and <b>Recommendation</b> on LinkedIn Profile for completing the project much earlier than the assigned time period and outstanding performance during the internship.</li></ul>'
     },
     "catchfreedeal.html": {
         "title": "<Full Stack Web Development Intern>",
-        "content": '<div class="floatRight">Dec 2017</div><a href="http://www.catchfreedeal.com" target="_blank" class="title_a">CatchFreeDeal, Noida </a><br /><br /><ul><li>Developed a complete website from scratch which displays best deals & coupons from different e-commerce website like amazon, flipkart, jabong, etc.</li><li>Created database to store different deals and coupons data as per preference of the logged user.</li><li>Implemented user authentication feature (login, logout, register) from scratch using PHP and MySQL database and used <b>facebook API</b> to give login feature from facebook.</li><li><b>Technologies:</b> PHP, jQuery, JavaScript, AJAX, MySQL, Bootstrap</li><li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/internshipCatchFreeDeal">https://github.com/adityasuman2025/internshipCatchFreeDeal</a></li></ul>'
+        "content": '<div class="floatRight">Dec 2017</div><a href="http://www.catchfreedeal.com" target="_blank" class="title_a">CatchFreeDeal, Remote </a><br /><br /><ul><li>Developed a complete website from scratch which displays best deals & coupons from different e-commerce website like amazon, flipkart, jabong, etc.</li><li>Created database to store different deals and coupons data as per preference of the logged user.</li><li>Implemented user authentication feature (login, logout, register) from scratch using PHP and MySQL database and used <b>facebook API</b> to give login feature from facebook.</li><li><b>Technologies:</b> PHP, jQuery, JavaScript, AJAX, MySQL, Bootstrap</li><li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/internshipCatchFreeDeal">https://github.com/adityasuman2025/internshipCatchFreeDeal</a></li></ul>'
     },
 
     "btp.html": {
@@ -244,8 +259,23 @@ const FILES_CONTENT = {
             </ul>
         `
     },
-    "notes.html": {
-        "title": "<Notes>",
+    "pomodoro_web_app.html": {
+        "title": "<Pomodoro Web App>",
+        "content": `
+            <ul>
+                <li>Developed a <b>Pomodoro Web/Desktop App</b> that can be used for time management and enhancing productivity</li>
+                <li>Used <b>Vanilla JavaScript</b> for Web App and <b>Electron.js</b> for Desktop App.</li>
+                <li>Used <a>Web-Worker</a> for timer to keep the main UI thread free and keep timer working when tab is not active or minimised.</li>
+                <li><b>Technologies:</b> JavaScript, Electron.js, HTML/CSS</li>
+
+                <li></li>
+                <li><b>Demo:</b> <a target="_blank" href="https://pomodoro.mngo.in">https://pomodoro.mngo.in</a></li>
+                <li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoPomodoro">https://github.com/adityasuman2025/MNgoPomodoro</a></li>
+            </ul>
+        `
+    },
+    "notes_web_app.html": {
+        "title": "<Notes Web App>",
         "content": `
             <ul>
                 <li>Developed a <b>Notes Web/Mobile App, Chrome Extension and PWA App</b> that can be used to crete notes and to do\'s and it also have <b>Offline Support</b>, which can work in offline mode too and will update the db when internet is back.</li>
@@ -260,8 +290,8 @@ const FILES_CONTENT = {
             </ul>
         `
     },
-    "chatapp.html": {
-        "title": "<ChatApp>",
+    "chat_web_app.html": {
+        "title": "<Chat Web App>",
         "content": `
             <ul>
                 <li>Developed a A <b>Real-time Chatting Web App & PWA</b> with awesome look, super fast and smooth messaging feature and other cool features. One can connect with any of the users registered on the app and can send them message.</li>
@@ -276,8 +306,8 @@ const FILES_CONTENT = {
             </ul>
         `
     },
-    "qr.html": {
-        "title": "<QR>",
+    "qr_mobile_app.html": {
+        "title": "<QR Mobile App>",
         "content": '<ul><li>An App to create any custom QR code and read any QR code.</li><li>Implemented Zxing Java library in Android to <b>decode</b> scanned QR code from smartphone camera and to generate QR Code Image from any text.</li><li><b>Technologies:</b> Android Studio, Java, Zxing library</li><li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoQR">https://github.com/adityasuman2025/MNgoQR</a></li></ul>'
     },
     "anwesha_2k18.html": {
@@ -291,7 +321,43 @@ const FILES_CONTENT = {
 
     "achievements.html": {
         "title": "<Achievements>",
-        "content": '<ul><li><b>Internship at ISRO: </b>Recieved Letter of Recommendation and ranked among <b>top 2% students</b> worked under <b>S. Santhalakshmi, Scientist ‘SF’ & Manager SDG, ISTRAC-ISRO.</b></li><li><b>Internship at NGCN: </b>Recieved <b>Return Offer & Recommendation</b> on LinkedIn Profile from <b>Justin Sebastian, CEO of NGCN, Oxyvin.</b></li><li><b>Automation IIT Patna: </b>Got back-to-back <b>14 projects</b> from <b>Dr. Mayank Agrawal</b>, PIC Automation, IIT Patna, in a duration of <b>7 months</b>, starting from January 2020 to July 2020.</li><li><b>JEE Main: </b>Secured <b>99.17 percentile</b> out of 12,07,058 candidates appeared in JEE Main 2016. </li><li><b>All India Secondary School Examination: </b>Scored a <b>10 CGPA</b> in Secondary School Examination 2014 (Class 10) conducted by CBSE.</li><li><b>Professors of IIT Patna: </b>Got Letter of Recommendation from <b>Dr. Jimson Mathew, Head of Department (HOD),</b> Computer Science & Engg Department, IIT Patna and <b>Dr. Mayank Agrawal, Assistant Professor,</b> Computer Science & Engg Department, IIT Patna</li><li><b>Gate Security App for IIT Patna: </b>10,000+ total scans and 400+ unique scans has been reported in a span of <b>3 months</b> and had <b>Media Coverage</b> of the project, its functionality and impact of the App in <b>2 newspapers</b> of Patna.<ul><li><a target="_blank" href="https://drive.google.com/file/d/1b5uDG3Hq3SRds0013zmB4fLd1xG5tnsF/view?usp=sharing">Dainik Bhaskar</a></li><li><a target="_blank" href="https://drive.google.com/file/d/1z2E2lDXd2I3MJ9ctly2OFKzq1FpQh7kp/view?usp=sharing">Hindustan</a></li></ul></li><li><b>Feedback Module for IIT Patna: </b>This module has been hosted on the college website and <b>all UG and PG students</b> had filled their course feedback using this module. The module reported <b>no bugs</b> and students have responded <b>positively.</b></li><li><b>B.Tech Final Year Project (BTP): </b>Graded <b>9/10</b> in my final year project and received positive feedback from my project guide.</li><li><b>Key Issue App for IIT Patna: </b>This app resulted in faster issuing and returning of keys which prevents queue and saves everyone’s time. <b>17,000+</b> keys of labs and rooms of different blocks of IIT Patna have been issued and returned till date.</li><li><b>Billing & Inventory ERP Software: </b><b>8,000+</b> invoices and quotations have been generated till date using software developed by me, during my internship at <b>NGCN.</b></li><li><b>Anwesha 2k18 Website: </b>Used by <b>3,500+</b> peoples to register in the biggest cultural fest of North India held at IIT Patna in 2018.</li></ul>'
+        "content": `
+            <ul>
+                <li><a>Byjus: </a>Subjective Assessment Revamp <b>saved</b> our infra cost by almost <b>50%</b> and Signup Flow Improv. in BEP <b>increased</b> the chance of signup by <b>40%</b>.</li>
+                
+                <li><a href="https://disk.mngo.in/achievement/web_vital_notes_app" target="_blank">Web Vital Score: </a>Have scored <b>95+</b> in Web Performance of all my personal Web Projects.</li>
+                
+                <li><a href="https://disk.mngo.in/achievement/lor_isro_santhalakshmi_krishna" target="_blank">Internship at ISRO: </a>Recieved Letter of Recommendation and ranked among <b>top 2% students</b> worked under <b>S. Santhalakshmi, Scientist ‘SF’ & Manager SDG, ISTRAC-ISRO.</b></li>
+                
+                <li><a href="https://disk.mngo.in/internship/3_oxyvin_internship_certificate" target="_blank">Internship at NGCN: </a>Recieved <b>Return Offer & Recommendation</b> on LinkedIn Profile from <b>Justin Sebastian, CEO of NGCN, Oxyvin.</b></li>
+                
+                <li><a href="https://disk.mngo.in/achievement/lor_dr_mayank_agrawal" target="_blank">Automation IIT Patna: </a>Got back-to-back <b>14 projects</b> from <b>Dr. Mayank Agrawal</b>, PIC Automation, IIT Patna, in a duration of <b>7 months</b>, starting from January 2020 to July 2020.</li>
+                
+                <li><a href="https://disk.mngo.in/achievement/lor_dr_jimson_mathew" target="_blank">Professors of IIT Patna: </a>Got Letter of Recommendation from <b>Dr. Jimson Mathew, Head of Department (HOD),</b> Computer Science & Engg Department, IIT Patna and <b>Dr. Mayank Agrawal, Assistant Professor,</b> Computer Science & Engg Department, IIT Patna</li>
+                
+                <li>
+                    <a target="_blank" href="https://disk.mngo.in/newspaper/gate_security_iitp_dainik">Gate Security App for IIT Patna: </a>2M+ total scans and 3k+ unique scans has been reported in a span of <b>3 months</b> and had <b>Media Coverage</b> of the project, its functionality and impact of the App in <b>2 newspapers</b> of Patna.
+                    <ul>
+                        <li><a target="_blank" href="https://disk.mngo.in/newspaper/gate_security_iitp_dainik">Dainik Bhaskar</a></li>
+                        <li><a target="_blank" href="https://disk.mngo.in/newspaper/gate_security_iitp_hindustan">Hindustan</a></li>
+                    </ul>
+                </li>
+                
+                <li><a>Feedback Module for IIT Patna: </a>This module has been hosted on the college website and <b>all UG and PG students</b> had filled their course feedback using this module. The module reported <b>no bugs</b> and students have responded <b>positively.</b></li>
+                
+                <li><a>B.Tech Final Year Project (BTP): </a>Graded <b>9/10</b> in my final year project and received positive feedback from my project guide.</li>
+                
+                <li><a href="https://disk.mngo.in/achievement/appreciation_for_key_issue_app" target="_blank">Key Issue App for IIT Patna: </a>This app resulted in faster issuing and returning of keys which prevents queue and saves everyone’s time. <b>17,000+</b> keys of labs and rooms of different blocks of IIT Patna have been issued and returned till date.</li>
+                
+                <li><a>Billing & Inventory ERP Software: </a><b>8,000+</b> invoices and quotations have been generated till date using software developed by me, during my internship at <b>NGCN.</b></li>
+                
+                <li><a>Anwesha 2k18 Website: </a>Used by <b>3,500+</b> peoples to register in the biggest cultural fest of North India held at IIT Patna in 2018.</li>
+
+                <li><a>JEE Main: </a>Secured <b>99.17 percentile</b> out of 12,07,058 candidates appeared in JEE Main 2016. </li>
+
+                <li><a>All India Secondary School Examination: </a>Scored a <b>10 CGPA</b> in Secondary School Examination 2014 (Class 10) conducted by CBSE.</li>
+            </ul>
+        `
     },
     "skills_n_intr.html": {
         "title": "<Skills & Interests>",
@@ -311,19 +377,31 @@ const FILES_CONTENT = {
     },
     "info.html": {
         "title": "<Info>",
-        "content": '<div>@adityasuman profile<br /><b>version:</b> 3.16.0<br /><b>latest release:</b> 15 February 2023<br /><b>release date:</b> 24 January 2020<br /><b>first release:</b> 15 March 2017<br /><b>developer:</b> Aditya Suman<br /><b>contact:</b> adityasuman2025@gmail.com<br><b>technologies used:</b> JavaScript, React.js<br /><b>NPM Package:</b> <a href="https://www.npmjs.com/package/mngo-text-editor" target="_blank">https://www.npmjs.com/package/mngo-text-editor</a><br /><b>declaration:</b> owner declares 100% hand-written code and no use of any other library in creation of MNgoTextEditor. This library owns the name of "MNgo Text Editor" and is a open-source software under MIT license.<br /><br />&copy 2017-23 This property belongs to Aditya Suman</div>'
+        "content": `
+            <div>
+                @adityasuman profile<br />
+                <b>version:</b> 3.16.0<br />
+                <b>latest release:</b> 4 November 2023<br />
+                <b>release date:</b> 24 January 2020<br />
+                <b>first release:</b> 15 March 2017<br />
+                <b>developer:</b> Aditya Suman<br />
+                <b>contact:</b> adityasuman2025@gmail.com<br>
+                <b>technologies used:</b> JavaScript, React.js<br />
+                <b>NPM Package:</b> <a href="https://www.npmjs.com/package/mngo-text-editor" target="_blank">https://www.npmjs.com/package/mngo-text-editor</a><br />
+                <b>declaration:</b> owner declares 100% hand-written code and no use of any other library in creation of MNgoTextEditor. This library owns the name of "MNgo Text Editor" and is a open-source software under MIT license.<br /><br />
+                &copy 2017-23 This property belongs to Aditya Suman
+            </div>
+        `
     },
 }
 
 ReactDOM.render(
-    <React.StrictMode>
-        <MNgoTextEditor
-            title={"adityasuman"}
-            typeWriterText1={"Hello <b>World</b>"}
-            typeWriterText2={"This is <b>Aditya</b> <a>Suman</a>"}
-            files={FILES}
-            filesContent={FILES_CONTENT}
-        />
-    </React.StrictMode>,
+    <MNgoTextEditor
+        title={"adityasuman"}
+        typeWriterText1={"Hello <b>World</b>"}
+        typeWriterText2={"This is <b>Aditya</b> <a>Suman</a>"}
+        files={FILES}
+        filesContent={FILES_CONTENT}
+    />,
     document.getElementById('root')
 );
