@@ -380,8 +380,8 @@ const FILES_CONTENT = {
         "content": `
             <div>
                 @adityasuman profile<br />
-                <b>version:</b> 3.16.0<br />
-                <b>latest release:</b> 4 November 2023<br />
+                <b>version:</b> 3.16.1<br />
+                <b>latest release:</b> 20 November 2023<br />
                 <b>release date:</b> 24 January 2020<br />
                 <b>first release:</b> 15 March 2017<br />
                 <b>developer:</b> Aditya Suman<br />
