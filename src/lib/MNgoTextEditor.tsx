@@ -175,9 +175,9 @@ export default function MNgoTextEditor({
                         {
                             Object.keys(activeTabFileData).length ?
                                 <>
-                                    <h2 className="fileTitle">{activeTabFileData?.title}</h2>
+                                    <h2 className="fileTitle">{`<${activeTabFileData?.title}>`}</h2>
                                     <div className="fileContent" dangerouslySetInnerHTML={{ __html: activeTabFileData?.content }} />
-                                    <h2 className="fileTitle">{activeTabFileData?.title}</h2>
+                                    <h2 className="fileTitle">{`</${activeTabFileData?.title}>`}</h2>
                                 </>
                                 : <p id="line-1"></p>
                         }

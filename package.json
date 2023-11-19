@@ -1,59 +1,45 @@
 {
-  "name": "mngo-text-editor",
-  "version": "3.16.0",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "homepage": "./",
-  "files": [
-    "dist",
-    "README.md"
-  ],
-  "private": false,
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:adityasuman2025/MNgoTextEditor.git"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "@babel/cli": "^7.15.4",
-    "@babel/preset-env": "^7.15.4",
-    "@babel/preset-react": "^7.14.5",
-    "@types/node": "^12.0.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "babel-preset-minify": "^0.5.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "typescript": "^4.1.2"
-  },
-  "peerDependencies": {},
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "GENERATE_SOURCEMAP=false react-scripts build",
-    "babel-build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --extensions '.ts,.tsx,.jsx' --ignore 'src/lib/**/*.test.tsx' --copy-files --no-copy-ignored",
-    "build-publish": "npm run babel-build && npm publish",
-    "demo": "cd demo rm-rf node_modules && npm install && npm start"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+    "name": "mngo-text-editor",
+    "private": false,
+    "version": "3.16.1",
+    "sideEffects": false,
+    "type": "module",
+    "homepage": "./",
+    "files": [
+        "dist",
+        "README.md"
     ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "resolutions": {
-    "babel-loader": "8.1.0"
-  }
+    "main": "./dist/index.cjs.js",
+    "module": "./dist/index.es.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.es.js",
+            "require": "./dist/index.cjs.js"
+        },
+        "./dist/style.css": "./dist/style.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:adityasuman2025/MNgoTextEditor.git"
+    },
+    "scripts": {
+        "start": "vite",
+        "build": "tsc && IS_DEPL=true GENERATE_SOURCEMAP=false vite build",
+        "lib-build": "tsc && vite build",
+        "build-publish": "npm run lib-build && npm publish",
+        "demo": "cd demo && rm -rf node_modules && npm install && npm start"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@types/node": "^20.9.2",
+        "@types/react": "^18.2.37",
+        "@types/react-dom": "^18.2.15",
+        "@vitejs/plugin-react": "^4.2.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "typescript": "^5.2.2",
+        "vite": "^5.0.0",
+        "vite-plugin-css-injected-by-js": "^3.3.0"
+    }
 }
