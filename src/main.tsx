@@ -50,6 +50,7 @@ const FILES = [
                     { "type": "file", "srcKey": "react_image_annotate_npm_package.html" },
                     { "type": "file", "srcKey": "react_secure_pdf_viewer_npm_package.html" },
                     { "type": "file", "srcKey": "text_editor_npm_package.html" },
+                    { "type": "file", "srcKey": "quiz_web_app.html" },
                     { "type": "file", "srcKey": "pomodoro_web_app.html" },
                     { "type": "file", "srcKey": "notes_web_app.html" },
                     { "type": "file", "srcKey": "chat_web_app.html" },
@@ -108,7 +109,7 @@ const FILES_CONTENT = {
                 <li>I’ve also been instrumental in several <b>initiatives</b> that resulted in significant <b>cost savings</b> and increased signups for my current company, such as reducing <b>infrastructure costs by 50%</b> and <b>boosting signups by 40%</b>.</li>
                 <li>Moreover, I have a track record of successfully <b>integrating products/SDKs</b> into various client/team systems.</li>
                 <li>Additionally, I've implemented numerous internal and <b>external tools</b> that have greatly contributed to <b>informed business decision-making</b>.</li>
-                <li><b>Technologies:</b> JavaScript, Node.js, vite, React.js, Redux, Next.js, tailwindcss, Socket, firebase, AWS</li>
+                <li><b>Technologies:</b> JavaScript, Node.js, vite, React.js, Redux, Next.js, TailwindCSS, Socket, firebase, AWS</li>
             </ul>
         `
     },
@@ -213,7 +214,7 @@ const FILES_CONTENT = {
                 <li>Created a npm package/react library using which user can annotate/markup/write over any image.</li>
                 <li>Annotations of all type are supported like <b>any shape/image, text, hand drawing,</b> etc.</li>
                 <li>One can add <b>annotation feature</b> in their project by installing the package in their react/javascript project.</li>
-                <li><b>Technologies:</b> JavaScript, React.js</li>
+                <li><b>Technologies:</b> TypeScript, JavaScript, React.js, TailwindCSS</li>
 
                 <li></li>
                 <li><b>Demo:</b> <a target="_blank" href="https://annotate.mngo.in">https://annotate.mngo.in</a></li>
@@ -236,7 +237,7 @@ const FILES_CONTENT = {
                     <li>❌ screen recording</li>
                     <li>✅ open pdf in pdf viewer using the given password programmatically</li>
                 </ol>
-                <li><b>Technologies:</b> JavaScript, React.js, react-pdf</li>
+                <li><b>Technologies:</b> TypeScript, JavaScript, React.js, react-pdf</li>
 
                 <li></li>
                 <li><b>Demo:</b> <a target="_blank" href="https://pdf.mngo.in">https://pdf.mngo.in</a></li>
@@ -251,11 +252,26 @@ const FILES_CONTENT = {
                 <li>Created a npm package/library and a personalized stylesheet to memic the design of <b>Sublime Text Editor</b>.</li>
                 <li>One can easily create his <b>web profile</b> by installing the package in their react/javascript project</li>
                 <li>Implemented this library to develop my <a target="_blank" href="https://adityasuman.mngo.in">web profile.</a></li>
-                <li><b>Technologies:</b> JavaScript, React.js</li>
+                <li><b>Technologies:</b> TypeScript, JavaScript, React.js</li>
 
                 <li></li>
                 <li><b>Demo:</b> <a target="_blank" href="https://mngo.in">https://mngo.in</a></li>
                 <li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoTextEditor">https://github.com/adityasuman2025/MNgoTextEditor</a></li>
+            </ul>
+        `
+    },
+    "quiz_web_app.html": {
+        "title": "Quiz Web App",
+        "content": `
+            <ul>
+                <li>Developed a <b>Quiz Web App</b> that can be used to practice frequently asked interview questions.</li>
+                <li>A web application designed for practicing common and <b>well-known interview questions</b> across various topics. Users can engage in quiz sessions to prepare for interviews and enhance their learning by tackling frequently asked questions.</li>
+                <li>This platform serves as a valuable resource for honing <b>interview skills</b> and gaining proficiency in diverse subject areas.</li>
+                <li><b>Technologies:</b> TypeScript, JavaScript, React.js, TailwindCSS</li>
+
+                <li></li>
+                <li><b>Demo:</b> <a target="_blank" href="https://quiz.mngo.in">https://quiz.mngo.in</a></li>
+                <li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoQuiz">https://github.com/adityasuman2025/MNgoQuiz</a></li>
             </ul>
         `
     },
@@ -361,7 +377,15 @@ const FILES_CONTENT = {
     },
     "skills_n_intr.html": {
         "title": "Skills & Interests",
-        "content": '<ul><li><b>General:</b> Web Application Development, Mobile App Development, API Development</li><li><b>Programming language:</b> Java, JavaScript, Python</li><li><b>Database:</b> MySQL, mongoDB</li><li><b>Web & App Technologies:</b> React-Native, React.js, Redux, Redux Saga, jQuery, Node.js, Django, Web-Socket, REST API, GraphQL, express.js, socket.io, kafka, Bootstrap, HTML, CSS</li><li><b>Other Tools:</b> AWS, Android Studio, Git, Heroku, cPanel, Google Cloud Platform Compute Engine, Google Firebase</li><li><b>Operating System:</b> Linux, Mac OS, Windows</li></ul>'
+        "content": `
+            <ul>
+            <li><b>General:</b> Web Application Development, Mobile Application Development, API Development</li>
+            <li><b>Programming language:</b> JavaScript, TypeScript, Java, Python</li>
+            <li><b>Web & App Technologies:</b> React.js, Next.js, Redux, Redux Saga, Redux Thunk, React-Native, TailwindCSS, jQuery, Node.js, Web-Socket, REST API, GraphQL, express.js, socket.io, kafka, Bootstrap, HTML, CSS</li>
+            <li><b>Database:</b> MySQL, mongoDB</li>
+            <li><b>Other Tools:</b> AWS, Google Firebase, Vercel, Android Studio, Git, Heroku, cPanel, Google Cloud Platform Compute Engine</li>
+            <li><b>Operating System:</b> Linux, Mac OS, Windows</li>
+        </ul>`
     },
     "por.html": {
         "title": "Position Of Responsibility",
@@ -380,13 +404,13 @@ const FILES_CONTENT = {
         "content": `
             <div>
                 @adityasuman profile<br />
-                <b>version:</b> 3.16.1<br />
-                <b>latest release:</b> 20 November 2023<br />
+                <b>version:</b> 3.16.11<br />
+                <b>latest release:</b> 23 November 2023<br />
                 <b>release date:</b> 24 January 2020<br />
                 <b>first release:</b> 15 March 2017<br />
                 <b>developer:</b> Aditya Suman<br />
                 <b>contact:</b> adityasuman2025@gmail.com<br>
-                <b>technologies used:</b> JavaScript, React.js<br />
+                <b>technologies used:</b> TypeScript, JavaScript, React.js<br />
                 <b>NPM Package:</b> <a href="https://www.npmjs.com/package/mngo-text-editor" target="_blank">https://www.npmjs.com/package/mngo-text-editor</a><br />
                 <b>declaration:</b> owner declares 100% hand-written code and no use of any other library in creation of MNgoTextEditor. This library owns the name of "MNgo Text Editor" and is a open-source software under MIT license.<br /><br />
                 &copy 2017-23 This property belongs to Aditya Suman
