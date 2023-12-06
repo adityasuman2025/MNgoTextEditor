@@ -13,6 +13,7 @@ const FILES = [
             {
                 "type": "folder", "srcKey": "work_experience",
                 "files": [
+                    { "type": "file", "srcKey": "systematic_fte.html" },
                     { "type": "file", "srcKey": "byjus_fte.html" },
                     { "type": "file", "srcKey": "mlcertific_intern.html" },
                     { "type": "file", "srcKey": "upbringo_intern.html" },
@@ -75,7 +76,7 @@ const FILES_CONTENT = {
             Hello World, My name is <a>Aditya Suman</a><br/>
             I\'m a programmer and a computer geek. I have professional skill in <a>Web & Mobile Application Development</a>.<br>
             I graduated from <b>IIT Patna</b> in 2020.<br/>
-            I have been employed as a <b>Full Time Senior Software Engineer</b> at <a href="https://www.byjus.com/" target="_blank" class="title_a">Byjus</a> for the past 3.3 years, and have also completed <b>internships at ISRO</b>, UpBrinGO, and 4 other startups.<br><br>
+            I have been employed as a <b>Full Time Software Engineer</b> at <a href="https://www.systematicventures.com" target="_blank" class="title_a">Systematic</a> and have worked Full Time at <a href="https://www.byjus.com" target="_blank" class="title_a">Byjus</a> in past and have also completed <b>internships at ISRO</b>, UpBrinGO, and 4 other startups.<br><br>
 
             <ul>
                 <li>With <a>3+ years</a> of professional experience in <b>Web Application Development</b>, I have primarily utilized <b>JavaScript</b>, TypeScript, <b>React.js</b>, Next.js, Node.js, Redux, TailwindCSS, HTML and CSS as my tech stacks.</li>
@@ -100,42 +101,112 @@ const FILES_CONTENT = {
         "content": "<ul><li>Bachelor Of Technology, <b>Indian Institute of Technology Patna (IIT P),</b> CPI- 7.08/10 (2016 - 2020) </li><li>Senior Secondary Schooling, <b>Magadh University</b> – 70.4% (2014 - 2016) </li><li> Secondary Schooling, CBSE, <b>R.P.S Public School, Bihar Sharif,</b> CGPA- 10/10 (2013 - 2014)</li></ul>"
     },
 
+    "systematic_fte.html": {
+        "title": "Software Engineer",
+        "content": `<div class="floatRight">December 2023 - Present</div><a href="https://www.systematicventures.com" target="_blank" class="title_a">Systematic - Remote, India</a><br /><br />
+            <ul>
+                <li>Working as a frontend developer to deliever monthly product requirements to build the product.</li>
+                <li>Actively involved in <b>sprint planning, design discussion, brainstorming sessions, PRD & solution</b> discussion and code reviews.</li>
+                <li><b>Technologies:</b> JavaScript, TypeScript, Next.js, React.js, AWS</li>
+            </ul>
+        `
+    },
     "byjus_fte.html": {
         "title": "Senior Software Engineer",
-        "content": `<div class="floatRight">August 2020 - Current</div><a href="https://www.byjus.com/" target="_blank" class="title_a">Byjus, Remote</a><br /><br />
+        "content": `<div class="floatRight">August 2020 - November 2023</div><a href="https://www.byjus.com/" target="_blank" class="title_a">Byjus - Remote, India</a><br /><br />
             <ul>
-                <li>I am currently <b>managing 2 junior</b> developers and was <b>leading, owning</b> and maintaining the <b>frontend</b> of my previous team consisting of <b>3 developers</b>. I am actively involved in <b>brainstorming sessions, PRD & solution</b> discussion and <b>code reviews</b>.</li>
-                <li>Having collaborated closely with <b>product managers and designers</b> to successfully implement <b>numerous features</b> and address bugs throughout my career, I understand the importance of seamlessly <b>integrating design concepts</b> into <b>functional features</b>.</li>
-                <li>I’ve also been instrumental in several <b>initiatives</b> that resulted in significant <b>cost savings</b> and increased signups for my current company, such as reducing <b>infrastructure costs by 50%</b> and <b>boosting signups by 40%</b>.</li>
-                <li>Moreover, I have a track record of successfully <b>integrating products/SDKs</b> into various client/team systems.</li>
-                <li>Additionally, I've implemented numerous internal and <b>external tools</b> that have greatly contributed to <b>informed business decision-making</b>.</li>
-                <li><b>Technologies:</b> JavaScript, Node.js, vite, React.js, Redux, Next.js, TailwindCSS, Socket, firebase, AWS</li>
+                <li>Worked in Byju's Exam Prep (BEP) team and <b>managing 2 juniors</b> to deliver monthly product requirements.</li>
+                <li>Led the <b>Subjective Assessment</b> team's Web to revamp the platform, prepared <a>LLD/HLD</a> of its Frontend and set up its repo from scratch.</li>
+                <li>Developed an <b>Annotate over image component</b>, worked on the Correction SDK and converted a monolith to frontend only project.</li>
+                <li><a>Led 3 juniors</a> to complete Print, Upload & Report SDK & Admin Portal.</li>
+                <li>
+                    <a>Impact:</a>
+                    <ul>
+                        <li><b>Revamped multiple portals</b> of Subjective Assessment to a <b>react npm package (sdk)</b> that our client can directly integrate in their system. This <a>saved our Frontend infra cost</a>, as instead of using infra for 6 different portals, we now have only 2.</li>
+                        <li>Worked on <b>Web performance and optimisation</b> of marketing page Toppr Codr and achieved a Performance <a>Web Vital Score of 95</a>.</li>
+                        <li>Worked on <b>Signup Flow Improvement</b> task in BEP to break the flow into mandatory & optional, which marginally increases our signup.</li>
+                    </ul>
+                </li>
+                <li><b>Technologies:</b> JavaScript, typeScript, React.js, Tailwind CSS, Next.js, Node.js, Redux, Redux-Saga, Firebase, socket, vercel, AWS, etc</li>
             </ul>
         `
     },
     "mlcertific_intern.html": {
         "title": "Full-Stack Web Development Intern",
-        "content": '<div class="floatRight">July 2020</div><a href="https://mlcertific.com" target="_blank" class="title_a">MLCertific, Remote</a><br /><br /><ul><li>Worked as a <b>Web Developer</b> to develop a Certification Website.</li><li>Developed the complete website on React and created its api on PHP</li><li>Website contains features like user\'s cart, razorpay payment, online exam/test, certificate generation, validation and sharing</li><li><b>Technologies:</b> React.js, PHP, MySQL, Bootstrap</li></ul>'
+        "content": `<div class="floatRight">July 2020</div><a href="https://mlcertific.com" target="_blank" class="title_a">MLCertific - Remote, India</a><br /><br />
+            <ul>
+                <li>Worked as a <b>Web Developer</b> to develop a Certification Website.</li>
+                <li>Developed the complete website on React and created its api on PHP</li>
+                <li>Website contains features like user\'s cart, razorpay payment, online exam/test, certificate generation, validation and sharing</li>
+                <li><b>Technologies:</b> React.js, PHP, MySQL, Bootstrap</li>
+            </ul>
+        `
     },
     "upbringo_intern.html": {
         "title": "App Development Intern",
-        "content": '<div class="floatRight">April 2020 – June 2020</div><a href="https://www.upbringo.com/#/" target="_blank" class="title_a">UpBrinGO, Remote</a><br /><br /><ul><li>Worked as an <b>App Developer</b> to develop a Mobile App compatible on Android & iOS both.</li><li>Added features like <b>QR based Attendance, Offline first, Billing Module, Homework Module</b>, etc in the existing App.</li><li>Developed complete <b>Billing & Homework module</b> which includes front-end, database design and back-end.</li><li>Updated front-end of the complete App.</li><li><b>Technologies:</b> React Native, Node.js, Serverless, GraphQL, MySQL</li></ul>'
+        "content": `<div class="floatRight">April 2020 – June 2020</div><a href="https://www.upbringo.com/#/" target="_blank" class="title_a">UpBrinGO - Remote, India</a><br /><br />
+            <ul>
+                <li>Worked as an <b>App Developer</b> to develop a Mobile App compatible on Android & iOS both.</li>
+                <li>Added features like <b>QR based Attendance, Offline first, Billing Module, Homework Module</b>, etc in the existing App.</li>
+                <li>Developed complete <b>Billing & Homework module</b> which includes front-end, database design and back-end.</li>
+                <li>Updated front-end of the complete App.</li>
+                <li><b>Technologies:</b> React Native, Node.js, Serverless, GraphQL, MySQL</li>
+            </ul>
+        `
     },
     "isro_intern.html": {
         "title": "Engineering Intern",
-        "content": '<div class="floatRight">May 2019 – July 2019</div><a href="https://www.istrac.gov.in/" target="_blank" class="title_a">ISRO Telemetry, Tracking and Command Network (ISTRAC), Bangalore</a><br /><br /><ul><li>Worked in <b>SDG Laboratory</b> (Software Development Group) of ISTRAC to develop a Android App & Web Interface for monitoring and controlling of MEOSAR.</li><li>Created a <b>Web-Socket Client</b> in <b>Java</b> and <b>Web-Socket Client</b> in <b>JavaScript</b> to connect Mobile App & Web App respectively to the <b>Web-Socket Server</b> built on <b>Python</b>.</li><li>Extracted the <b>JSON</b> coming from <b>Web-Socket Server</b> in human readable and interacting interface.</li><li>Divided the software into 3 common modules, Schedule, Equipment & Map Module for Web-Interface & Mobile App and 1 extra Web-Socket Service Module only for the App.</li><li>Implemented <b>Service</b> in Android to keep <b>Web-Socket Client</b> always running in background in the app even when the app is minimized or closed to get push notification, required for equipment status details and new beacon alert.</li><li>Created <b>MySQL database</b> to store login credentials for the Mobile App & built its <b>back-end files</b> on <b>PHP</b>.</li><li><b>Technologies:</b> Android Studio, Java, JavaScript, Python, PHP, MySQL, jQuery</li><li>Ranked in the <b>top 2%</b> among the students handled by my project guide and received a <b>Letter of Recommendation</b> from her.</li></ul>'
+        "content": `<div class="floatRight">May 2019 – July 2019</div><a href="https://www.istrac.gov.in/" target="_blank" class="title_a">ISRO Telemetry, Tracking and Command Network (ISTRAC) - Bangalore, India</a><br /><br />
+            <ul>
+                <li>Worked in <b>SDG Laboratory</b> (Software Development Group) of ISTRAC to develop a Android App & Web Interface for monitoring and controlling of MEOSAR.</li>
+                <li>Created a <b>Web-Socket Client</b> in <b>Java</b> and <b>Web-Socket Client</b> in <b>JavaScript</b> to connect Mobile App & Web App respectively to the <b>Web-Socket Server</b> built on <b>Python</b>.</li>
+                <li>Extracted the <b>JSON</b> coming from <b>Web-Socket Server</b> in human readable and interacting interface.</li>
+                <li>Divided the software into 3 common modules, Schedule, Equipment & Map Module for Web-Interface & Mobile App and 1 extra Web-Socket Service Module only for the App.</li>
+                <li>Implemented <b>Service</b> in Android to keep <b>Web-Socket Client</b> always running in background in the app even when the app is minimized or closed to get push notification, required for equipment status details and new beacon alert.</li>
+                <li>Created <b>MySQL database</b> to store login credentials for the Mobile App & built its <b>back-end files</b> on <b>PHP</b>.</li>
+                <li><b>Technologies:</b> Android Studio, Java, JavaScript, Python, PHP, MySQL, jQuery</li>
+                <li>Ranked in the <b>top 2%</b> among the students handled by my project guide and received a <b>Letter of Recommendation</b> from her.</li>
+            </ul>
+        `
     },
     "oxyvin_intern.html": {
         "title": "Software Development Intern",
-        "content": '<div class="floatRight">Nov 2018 – Jan 2019</div><a href="https://oxyvin.com" target="_blank" class="title_a">Oxyvin Technologies (OPC) Pvt Ltd, Bangalore</a><br /><br /><ul><li>Worked on <b>CodeIgniter</b> framework for <b>MVC Architectural</b> Application Development.</li><li>Developed Technical, Auditor, Planning, Manage & Customer Module of the software.</li><li>Divided different forms in different steps to be followed in chronological order in each modules.</li><li>Created tables of each form of each module in <b>MySQL database</b> and used different forms of <b>Normalization</b> to store filled forms data in more structured form.</li><li>Used <b>AJAX</b> to implement multiple number of input type tag in HTML and to perform database actions asynchronously.</li><li>Worked on the security aspects of the application to prevent cookie manipulation, SQL injection.</li><li><b>Technologies:</b> CodeIgniter, PHP, MySQL, jQuery, JavaScript, AJAX, Bootstrap </li></ul>',
+        "content": `<div class="floatRight">Nov 2018 – Jan 2019</div><a href="https://oxyvin.com" target="_blank" class="title_a">Oxyvin Technologies (OPC) Pvt Ltd - Bangalore, India</a><br /><br />
+            <ul>
+                <li>Worked on <b>CodeIgniter</b> framework for <b>MVC Architectural</b> Application Development.</li>
+                <li>Developed Technical, Auditor, Planning, Manage & Customer Module of the software.</li>
+                <li>Divided different forms in different steps to be followed in chronological order in each modules.</li>
+                <li>Created tables of each form of each module in <b>MySQL database</b> and used different forms of <b>Normalization</b> to store filled forms data in more structured form.</li>
+                <li>Used <b>AJAX</b> to implement multiple number of input type tag in HTML and to perform database actions asynchronously.</li>
+                <li>Worked on the security aspects of the application to prevent cookie manipulation, SQL injection.</li>
+                <li><b>Technologies:</b> CodeIgniter, PHP, MySQL, jQuery, JavaScript, AJAX, Bootstrap </li>
+            </ul>
+        `
     },
     "ngcn_intern.html": {
         "title": "Software Development Intern",
-        "content": '<div class="floatRight">May 2018 – July 2018</div><a href="http://ngcn.co.uk/" target="_blank" class="title_a">NGCN Infosolutions Pvt Ltd, Remote </a> <br /> <br /><ul><li>Developed an <b>ERP Software</b> used for <b>Billing and Inventory</b> purpose with facilities like Multi Branch, Multi User and can handle Inventory, Purchases, Stock, Billing, Reports, etc.</b></li><li>Created a <b>Single Page Application</b> using <b>AJAX</b> where different pages for different tasks of the user loads without refreshing or redirecting to any other page.</li><li>Used <b>AJAX</b> to perform all the task in background to minimize slow loading and to prevent loading of same UI again and again which results in improvement of speed of the application.</li><li><b>Technologies:</b> PHP, jQuery, JavaScript, AJAX, MySQL</li><li><b>Demo:</b> <a target="_blank" href="http://demoerp.pnds.in">http://demoerp.pnds.in</a></li><li>Received a <b>Return Offer</b> and <b>Recommendation</b> on LinkedIn Profile for completing the project much earlier than the assigned time period and outstanding performance during the internship.</li></ul>'
+        "content": `<div class="floatRight">May 2018 – July 2018</div><a href="http://ngcn.co.uk/" target="_blank" class="title_a">NGCN Infosolutions Pvt Ltd - Remote, India</a> <br /> <br />
+            <ul>
+                <li>Developed an <b>ERP Software</b> used for <b>Billing and Inventory</b> purpose with facilities like Multi Branch, Multi User and can handle Inventory, Purchases, Stock, Billing, Reports, etc.</b></li>
+                <li>Created a <b>Single Page Application</b> using <b>AJAX</b> where different pages for different tasks of the user loads without refreshing or redirecting to any other page.</li>
+                <li>Used <b>AJAX</b> to perform all the task in background to minimize slow loading and to prevent loading of same UI again and again which results in improvement of speed of the application.</li>
+                <li><b>Technologies:</b> PHP, jQuery, JavaScript, AJAX, MySQL</li>
+                <li><b>Demo:</b> <a target="_blank" href="http://demoerp.pnds.in">http://demoerp.pnds.in</a></li>
+                <li>Received a <b>Return Offer</b> and <b>Recommendation</b> on LinkedIn Profile for completing the project much earlier than the assigned time period and outstanding performance during the internship.</li>
+            </ul>
+        `
     },
     "catchfreedeal.html": {
         "title": "Full Stack Web Development Intern",
-        "content": '<div class="floatRight">Dec 2017</div><a href="http://www.catchfreedeal.com" target="_blank" class="title_a">CatchFreeDeal, Remote </a><br /><br /><ul><li>Developed a complete website from scratch which displays best deals & coupons from different e-commerce website like amazon, flipkart, jabong, etc.</li><li>Created database to store different deals and coupons data as per preference of the logged user.</li><li>Implemented user authentication feature (login, logout, register) from scratch using PHP and MySQL database and used <b>facebook API</b> to give login feature from facebook.</li><li><b>Technologies:</b> PHP, jQuery, JavaScript, AJAX, MySQL, Bootstrap</li><li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/internshipCatchFreeDeal">https://github.com/adityasuman2025/internshipCatchFreeDeal</a></li></ul>'
+        "content": `<div class="floatRight">Dec 2017</div><a href="http://www.catchfreedeal.com" target="_blank" class="title_a">CatchFreeDeal - Remote, India</a><br /><br />
+            <ul>
+                <li>Developed a complete website from scratch which displays best deals & coupons from different e-commerce website like amazon, flipkart, jabong, etc.</li>
+                <li>Created database to store different deals and coupons data as per preference of the logged user.</li>
+                <li>Implemented user authentication feature (login, logout, register) from scratch using PHP and MySQL database and used <b>facebook API</b> to give login feature from facebook.</li>
+                <li><b>Technologies:</b> PHP, jQuery, JavaScript, AJAX, MySQL, Bootstrap</li>
+                <li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/internshipCatchFreeDeal">https://github.com/adityasuman2025/internshipCatchFreeDeal</a></li>
+            </ul>
+        `
     },
 
     "btp.html": {
@@ -413,7 +484,7 @@ const FILES_CONTENT = {
                 <b>technologies used:</b> TypeScript, JavaScript, React.js<br />
                 <b>NPM Package:</b> <a href="https://www.npmjs.com/package/mngo-text-editor" target="_blank">https://www.npmjs.com/package/mngo-text-editor</a><br />
                 <b>declaration:</b> owner declares 100% hand-written code and no use of any other library in creation of MNgoTextEditor. This library owns the name of "MNgo Text Editor" and is a open-source software under MIT license.<br /><br />
-                &copy 2017-23 This property belongs to Aditya Suman
+                &copy 2017-24 This property belongs to Aditya Suman
             </div>
         `
     },
