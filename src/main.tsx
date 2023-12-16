@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 
 import { MNgoTextEditor } from "./lib";
@@ -468,7 +468,7 @@ const FILES_CONTENT = {
     },
     "follow_me.html": {
         "title": "Follow Me",
-        "content": '<ul><li>quora: <a href="https://www.quora.com/profile/Aditya-Suman-15" target="_blank">https://www.quora.com/profile/Aditya-Suman-15</a></li></ul><ul><li>instagram: <a href="https://www.instagram.com/the_sociology_king" target="_blank">https://www.instagram.com/the_sociology_king</a></li></ul>'
+        "content": '<ul><li>instagram: <a href="https://www.instagram.com/the_sociology_king" target="_blank">https://www.instagram.com/the_sociology_king</a></li></ul>'
     },
     "info.html": {
         "title": "Info",
@@ -490,12 +490,44 @@ const FILES_CONTENT = {
     },
 }
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-    <MNgoTextEditor
-        title={"adityasuman"}
-        typeWriterText1={"Hello <b>World</b>"}
-        typeWriterText2={"This is <b>Aditya</b> <a>Suman</a>"}
-        files={FILES}
-        filesContent={FILES_CONTENT}
-    />,
-)
+const API_BASE_URL = "https://apis.mngo.in"; // "http://localhost:3000" //
+const API_COUNTER_REF = "/api/counter";
+const PROJECT_NAME = "MNgo Text Editor";
+
+export async function sendRequestToAPI(
+    baseUrl: string, endpoint: string, method: string = "get", body: { [key: string]: any },
+    options: { [key: string]: any } = {}
+) {
+    const { throwNotOkError = true } = options || {};
+
+    const requestAddress = baseUrl + endpoint;
+    const response = await fetch(requestAddress, {
+        method,
+        ...(method.toLowerCase() === "get" ? {} : {
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body || {})
+        })
+    });
+    const jsonResp = await response.json();
+
+    if (!response.ok && throwNotOkError) throw new Error(jsonResp.message);
+    return jsonResp;
+}
+
+function App() {
+    useEffect(() => {
+        sendRequestToAPI(API_BASE_URL, `${API_COUNTER_REF}`, "POST", { appName: PROJECT_NAME.split(" ").join(""), location: window.location.href });
+    }, []);
+
+    return (
+        <MNgoTextEditor
+            title={"adityasuman"}
+            typeWriterText1={"Hello <b>World</b>"}
+            typeWriterText2={"This is <b>Aditya</b> <a>Suman</a>"}
+            files={FILES}
+            filesContent={FILES_CONTENT}
+        />
+    )
+};
+
+ReactDOM.createRoot(document.getElementById('root')!).render(<App />);
