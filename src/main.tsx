@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-
+import { sendRequestToAPI } from "mngo-project-tools/apiUtils";
+import { getDeviceDetails } from "mngo-project-tools/deviceUtils";
 import { MNgoTextEditor } from "./lib";
 
 const FILES = [
@@ -494,29 +495,16 @@ const API_BASE_URL = "https://apis.mngo.in"; // "http://localhost:3000" //
 const API_COUNTER_REF = "/api/counter";
 const PROJECT_NAME = "MNgo Text Editor";
 
-export async function sendRequestToAPI(
-    baseUrl: string, endpoint: string, method: string = "get", body: { [key: string]: any },
-    options: { [key: string]: any } = {}
-) {
-    const { throwNotOkError = true } = options || {};
-
-    const requestAddress = baseUrl + endpoint;
-    const response = await fetch(requestAddress, {
-        method,
-        ...(method.toLowerCase() === "get" ? {} : {
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(body || {})
-        })
-    });
-    const jsonResp = await response.json();
-
-    if (!response.ok && throwNotOkError) throw new Error(jsonResp.message);
-    return jsonResp;
-}
-
 function App() {
     useEffect(() => {
-        sendRequestToAPI(API_BASE_URL, `${API_COUNTER_REF}`, "POST", { appName: PROJECT_NAME.split(" ").join(""), location: window.location.href });
+        const deviceDetails = getDeviceDetails();
+
+        sendRequestToAPI(API_BASE_URL, `${API_COUNTER_REF}`, "POST", {
+            appName: PROJECT_NAME.split(" ").join(""),
+            location: window.location.href,
+            date: new Date().toLocaleString(),
+            device: `${deviceDetails.device} - ${deviceDetails.os} - ${deviceDetails.browser}`,
+        });
     }, []);
 
     return (
