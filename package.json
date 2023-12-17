@@ -31,7 +31,7 @@
         "demo": "cd demo && rm -rf node_modules && npm install && npm start"
     },
     "dependencies": {
-        "mngo-project-tools": "^1.3.0"
+        "mngo-project-tools": "^1.3.11"
     },
     "devDependencies": {
         "@types/node": "^20.9.2",
