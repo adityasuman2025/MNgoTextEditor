@@ -1,7 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { sendRequestToAPI } from "mngo-project-tools/apiUtils";
-import { getDeviceDetails } from "mngo-project-tools/deviceUtils";
 import { MNgoTextEditor } from "./lib";
 
 const FILES = [
@@ -50,11 +48,8 @@ const FILES = [
                 "type": "folder", "srcKey": "other_projects",
                 "files": [
                     { "type": "file", "srcKey": "react_image_annotate_npm_package.html" },
-                    { "type": "file", "srcKey": "react_secure_pdf_viewer_npm_package.html" },
                     { "type": "file", "srcKey": "text_editor_npm_package.html" },
                     { "type": "file", "srcKey": "quiz_web_app.html" },
-                    { "type": "file", "srcKey": "pomodoro_web_app.html" },
-                    { "type": "file", "srcKey": "notes_web_app.html" },
                     { "type": "file", "srcKey": "chat_web_app.html" },
                     { "type": "file", "srcKey": "qr_mobile_app.html" },
                     { "type": "file", "srcKey": "anwesha_2k18.html" },
@@ -95,7 +90,7 @@ const FILES_CONTENT = {
     },
     "contact_me.html": {
         "title": "Contact Me",
-        "content": '<b>Homepage: </b><a target="_blank" href="https://adityasuman.mngo.in">https://adityasuman.mngo.in</a><br><b>Email: </b><a href="mailto:adityasuman2025@gmail.com">adityasuman2025@gmail.com</a>, <a href="mailto:aditya.me16@iitp.ac.in">aditya.me16@iitp.ac.in</a><br><b>Phone: </b><a href="tel:+917424947945">+91-7424947945</a><br><b>LinkedIn: </b> <a target="_blank" href="https://www.linkedin.com/in/adityasuman2025">https://www.linkedin.com/in/adityasuman2025</a><br><b>GitHub: </b> <a target="_blank" href="https://github.com/adityasuman2025">https://github.com/adityasuman2025</a>'
+        "content": '<b>Homepage: </b><a target="_blank" href="https://adityas.site">https://adityas.site</a><br><b>Email: </b><a href="mailto:adityasuman2025@gmail.com">adityasuman2025@gmail.com</a>, <a href="mailto:aditya.me16@iitp.ac.in">aditya.me16@iitp.ac.in</a><br><b>Phone: </b><a href="tel:+917424947945">+91-7424947945</a><br><b>LinkedIn: </b> <a target="_blank" href="https://www.linkedin.com/in/adityasuman2025">https://www.linkedin.com/in/adityasuman2025</a><br><b>GitHub: </b> <a target="_blank" href="https://github.com/adityasuman2025">https://github.com/adityasuman2025</a>'
     },
     "education.html": {
         "title": "Education",
@@ -192,7 +187,6 @@ const FILES_CONTENT = {
                 <li>Created a <b>Single Page Application</b> using <b>AJAX</b> where different pages for different tasks of the user loads without refreshing or redirecting to any other page.</li>
                 <li>Used <b>AJAX</b> to perform all the task in background to minimize slow loading and to prevent loading of same UI again and again which results in improvement of speed of the application.</li>
                 <li><b>Technologies:</b> PHP, jQuery, JavaScript, AJAX, MySQL</li>
-                <li><b>Demo:</b> <a target="_blank" href="http://demoerp.pnds.in">http://demoerp.pnds.in</a></li>
                 <li>Received a <b>Return Offer</b> and <b>Recommendation</b> on LinkedIn Profile for completing the project much earlier than the assigned time period and outstanding performance during the internship.</li>
             </ul>
         `
@@ -289,31 +283,7 @@ const FILES_CONTENT = {
                 <li><b>Technologies:</b> TypeScript, JavaScript, React.js, TailwindCSS</li>
 
                 <li></li>
-                <li><b>Demo:</b> <a target="_blank" href="https://annotate.mngo.in">https://annotate.mngo.in</a></li>
                 <li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoImageAnnotate">https://github.com/adityasuman2025/MNgoImageAnnotate</a></li>
-            </ul>
-        `
-    },
-    "react_secure_pdf_viewer_npm_package.html": {
-        "title": "React Secure PDF Viewer NPM Package",
-        "content": `
-            <ul>
-                <li>Created a npm package/react library using which can be used to open to open any pdf (password protected or non-protected both) having thumbnail, jump to page, zoom features and other security features like:</li>
-                <ol>
-                    <li>✅ block right click</li>
-                    <li>✅ disable user select</li>
-                    <li>✅ block download</li>
-                    <li>✅ block getting pdf url by inspecting elements</li>
-                    <li>✅ block printing of the page/pdf</li>
-                    <li>❌ screenshot</li>
-                    <li>❌ screen recording</li>
-                    <li>✅ open pdf in pdf viewer using the given password programmatically</li>
-                </ol>
-                <li><b>Technologies:</b> TypeScript, JavaScript, React.js, react-pdf</li>
-
-                <li></li>
-                <li><b>Demo:</b> <a target="_blank" href="https://pdf.mngo.in">https://pdf.mngo.in</a></li>
-                <li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoSecurePdfViewer">https://github.com/adityasuman2025/MNgoSecurePdfViewer</a></li>
             </ul>
         `
     },
@@ -327,7 +297,7 @@ const FILES_CONTENT = {
                 <li><b>Technologies:</b> TypeScript, JavaScript, React.js</li>
 
                 <li></li>
-                <li><b>Demo:</b> <a target="_blank" href="https://mngo.in">https://mngo.in</a></li>
+                <li><b>Demo:</b> <a target="_blank" href="https://adityas.site">https://adityas.site</a></li>
                 <li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoTextEditor">https://github.com/adityasuman2025/MNgoTextEditor</a></li>
             </ul>
         `
@@ -342,39 +312,8 @@ const FILES_CONTENT = {
                 <li><b>Technologies:</b> TypeScript, JavaScript, React.js, TailwindCSS</li>
 
                 <li></li>
-                <li><b>Demo:</b> <a target="_blank" href="https://quiz.mngo.in">https://quiz.mngo.in</a></li>
+                <li><b>Demo:</b> <a target="_blank" href="https://quiz.adityas.site">https://quiz.adityas.site</a></li>
                 <li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoQuiz">https://github.com/adityasuman2025/MNgoQuiz</a></li>
-            </ul>
-        `
-    },
-    "pomodoro_web_app.html": {
-        "title": "Pomodoro Web App",
-        "content": `
-            <ul>
-                <li>Developed a <b>Pomodoro Web/Desktop App</b> that can be used for time management and enhancing productivity</li>
-                <li>Used <b>Vanilla JavaScript</b> for Web App and <b>Electron.js</b> for Desktop App.</li>
-                <li>Used <a>Web-Worker</a> for timer to keep the main UI thread free and keep timer working when tab is not active or minimised.</li>
-                <li><b>Technologies:</b> JavaScript, Electron.js, HTML/CSS</li>
-
-                <li></li>
-                <li><b>Demo:</b> <a target="_blank" href="https://pomodoro.mngo.in">https://pomodoro.mngo.in</a></li>
-                <li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoPomodoro">https://github.com/adityasuman2025/MNgoPomodoro</a></li>
-            </ul>
-        `
-    },
-    "notes_web_app.html": {
-        "title": "Notes Web App",
-        "content": `
-            <ul>
-                <li>Developed a <b>Notes Web/Mobile App, Chrome Extension and PWA App</b> that can be used to crete notes and to do\'s and it also have <b>Offline Support</b>, which can work in offline mode too and will update the db when internet is back.</li>
-                <li>Used <b>React Native</b> for Mobile App and <b>React.js</b> for Web App.</li>
-                <li>Used <a>Firebase</a> as database and <b>AsyncStorage</b> in Mobile & <b>localStorage</b> in Web for storing user's data in local to support Offline Support Feature</li>
-                <li><b>Technologies:</b> React.js, React Native, JavaScript, PWA, Firebase</li>
-
-                <li></li>
-                <li><b>Demo:</b> <a target="_blank" href="https://notes.mngo.in">https://notes.mngo.in</a></li>
-                <li><b>Chrome Extension:</b> <a target="_blank" href="https://chrome.google.com/webstore/detail/mngo-notes-text-notes-to/ennpnglofmhmbpijnambnccoaklahfno">MNgo Notes: Text Notes & To Dos</a></li>
-                <li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoNotesWeb">https://github.com/adityasuman2025/MNgoNotesWeb</a></li>
             </ul>
         `
     },
@@ -387,10 +326,6 @@ const FILES_CONTENT = {
                 <li>Used <b>Firebase Realtime Database</b> as database and <b>Firebase Storage</b> to store multimedia messages (images) and <a>AES Encryption</a> algorithms for encrypting messages.</li>
                 <li>Implemented <b>Offline Support</b> using <a>localStorage</a> and used <a>WebRTC</a> & google stun servers for video calls</li>
                 <li><b>Technologies:</b> JavaScript, React.js, Redux, PWA, Firebase, WebRTC</li>
-
-                <li></li>
-                <li><b>Demo:</b> <a target="_blank" href="https://chat.mngo.in">https://chat.mngo.in</a></li>
-                <li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoChat3Web">https://github.com/adityasuman2025/MNgoChat3Web</a></li>
             </ul>
         `
     },
@@ -465,7 +400,7 @@ const FILES_CONTENT = {
     },
     "resume.html": {
         "title": "Resume",
-        "content": '<div style="text-align: center;"><a class="resumeBtn" target="_blank" href="https://resume.mngo.in">Download Resume</a></div>'
+        "content": '<div style="text-align: center;"><a class="resumeBtn" target="_blank" href="https://drive.google.com/file/d/1FKkhU9SEod7knpwsJOJJ3Y1QnRZkpdEQ/view?usp=share_link">Download Resume</a></div>'
     },
     "follow_me.html": {
         "title": "Follow Me",
@@ -485,28 +420,13 @@ const FILES_CONTENT = {
                 <b>technologies used:</b> TypeScript, JavaScript, React.js<br />
                 <b>NPM Package:</b> <a href="https://www.npmjs.com/package/mngo-text-editor" target="_blank">https://www.npmjs.com/package/mngo-text-editor</a><br />
                 <b>declaration:</b> owner declares 100% hand-written code and no use of any other library in creation of MNgoTextEditor. This library owns the name of "MNgo Text Editor" and is a open-source software under MIT license.<br /><br />
-                &copy 2017-24 This property belongs to Aditya Suman
+                &copy 2017-26 This property belongs to Aditya Suman
             </div>
         `
     },
 }
 
-const API_BASE_URL = "https://apis.mngo.in"; // "http://localhost:3000" //
-const API_COUNTER_REF = "/api/counter";
-const PROJECT_NAME = "MNgo Text Editor";
-
 function App() {
-    useEffect(() => {
-        const deviceDetails = getDeviceDetails();
-
-        sendRequestToAPI(API_BASE_URL, `${API_COUNTER_REF}`, "POST", {
-            appName: PROJECT_NAME.split(" ").join(""),
-            location: window.location.href,
-            date: new Date().toLocaleString(),
-            device: `${deviceDetails.device} - ${deviceDetails.os} - ${deviceDetails.browser}`,
-        });
-    }, []);
-
     return (
         <MNgoTextEditor
             title={"adityasuman"}
