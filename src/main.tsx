@@ -70,18 +70,18 @@ const FILES_CONTENT = {
         "title": "About Me",
         "content": `
             Hello World, My name is <a>Aditya Suman</a><br/>
-            I\'m a programmer and a computer geek. I have professional skill in <a>Web & Mobile Application Development</a>.<br>
+            I\'m a <b>Senior Frontend Engineer</b> with <a>5+ years</a> of experience and a computer geek. I have professional skill in <a>Web & Mobile Application Development</a>.<br>
             I graduated from <b>IIT Patna</b> in 2020.<br/>
-            I have been employed as a <b>Full Time Software Engineer</b> at <a href="https://www.systematicventures.com" target="_blank" class="title_a">Systematic</a> and have worked Full Time at <a href="https://www.byjus.com" target="_blank" class="title_a">Byjus</a> in past and have also completed <b>internships at ISRO</b>, UpBrinGO, and 4 other startups.<br><br>
+            I am currently employed as a <b>Senior Frontend Engineer</b> at <a href="https://www.systematicventures.com" target="_blank" class="title_a">Systematic Ventures</a> and have worked Full Time at <a href="https://www.byjus.com" target="_blank" class="title_a">Byjus</a> in past and have also completed <b>internships at ISRO</b>, UpBrinGO, and 4 other startups.<br><br>
 
             <ul>
-                <li>With <a>3+ years</a> of professional experience in <b>Web Application Development</b>, I have primarily utilized <b>JavaScript</b>, TypeScript, <b>React.js</b>, Next.js, Node.js, Redux, TailwindCSS, HTML and CSS as my tech stacks.</li>
-                <li>I am currently <b>managing 2 junior</b> developers and was <b>leading, owning</b> and maintaining the <b>frontend</b> of my previous team consisting of <b>3 developers</b>. I am actively involved in <b>brainstorming sessions, PRD & solution</b> discussion and <b>code reviews</b>.</li>
-                <li>Having collaborated closely with <b>product managers and designers</b> to successfully implement <b>numerous features</b> and address bugs throughout my career, I understand the importance of seamlessly <b>integrating design concepts</b> into <b>functional features</b>.</li>
-                <li>I’ve also been instrumental in several <b>initiatives</b> that resulted in significant <b>cost savings</b> and increased signups for my current company, such as reducing <b>infrastructure costs by 50%</b> and <b>boosting signups by 40%</b>.</li>
-                <li>Moreover, I have a track record of successfully <b>integrating products/SDKs</b> into various client/team systems.</li>
-                <li>Additionally, I've implemented numerous internal and <b>external tools</b> that have greatly contributed to <b>informed business decision-making</b>.</li>
-                <li>Finally, I thrive in <b>fast-paced environments</b> and excel at solving complex problems to <b>deliver high-quality solutions</b> on time. This <b>adaptability</b> and problem-solving mindset are attributes I believe will be invaluable in meeting the challenges and demands of the company.</li>
+                <li>With <a>5+ years</a> of professional experience in <b>Web Application Development</b>, I specialize in <b>JavaScript, TypeScript, React.js, Next.js</b>, along with Node.js, Redux, Redux-Saga, TailwindCSS, HTML and CSS as my core tech stack.</li>
+                <li>I am currently <b>leading a team of 3 frontend developers</b> at Systematic Ventures, collaborating directly with <b>US-based stakeholders</b> to translate business requirements into scalable technical solutions and <b>owning delivery</b> from scoping through production release.</li>
+                <li>Expert in <b>modernizing development cycles</b> by integrating <b>agentic coding workflows (AI)</b> using <b>Cursor</b> across Development, PRD Technical Plan & Code Review, which has <b>reduced feature delivery man-days by 50%</b> and improved code standards & maintainability.</li>
+                <li>Having collaborated closely with <b>product managers and designers</b> to successfully ship <b>numerous features</b> like <b>Agent, AI Enhance, Profile Share, Simplify Signup, Analytics, PDF Export, Product Tour, Deal Terms, Advanced Search</b>, etc., I understand the importance of seamlessly <b>integrating design concepts</b> into <b>functional features</b>.</li>
+                <li>I've been instrumental in several <b>high-impact initiatives</b> — at Byjus the Subjective Assessment revamp <b>cut infrastructure costs by ~50%</b> and Signup Flow Improvement <b>boosted signups by 40%</b>, and at Systematic <b>Simplify Signup & Easy Onboarding sped up the signup process by 2x</b>.</li>
+                <li>Moreover, I have a track record of successfully <b>integrating products/SDKs</b> into various client/team systems and have implemented numerous internal and <b>external tools</b> that have greatly contributed to <b>informed business decision-making</b>.</li>
+                <li>Finally, I thrive in <b>fast-paced agile environments</b> and excel at solving complex problems to <b>deliver high-quality, scalable solutions</b> on time. This <b>adaptability</b> and problem-solving mindset are attributes I believe will be invaluable in meeting the challenges and demands of the company.</li>
             </ul>
             <br>
             
@@ -98,12 +98,21 @@ const FILES_CONTENT = {
     },
 
     "systematic_fte.html": {
-        "title": "Software Engineer",
-        "content": `<div class="floatRight">December 2023 - Present</div><a href="https://www.systematicventures.com" target="_blank" class="title_a">Systematic - Remote, India</a><br /><br />
+        "title": "Senior Frontend Engineer",
+        "content": `<div class="floatRight">December 2023 - Present</div><a href="https://www.systematicventures.com" target="_blank" class="title_a">Systematic Ventures - Remote, India</a><br /><br />
             <ul>
-                <li>Working as a frontend developer to deliever monthly product requirements to build the product.</li>
-                <li>Actively involved in <b>sprint planning, design discussion, brainstorming sessions, PRD & solution</b> discussion and code reviews.</li>
-                <li><b>Technologies:</b> JavaScript, TypeScript, Next.js, React.js, AWS</li>
+                <li><b>Leading a team of 3 frontend developers</b> to collaborate directly with <b>US-based stakeholders</b> to translate business requirements into scalable technical solutions, owning delivery from <b>scoping through production release</b>.</li>
+                <li>Integrated <b>Cursor</b> in our <b>Development, PRD Technical Plan & Code Review</b> workflow to improve & speed up the feature delivery and code standard and maintainability.</li>
+                <li>Added features like <b>Agent, AI Enhance, Profile Share, Simplify Signup, Analytics, PDF Export, Product Tour, Deal Terms, Advanced Search, Public & Private Profile, Easy Onboarding</b>, etc.</li>
+                <li>
+                    <a>Impact:</a>
+                    <ul>
+                        <li><b>Agentic Coding</b> using Cursor reduces <a>feature delivery man-days by 50%</a>.</li>
+                        <li><b>Agent & AI Enhance</b> significantly eases investors research effort.</li>
+                        <li>Signup process <a>speeds up by 2x</a> by data pre-population and SSO of <b>Simplify Signup & Easy Onboarding</b> feature.</li>
+                    </ul>
+                </li>
+                <li><b>Technologies:</b> JavaScript, TypeScript, React.js, Next.js, Posthog, Cursor, Netlify, etc.</li>
             </ul>
         `
     },
@@ -346,23 +355,25 @@ const FILES_CONTENT = {
         "title": "Achievements",
         "content": `
             <ul>
+                <li><a>Systematic Ventures: </a><b>Owned and built the main product</b> of the company. Integrated <b>Cursor & agentic coding workflows</b> across Dev, PRD & Code Review which <b>reduced feature delivery man-days by 50%</b>, and <b>Simplify Signup & Easy Onboarding sped up the signup process by 2x</b>.</li>
+
                 <li><a>Byjus: </a>Subjective Assessment Revamp <b>saved</b> our infra cost by almost <b>50%</b> and Signup Flow Improv. in BEP <b>increased</b> the chance of signup by <b>40%</b>.</li>
                 
-                <li><a href="https://disk.mngo.in/achievement/web_vital_notes_app" target="_blank">Web Vital Score: </a>Have scored <b>95+</b> in Web Performance of all my personal Web Projects.</li>
+                <li><a target="_blank">Web Vital Score: </a>Have scored <b>95+</b> in Web Performance of all my personal Web Projects.</li>
                 
-                <li><a href="https://disk.mngo.in/achievement/lor_isro_santhalakshmi_krishna" target="_blank">Internship at ISRO: </a>Recieved Letter of Recommendation and ranked among <b>top 2% students</b> worked under <b>S. Santhalakshmi, Scientist ‘SF’ & Manager SDG, ISTRAC-ISRO.</b></li>
+                <li><a target="_blank">Internship at ISRO: </a>Recieved Letter of Recommendation and ranked among <b>top 2% students</b> worked under <b>S. Santhalakshmi, Scientist ‘SF’ & Manager SDG, ISTRAC-ISRO.</b></li>
                 
-                <li><a href="https://disk.mngo.in/internship/3_oxyvin_internship_certificate" target="_blank">Internship at NGCN: </a>Recieved <b>Return Offer & Recommendation</b> on LinkedIn Profile from <b>Justin Sebastian, CEO of NGCN, Oxyvin.</b></li>
+                <li><a target="_blank">Internship at NGCN: </a>Recieved <b>Return Offer & Recommendation</b> on LinkedIn Profile from <b>Justin Sebastian, CEO of NGCN, Oxyvin.</b></li>
                 
-                <li><a href="https://disk.mngo.in/achievement/lor_dr_mayank_agrawal" target="_blank">Automation IIT Patna: </a>Got back-to-back <b>14 projects</b> from <b>Dr. Mayank Agrawal</b>, PIC Automation, IIT Patna, in a duration of <b>7 months</b>, starting from January 2020 to July 2020.</li>
+                <li><a target="_blank">Automation IIT Patna: </a>Assigned back-to-back <b>12 projects</b> from <b>Dr. Mayank Agrawal</b>, PIC Automation, IIT Patna, in a duration of <b>6 months</b>, January 2020 to June 2020.</li>
                 
-                <li><a href="https://disk.mngo.in/achievement/lor_dr_jimson_mathew" target="_blank">Professors of IIT Patna: </a>Got Letter of Recommendation from <b>Dr. Jimson Mathew, Head of Department (HOD),</b> Computer Science & Engg Department, IIT Patna and <b>Dr. Mayank Agrawal, Assistant Professor,</b> Computer Science & Engg Department, IIT Patna</li>
+                <li><a target="_blank">Professors of IIT Patna: </a>Got <b>Letter of Recommendation</b> from <b>Dr. Jimson Mathew, Head of Department (HOD),</b> CSE Dept., IIT Patna and <b>Letter of Appreciation</b> from <b>Dr. Mayank Agrawal, Assistant Professor,</b> CSE Dept., IIT Patna.</li>
                 
                 <li>
-                    <a target="_blank" href="https://disk.mngo.in/newspaper/gate_security_iitp_dainik">Gate Security App for IIT Patna: </a>2M+ total scans and 3k+ unique scans has been reported in a span of <b>3 months</b> and had <b>Media Coverage</b> of the project, its functionality and impact of the App in <b>2 newspapers</b> of Patna.
+                    <a target="_blank" href="https://drive.google.com/drive/folders/1_JJX7Pq5mKsyYMf2v3r8dHQROriULJPF?usp=share_link">Gate Security App for IIT Patna: </a><b>5M+</b> total scans and <b>10k+</b> unique scans have been reported till date, and had <b>Media Coverage</b> of the project and its impact (specially during covid) in <b>2 newspapers</b> of Patna.
                     <ul>
-                        <li><a target="_blank" href="https://disk.mngo.in/newspaper/gate_security_iitp_dainik">Dainik Bhaskar</a></li>
-                        <li><a target="_blank" href="https://disk.mngo.in/newspaper/gate_security_iitp_hindustan">Hindustan</a></li>
+                        <li><a target="_blank" href="https://drive.google.com/drive/folders/1_JJX7Pq5mKsyYMf2v3r8dHQROriULJPF?usp=share_link">Dainik Bhaskar</a></li>
+                        <li><a target="_blank">Hindustan</a></li>
                     </ul>
                 </li>
                 
@@ -370,7 +381,7 @@ const FILES_CONTENT = {
                 
                 <li><a>B.Tech Final Year Project (BTP): </a>Graded <b>9/10</b> in my final year project and received positive feedback from my project guide.</li>
                 
-                <li><a href="https://disk.mngo.in/achievement/appreciation_for_key_issue_app" target="_blank">Key Issue App for IIT Patna: </a>This app resulted in faster issuing and returning of keys which prevents queue and saves everyone’s time. <b>17,000+</b> keys of labs and rooms of different blocks of IIT Patna have been issued and returned till date.</li>
+                <li><a target="_blank">Key Issue App for IIT Patna: </a>This app resulted in faster issuing and returning of keys which prevents queue and saves everyone’s time. <b>17,000+</b> keys of labs and rooms of different blocks of IIT Patna have been issued and returned till date.</li>
                 
                 <li><a>Billing & Inventory ERP Software: </a><b>8,000+</b> invoices and quotations have been generated till date using software developed by me, during my internship at <b>NGCN.</b></li>
                 
@@ -386,13 +397,13 @@ const FILES_CONTENT = {
         "title": "Skills & Interests",
         "content": `
             <ul>
-            <li><b>General:</b> Web Application Development, Mobile Application Development, API Development</li>
-            <li><b>Programming language:</b> JavaScript, TypeScript, Java, Python</li>
-            <li><b>Web & App Technologies:</b> React.js, Next.js, Redux, Redux Saga, Redux Thunk, React-Native, TailwindCSS, jQuery, Node.js, Web-Socket, REST API, GraphQL, express.js, socket.io, kafka, Bootstrap, HTML, CSS</li>
-            <li><b>Database:</b> MySQL, mongoDB</li>
-            <li><b>Other Tools:</b> AWS, Google Firebase, Vercel, Android Studio, Git, Heroku, cPanel, Google Cloud Platform Compute Engine</li>
-            <li><b>Operating System:</b> Linux, Mac OS, Windows</li>
-        </ul>`
+                <li><b>General:</b> Web Application Development, Mobile Application Development, API Development, Agentic Coding Workflows (AI)</li>
+                <li><b>Primary Skills:</b> JavaScript, TypeScript, React.js, Next.js, Tailwind CSS, Redux, Redux-Saga, HTML, CSS</li>
+                <li><b>Secondary Skills:</b> Node.js, Java, Python, React-Native, jQuery, GraphQL, Web-Socket, REST API, express.js, socket.io, kafka, Bootstrap</li>
+                <li><b>Database:</b> MySQL, mongoDB, Firebase</li>
+                <li><b>Tools:</b> Cursor, Git, Vercel, Netlify, Posthog, Datadog, GTM, AWS, Android Studio, Heroku, cPanel, Google Cloud Platform Compute Engine</li>
+                <li><b>Operating System:</b> Linux, Mac OS, Windows</li>
+            </ul>`
     },
     "por.html": {
         "title": "Position Of Responsibility",
