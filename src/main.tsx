@@ -70,14 +70,14 @@ const FILES_CONTENT = {
         "title": "About Me",
         "content": `
             Hello World, My name is <a>Aditya Suman</a><br/>
-            I\'m a <b>Senior Frontend Engineer</b> with <a>5+ years</a> of experience and a computer geek. I have professional skill in <a>Web & Mobile Application Development</a>.<br>
+            I\'m a <b>Senior Frontend Engineer</b> with <a>5+ years</a> of experience having professional skill in <a>Web & Mobile Application Development</a>.<br>
             I graduated from <b>IIT Patna</b> in 2020.<br/>
             I am currently employed as a <b>Senior Frontend Engineer</b> at <a href="https://www.systematicventures.com" target="_blank" class="title_a">Systematic Ventures</a> and have worked Full Time at <a href="https://www.byjus.com" target="_blank" class="title_a">Byjus</a> in past and have also completed <b>internships at ISRO</b>, UpBrinGO, and 4 other startups.<br><br>
 
             <ul>
                 <li>With <a>5+ years</a> of professional experience in <b>Web Application Development</b>, I specialize in <b>JavaScript, TypeScript, React.js, Next.js</b>, along with Node.js, Redux, Redux-Saga, TailwindCSS, HTML and CSS as my core tech stack.</li>
-                <li>I am currently <b>leading a team of 3 frontend developers</b> at Systematic Ventures, collaborating directly with <b>US-based stakeholders</b> to translate business requirements into scalable technical solutions and <b>owning delivery</b> from scoping through production release.</li>
-                <li>Expert in <b>modernizing development cycles</b> by integrating <b>agentic coding workflows (AI)</b> using <b>Cursor</b> across Development, PRD Technical Plan & Code Review, which has <b>reduced feature delivery man-days by 50%</b> and improved code standards & maintainability.</li>
+                <li>Currently <b>leading a team of 3 frontend developers</b> at Systematic Ventures, collaborating directly with <b>US-based stakeholders</b> to translate business requirements into scalable technical solutions and <b>owning the complete feature delivery</b> from scoping to production release.</li>
+                <li>I also have experience in <b>modernizing development cycles</b> using <b>agentic coding</b> tools like <b>Cursor</b>. be it from PRD Technical Planning, development to code reviews, which significantly <b>reduces feature delivery man-days</b> and improved code standards & maintainability.</li>
                 <li>Having collaborated closely with <b>product managers and designers</b> to successfully ship <b>numerous features</b> like <b>Agent, AI Enhance, Profile Share, Simplify Signup, Analytics, PDF Export, Product Tour, Deal Terms, Advanced Search</b>, etc., I understand the importance of seamlessly <b>integrating design concepts</b> into <b>functional features</b>.</li>
                 <li>I've been instrumental in several <b>high-impact initiatives</b> — at Byjus the Subjective Assessment revamp <b>cut infrastructure costs by ~50%</b> and Signup Flow Improvement <b>boosted signups by 40%</b>, and at Systematic <b>Simplify Signup & Easy Onboarding sped up the signup process by 2x</b>.</li>
                 <li>Moreover, I have a track record of successfully <b>integrating products/SDKs</b> into various client/team systems and have implemented numerous internal and <b>external tools</b> that have greatly contributed to <b>informed business decision-making</b>.</li>
