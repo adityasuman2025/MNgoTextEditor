@@ -1,78 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg-main: #0b0c10;
+    --bg-sidebar: #13141c;
+    --bg-editor: #191b24;
+    --bg-tab-bar: #0f1015;
+    --bg-tab-inactive: #13141c;
+    --bg-tab-active: #191b24;
+    --border-color: rgba(255, 255, 255, 0.07);
+    --text-muted: #7e849b;
+    --text-normal: #c5cbdc;
+    --accent-color: #6366f1;
+    --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    --accent-hover-gradient: linear-gradient(135deg, #4f46e5 0%, #9333ea 100%);
+    --terminal-bg: rgba(20, 21, 30, 0.75);
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Outfit', -apple-system, sans-serif;
     overflow: hidden;
-    color: rgba(255, 255, 255, 0.87);
-    background: #181915;
-
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
+    color: var(--text-normal);
+    background: var(--bg-main);
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 ::-webkit-scrollbar {
-    width: 0;
-    height: 0
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .editorWindow {
-    background: #181915
-}
-
-.clamplines {
-    display: -webkit-box !important;
-    -webkit-line-clamp: 1 !important;
-    -webkit-box-orient: vertical !important;
-    text-overflow: clip !important;
-    overflow: hidden !important;
-    word-break: break-all !important
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .titleBar {
     max-width: 100% !important;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 0 5px;
-    height: var(--titleBarHeight)
+    justify-content: space-between;
+    padding: 0 16px;
+    height: var(--titleBarHeight);
+    background: var(--bg-tab-bar);
+    border-bottom: 1px solid var(--border-color);
+    user-select: none;
 }
 
 .titleBarBtns {
-    display: flex
+    display: flex;
+    gap: 8px;
+}
+
+.closBtn,
+.miniBtn,
+.maxiBtn {
+    height: 11px;
+    width: 11px;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+.titleBarBtns:hover .closBtn,
+.titleBarBtns:hover .miniBtn,
+.titleBarBtns:hover .maxiBtn {
+    transform: scale(1.1);
 }
 
 .closBtn {
-    height: 12px;
-    width: 12px;
-    border-radius: 100%;
-    margin-right: 7px;
-    background: #fe6254
+    background: #ff5f56;
 }
 
 .miniBtn {
-    height: 12px;
-    width: 12px;
-    border-radius: 100%;
-    margin-right: 7px;
-    background: #fdc92d
+    background: #ffbd2e;
 }
 
 .maxiBtn {
-    height: 12px;
-    width: 12px;
-    border-radius: 100%;
-    margin-right: 7px;
-    background: #28d33f
+    background: #27c93f;
 }
 
 .titleBarTitle {
-    display: flex;
-    flex: 1;
-    color: #9a9a98;
-    font-size: 13px;
-    justify-content: center
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 .mainWindow {
@@ -80,57 +106,112 @@ body {
     width: 100vw;
     overflow: hidden;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #282923
+    background: var(--bg-editor);
 }
 
 .filesListBar {
     min-width: var(--filesListBarWidth);
     max-width: var(--filesListBarWidth);
     height: 100%;
+    min-height: 0;
+    max-height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
-    background: #181915;
-    padding: 10px
+    background: var(--bg-sidebar);
+    border-right: 1px solid var(--border-color);
+    padding: 12px 8px;
+    box-sizing: border-box;
 }
 
 .filesListBarTitle {
-    color: #9a9a98;
-    font-weight: 700;
-    position: sticky;
-    top: 0;
-    background: #181915;
-    padding: 5px
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
 }
 
 .filesListBarList {
-    padding: 5px 0;
-    color: #c8c9c7;
-    font-size: 14px
+    color: var(--text-normal);
+    font-size: 13px;
 }
 
 .family {
-    padding-left: 5px
+    padding-left: 0px;
 }
 
-.parent {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    padding: 3px 0
-}
-
+.parent,
 .child {
     cursor: pointer;
     display: flex;
     align-items: center;
-    padding: 3px;
-    padding-left: 5px
+    padding: 6px 8px;
+    margin: 2px 0;
+    border-radius: 6px;
+    transition: all 0.2s;
+    color: var(--text-normal);
+}
+
+.parent:hover,
+.child:hover {
+    background: rgba(255, 255, 255, 0.04);
+    color: #fff;
+}
+
+.parent::before,
+.child::before {
+    content: '';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+    flex-shrink: 0;
+}
+
+.parent::before {
+    content: '›';
+    color: var(--text-muted);
+    font-size: 15px;
+    font-family: monospace;
+    line-height: 1;
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s;
+}
+
+.parent:hover::before {
+    color: #fff;
+}
+
+.parent.open::before {
+    transform: rotate(90deg);
+}
+
+.children {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-4px);
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding-left: 6px;
+}
+
+.children.open {
+    max-height: 4000px;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .fileIcon {
-    margin-right: 5px
+    margin-right: 8px;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.parent:hover .fileIcon,
+.child:hover .fileIcon {
+    opacity: 1;
 }
 
 .fileWindow {
@@ -138,237 +219,318 @@ body {
     max-width: calc(100vw - var(--filesListBarWidth));
     height: 100%;
     overflow-x: hidden;
-    overflow-y: auto
+    overflow-y: auto;
+    background: var(--bg-editor);
 }
 
 .tabBar {
     position: sticky;
     top: 0;
-    background: #181915;
+    background: var(--bg-tab-bar);
     width: 100%;
     height: var(--tabBarHeight);
     display: flex;
     align-items: flex-end;
     overflow-x: auto;
-    overflow-y: hidden
+    overflow-y: hidden;
+    border-bottom: 1px solid var(--border-color);
+    z-index: 10;
 }
 
 .tabBarItem {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 5px;
-    padding: 5px;
-    font-size: 13px;
-    max-height: 100%;
-    min-width: 150px;
-    max-width: 150px;
-    background: #21221d;
-    color: #9a9a98;
-    border-radius: 10px 10px 0 0;
-    cursor: pointer
+    padding: 0 12px;
+    height: 100%;
+    font-size: 12px;
+    font-weight: 500;
+    min-width: 130px;
+    max-width: 160px;
+    background: var(--bg-tab-inactive);
+    color: var(--text-muted);
+    border-right: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
-.active {
-    background: #282923;
-    color: #e2e2e2
+.tabBarItem:hover {
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--text-normal);
+}
+
+.tabBarItem.active {
+    background: var(--bg-tab-active);
+    color: #fff;
+    border-top: 2px solid var(--accent-color);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.tabBarItem div:last-child {
+    font-size: 10px;
+    opacity: 0.5;
+    padding: 2px 5px;
+    border-radius: 4px;
+    transition: all 0.15s;
+}
+
+.tabBarItem div:last-child:hover {
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 1;
+}
+
+.clamplines {
+    flex: 1;
+    margin-right: 6px;
+    display: block !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
 }
 
 .fileContainer {
-    font-family: 'Roboto Mono', monospace;
-    margin: 18px 50px;
-    font-size: 13px !important;
-    color: #c8c9c7
+    font-family: 'Fira Code', monospace;
+    margin: 32px 40px;
+    font-size: 14px !important;
+    color: var(--text-normal);
+    max-width: 100%;
 }
 
 .fileTitle {
     padding: 0;
     margin: 0;
-    margin-bottom: 5px;
-    color: #f3246f
+    margin-bottom: 12px;
+    color: #f43f5e;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 .fileContent {
     margin-left: 20px;
-    line-height: 20px
+    line-height: 1.6;
 }
 
 .fileContent ul {
-    margin: 0;
+    margin: 12px 0 12px 20px;
     padding: 0;
-    margin-left: 20px;
-    line-height: 20px;
-    word-wrap: break-word
+    line-height: 1.6;
 }
 
 .fileContent li {
     padding: 0;
-    margin: 5px;
-    margin-left: 10px;
-    word-wrap: break-word
+    margin: 6px 0;
 }
 
-.fileContent a {
-    color: #5cbbce;
-    text-decoration: none
+.fileContent a,
+.terminal-content a {
+    color: #38bdf8 !important;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: all 0.2s;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.fileContent a:hover,
+.terminal-content a:hover {
+    color: #7dd3fc !important;
+    transform: translateY(-1px);
 }
 
 .fileContent b {
-    font-weight: 400;
-    color: #9ed72b
+    font-weight: 600;
+    color: #a3e635;
+    transition: color 0.2s;
 }
 
 .floatRight {
-    float: right
+    float: right;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+/* Terminal Styling */
+.terminal-body {
+    font-family: 'Fira Code', monospace;
+    background: var(--terminal-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s;
+}
+
+.terminal-header,
+.terminal-prompt {
+    color: #38bdf8;
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.terminal-prompt {
+    margin-bottom: 0px;
+}
+
+.terminal-accent,
+.terminal-cursor {
+    color: #818cf8;
+}
+
+.terminal-loader,
+.terminal-success-message {
+    color: #4ade80;
+    margin-bottom: 16px;
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+.terminal-success-message {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.terminal-content {
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    padding-left: 20px;
+    margin-bottom: 20px;
+    color: #e2e8f0;
+}
+
+.terminal-content b {
+    color: #fb7185 !important;
+    font-weight: 600;
+}
+
+.terminal-cursor {
+    animation: blinkCursor 0.8s step-start infinite;
+}
+
+@keyframes blinkCursor {
+    50% {
+        opacity: 0;
+    }
+}
+
+#typewriter-container.typing::after {
+    content: '▋';
+    animation: cursorBlink 0.8s step-start infinite;
+    color: #818cf8;
+    margin-left: 2px;
+}
+
+@keyframes cursorBlink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.terminal-resume-btn-container {
+    margin: 28px 0 16px 0;
 }
 
 .resumeBtn {
-    background-color: #5cbbce;
-    color: #e1e1e1 !important;
-    padding: 10px;
-    border-radius: 5px
+    display: inline-flex;
+    align-items: center;
+    background: var(--accent-gradient);
+    color: #fff !important;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
 }
 
-.hiddenText {
-    width: fit-content;
-    opacity: 0
+.resumeBtn:hover {
+    background: var(--accent-hover-gradient) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.6) !important;
+    color: #fff !important;
 }
 
-#line-1 {
-    width: fit-content;
-    border-right: 2px solid rgba(255, 255, 255, .75);
-    white-space: nowrap;
-    overflow: hidden
+.resumeBtn:active {
+    transform: translateY(0) !important;
 }
 
-#line-1 b {
-    color: #5cbbce
-}
-
-#line-1 a {
-    color: #f3246f;
-    text-decoration: none
-}
-
-.anim-typewriter {
-    animation: typewriter 2s steps(30) normal, blinkTextCursor .7s ease-in-out infinite
-}
-
-.anim-typewriter-remove {
-    animation: typewriter_remove 2s steps(30) normal both, blinkTextCursor .7s ease-in-out infinite
-}
-
-.anim-typewriter2 {
-    animation: typewriter2 3s steps(30) normal, blinkTextCursor .7s ease-in-out infinite
-}
-
-.anim-typewriter-remove2 {
-    animation: typewriter_remove2 3s steps(30) normal both, blinkTextCursor .7s ease-in-out infinite
-}
-
-@keyframes typewriter {
-    from {
-        width: 0
-    }
-
-    to {
-        width: var(--typewriterText1Width)
-    }
-}
-
-@keyframes typewriter_remove {
-    from {
-        width: var(--typewriterText1Width)
-    }
-
-    to {
-        width: 0
-    }
-}
-
-@keyframes typewriter2 {
-    from {
-        width: 0
-    }
-
-    to {
-        width: var(--typewriterText2Width)
-    }
-}
-
-@keyframes typewriter_remove2 {
-    from {
-        width: var(--typewriterText2Width)
-    }
-
-    to {
-        width: 0
-    }
-}
-
-@keyframes blinkTextCursor {
-    from {
-        border-right-color: rgba(255, 255, 255, .75)
-    }
-
-    to {
-        border-right-color: transparent
-    }
-}
-
+/* Mobile Sidebar & Overlay & FAB */
 .sidebarToggleBtn {
     display: none;
-    background: transparent;
-    border: none;
-    color: #9a9a98;
-    font-size: 20px;
-    cursor: pointer;
-    padding: 0 10px;
-    line-height: 1;
-    user-select: none;
 }
 
 .sidebarOverlay {
     display: none;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width: 800px) {
     .sidebarToggleBtn {
-        display: block;
-        position: absolute;
-        right: 15px;
+        display: flex;
+        position: fixed;
+        bottom: 24px;
+        left: 24px;
+        width: 52px;
+        height: 52px;
+        border-radius: 52px;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        background: var(--accent-gradient);
+        border: none;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .sidebarToggleBtn:hover {
+        transform: scale(1.05) translateY(-2px);
+        box-shadow: 0 12px 30px rgba(99, 102, 241, 0.6);
+    }
+
+    .sidebarToggleBtn.active {
+        background: #ff5f56;
+        box-shadow: 0 8px 24px rgba(255, 95, 86, 0.4);
+        transform: rotate(90deg);
     }
 
     .sidebarOverlay {
         display: block;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(2px);
+        height: 100vh;
+        background: rgba(4, 5, 8, 0.7);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
         z-index: 99;
     }
 
     .mainWindow {
         position: relative;
-        flex-direction: column;
     }
 
     .filesListBar {
         position: absolute;
         top: 0;
+        bottom: 0;
         left: 0;
-        min-width: 250px !important;
-        max-width: 250px !important;
-        height: 100% !important;
-        background: #181915 !important;
-        box-shadow: 4px 0 15px rgba(0, 0, 0, 0.6);
+        height: auto !important;
+        min-width: var(--filesListBarWidth) !important;
+        max-width: var(--filesListBarWidth) !important;
+        background: var(--bg-sidebar) !important;
+        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
         z-index: 100;
-        padding: 15px !important;
+        padding: 12px 8px 80px 8px !important;
         transform: translateX(-100%);
         transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch;
     }
 
     .filesListBar.open {
@@ -382,7 +544,7 @@ body {
     }
 
     .fileContainer {
-        margin: 15px !important;
+        margin: 20px !important;
     }
 
     .fileContent {
@@ -392,8 +554,7 @@ body {
     .floatRight {
         float: none !important;
         display: block;
-        margin-bottom: 5px;
-        color: #9a9a98;
-        font-size: 12px;
+        margin-top: 4px;
+        margin-bottom: 8px;
     }
 }

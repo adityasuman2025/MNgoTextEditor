@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { MNgoTextEditor } from "./lib";
+import packageJson from '../package.json';
 
 const FILES = [
     {
@@ -69,23 +70,17 @@ const FILES_CONTENT = {
     "about_me.html": {
         "title": "About Me",
         "content": `
-            Hello World, My name is <a>Aditya Suman</a><br/>
-            I\'m a <b>Senior Frontend Engineer</b> with <a>5+ years</a> of experience having professional skill in <a>Web & Mobile Application Development</a>.<br>
-            I graduated from <b>IIT Patna</b> in 2020.<br/>
-            I am currently employed as a <b>Senior Frontend Engineer</b> at <a href="https://www.systematicventures.com" target="_blank" class="title_a">Systematic Ventures</a> and have worked Full Time at <a href="https://www.byjus.com" target="_blank" class="title_a">Byjus</a> in past and have also completed <b>internships at ISRO</b>, UpBrinGO, and 4 other startups.<br><br>
+            Hi There, I am <a>Aditya Suman</a> from India.<br/>
+            I'm a <b>Senior Frontend Engineer</b> with <a>5.5+ years</a> of experience in building scalable & high-performance web applications utilising <b>JavaScript, TypeScript, React, and Next.js</b> as my core tech stack.<br/>
+            I graduated from <b>IIT Patna</b> in 2020.<br/><br/>
 
             <ul>
-                <li>With <a>5+ years</a> of professional experience in <b>Web Application Development</b>, I specialize in <b>JavaScript, TypeScript, React.js, Next.js</b>, along with Node.js, Redux, Redux-Saga, TailwindCSS, HTML and CSS as my core tech stack.</li>
-                <li>Currently <b>leading a team of 3 frontend developers</b> at Systematic Ventures, collaborating directly with <b>US-based stakeholders</b> to translate business requirements into scalable technical solutions and <b>owning the complete feature delivery</b> from scoping to production release.</li>
-                <li>I also have experience in <b>modernizing development cycles</b> using <b>agentic coding</b> tools like <b>Cursor</b>. be it from PRD Technical Planning, development to code reviews, which significantly <b>reduces feature delivery man-days</b> and improved code standards & maintainability.</li>
-                <li>Having collaborated closely with <b>product managers and designers</b> to successfully ship <b>numerous features</b> like <b>Agent, AI Enhance, Profile Share, Simplify Signup, Analytics, PDF Export, Product Tour, Deal Terms, Advanced Search</b>, etc., I understand the importance of seamlessly <b>integrating design concepts</b> into <b>functional features</b>.</li>
-                <li>I've been instrumental in several <b>high-impact initiatives</b> — at Byjus the Subjective Assessment revamp <b>cut infrastructure costs by ~50%</b> and Signup Flow Improvement <b>boosted signups by 40%</b>, and at Systematic <b>Simplify Signup & Easy Onboarding sped up the signup process by 2x</b>.</li>
-                <li>Moreover, I have a track record of successfully <b>integrating products/SDKs</b> into various client/team systems and have implemented numerous internal and <b>external tools</b> that have greatly contributed to <b>informed business decision-making</b>.</li>
-                <li>Finally, I thrive in <b>fast-paced agile environments</b> and excel at solving complex problems to <b>deliver high-quality, scalable solutions</b> on time. This <b>adaptability</b> and problem-solving mindset are attributes I believe will be invaluable in meeting the challenges and demands of the company.</li>
+                <li>I currently work remotely for a <b>US-based startup</b> where I independently build, own, and scale the entire frontend. So I am highly comfortable with <a>asynchronous collaboration</a>, independent problem-solving, and delivering high-quality code <a>across different time zones</a>. I directly collaborate with US-based stakeholders to translate their business requirements into scalable technical solutions, owning the complete feature delivery from scoping to production release.</li>
+                <li>I also have experience in working with modern development cycles using <b>agentic coding tools like Cursor, Antigravity</b>. Be it from PRD Technical Planning, development to code reviews, which significantly <a>reduces feature delivery timeline</a> and improved code standards & maintainability.</li>
+                <li>In my previous company, I co-led an architecture to convert a legacy infrastructure into a <b>modular React SDK</b>, that <a>reduced our infrastructure costs by around 50%</a>. I am deeply passionate about web performance and always target a <b>Web Vital Score of 95+</b> across my projects because you know fast software drives user retention.</li>
             </ul>
             <br>
-            
-            Other than programming I use to spend time in watching movies and youtube, listening songs and nature photography.
+            I’m looking for my next challenge in a fast-paced, product-driven environment where I can be part of frontend initiatives and collaborate with high-performing teams. Looking forward to discussing how I can add value to your team.
         `
     },
     "contact_me.html": {
@@ -410,9 +405,8 @@ const FILES_CONTENT = {
         "content": `
             <div>
                 @adityasuman profile<br />
-                <b>version:</b> 3.16.11<br />
-                <b>latest release:</b> 23 November 2023<br />
-                <b>release date:</b> 24 January 2020<br />
+                <b>version:</b> ${packageJson.version}<br />
+                <b>latest release:</b> 20 June 2026<br />
                 <b>first release:</b> 15 March 2017<br />
                 <b>developer:</b> Aditya Suman<br />
                 <b>contact:</b> adityasuman2025@gmail.com<br>
@@ -429,8 +423,8 @@ function App() {
     return (
         <MNgoTextEditor
             title={"adityasuman"}
-            typeWriterText1={"Hello <b>World</b>"}
-            typeWriterText2={"This is <b>Aditya</b> <a>Suman</a>"}
+            typeWriterFileKey={"about_me.html"}
+            resumeFileKey={"resume.html"}
             files={FILES}
             filesContent={FILES_CONTENT}
         />
