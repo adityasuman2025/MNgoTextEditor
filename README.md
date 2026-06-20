@@ -1,109 +1,140 @@
 # mngo-text-editor
-This library is available at [mngo-text-editor](https://www.npmjs.com/package/mngo-text-editor)
 
+A premium, highly interactive React and TypeScript component that mimics the aesthetics of the **Sublime Text Editor**. Build a beautiful developer profile or portfolio page instantly.
 
-## Demo
-[mngo.in](https://mngo.in)
+This library is available on npm at [mngo-text-editor](https://www.npmjs.com/package/mngo-text-editor).
 
-[adityasuman.mngo.in](https://adityasuman.mngo.in)
+---
 
+## Live Demo
 
-## Brief:
-A JavaScript Library (npm package) to memic the design of Sublime Text Editor. One can easily create his web profile in react.js by installing `mngo-text-editor` package
+- Portfolio Profile: [adityas.site](https://adityas.site)
 
+---
 
-## Screenshots:
-<img src="screenshots/1.png" alt="screenshot 1">
+## Features
+- **Aesthetic UI**: Smooth, dark terminal theme with window controls, responsive layout, and clean typography.
+- **Dynamic File Tree**: Interactive sidebar with folder toggles, arrow key keyboard navigation, and file selections.
+- **Typewriter Compiler**: Built-in typewriter HTML parser to simulate compiling and compiling success states.
+- **Highly Modular**: Decoupled component layers fully typed in TypeScript.
+- **A11y (Accessibility)**: Screen-reader friendly DOM landmarks and full keyboard accessibility.
+- **Native Fonts**: Fast loading via native system font stacks.
 
-<img src="screenshots/2.png" alt="screenshot 2">
+---
 
+## Component Props
+
+| Prop | Type | Default | Description |
+|---|---|---|---|
+| `title` | `string` | `'adityasuman'` | The editor's primary project title shown in the header. |
+| `files` | `FileNode[]` | `[]` | Array describing the sidebar file/folder hierarchy. |
+| `filesContent` | `FilesContentMap` | `{}` | Key-value mapping of file keys to titles and HTML content. |
+| `typeWriterFileKey` | `string` | `'about_me.html'` | The key of the file inside `filesContent` that will be typed out upon initial load. |
+| `resumeFileKey` | `string` | `'resume.html'` | The key of the file containing the resume download button HTML. |
+| `titleBarHeight` | `string` | `'25px'` | CSS height of the window title bar. |
+| `tabBarHeight` | `string` | `'30px'` | CSS height of the editor tab bar. |
+| `filesListBarWidth` | `string` | `'280px'` | CSS width of the sidebar folder view. |
+
+---
+
+## TypeScript Type Definitions
+
+Below are the exact TypeScript interfaces for the props used by `mngo-text-editor`:
+
+### `FileNode`
+Used to construct the sidebar directory structure dynamically.
+```typescript
+export interface FileNode {
+    type: 'file' | 'folder' | string; // Type of node
+    srcKey: string;                    // Name/Key of the file or folder
+    defaultOpen?: boolean;             // Open by default if it's a folder
+    files?: FileNode[];                // Recursive child nodes (for folders)
+    [key: string]: any;                // Supports additional developer attributes
+}
+```
+
+### `FileContent`
+Represents the title and rich HTML layout data of an openable file.
+```typescript
+export interface FileContent {
+    title: string;                     // HTML Tag title wrapper (e.g. "About Me")
+    content: string;                   // Rich HTML string representing file content
+}
+```
+
+### `FilesContentMap`
+A map of file keys to their respective titles and contents.
+```typescript
+export interface FilesContentMap {
+    [fileKey: string]: FileContent;    // fileKey matches srcKey in FileNode (e.g., "about_me.html")
+}
+```
+
+---
 
 ## Usage
+
+### Basic Component Import
+Install the package:
+```bash
+npm install mngo-text-editor
+```
+
+Use the component in your React application:
+```tsx
+import React from 'react';
+import { MNgoTextEditor, FileNode, FilesContentMap } from 'mngo-text-editor';
+import 'mngo-text-editor/dist/style.css'; // Don't forget the CSS bundle!
+
+const FILES: FileNode[] = [
+  {
+    type: "folder",
+    srcKey: "my_project",
+    defaultOpen: true,
+    files: [
+      { type: "file", srcKey: "about_me.html" },
+      { type: "file", srcKey: "skills.html" }
+    ]
+  }
+];
+
+const FILES_CONTENT: FilesContentMap = {
+  "about_me.html": {
+    title: "About Me",
+    content: "Hi, I am a <b>Software Engineer</b> utilizing React & Node.js."
+  },
+  "skills.html": {
+    title: "Skills",
+    content: "JavaScript, TypeScript, React, Next.js, CSS."
+  }
+};
+
+function App() {
+  return (
     <MNgoTextEditor
-        titleBarHeight={string}
-        tabBarHeight={string}
-        filesListBarWidth={string}
-        title={string}
-        typeWriterText1={string}
-        typeWriterText2={string}
-        files={array}
-        filesContent={object}
+      title="portfolio"
+      files={FILES}
+      filesContent={FILES_CONTENT}
+      typeWriterFileKey="about_me.html"
     />
+  );
+}
+```
 
-`props example`
-
-1. `titleBarHeight`  default value is "25px"
-2. `tabBarHeight`  default value is  "30px"
-3. `filesListBarWidth`  default value is "220px"
-4. `title` "adityasuman2025"
-5. `typeWriterText1` "Hello <b>World</b>" (html string)
-6. `typeWriterText2` "This is <b>Aditya</b> <a>Suman</a>" (html string)
-7. `files`  
-        
-
-            [
-                {
-                    "type": "folder", "srcKey": "adityasuman", "defaultOpen": true,
-                    "files": [
-                        { "type": "file", "srcKey": "about_me.html" },
-                        { "type": "file", "srcKey": "contact_me.html" },
-                        {
-                            "type": "folder", "srcKey": "work_experience",
-                            "files": [ ]
-                        }
-                    ]
-                },
-                { "type": "file", "srcKey": "follow_me.html" },
-            ]
-
-        
-    1. `type` can be `file` or `folder`
-    2. `srcKey` is the name of the file that will appear in left side bar and the same `key` is used in `filesContent` props to contain content of that file
-8. `filesContent`  
-        
-
-            {
-                "about_me.html": {
-                    "title": "<About Me>",
-                    "content": 'I\'m a programmer and a computer geek.<br>I have professional skill in Mobile & Web Application Development. <br>Currently I am Full Time Software Engineer at <a href="https://www.byjus.com/" target="_blank" class="title_a">Byjus</a> and have done internship at <b>ISRO, UpBrinGO & 4 other startups</b>.<br>Other than programming I use to spend time in reading novels, listening songs, graphics designing and nature photography.'
-                },
-            }
-
-        
-    1. key (about_me.html) is the `srcKey` from `files` props
-    2. `title` is the title of the file (string)
-    3. `content` is the content of the file (html string)
-
-
-## Installation
-1. npm install
-2. npm start
-
+---
 
 ## Available Scripts
 
-In the project directory, you can run
+In the project development workspace, you can run:
 
 ### `npm start`
+Runs the host application locally in development mode (using Vite).
 
-Runs the app in the development mode
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### `npm run build`
+Compiles the static demo site into production assets.
 
-### `npm run lib-build`
-
-it is for final package build which create `dist` folder.
-
-### `npm run build-publish`
-
-this command make build of the project and publishes it, basically it is combination of `npm run lib-build` and `npm publish`
-
-### `npm publish`
-
-to publish the project on npm
-
-`Note`: do `npm run lib-build` before `npm publish` because it publishes dist folder as defined as key main, module, files in package.json, and do not forget to login in npm using `npm login`
-
+---
 
 ## License
 
-All rights reserved under MNgo.
+All rights reserved under MNgo / MIT.

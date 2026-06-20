@@ -1,7 +1,7 @@
 {
     "name": "mngo-text-editor",
     "private": false,
-    "version": "3.17.0",
+    "version": "3.17.01",
     "sideEffects": false,
     "type": "module",
     "homepage": "./",
