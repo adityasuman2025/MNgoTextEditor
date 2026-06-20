@@ -22,6 +22,7 @@ export default function MNgoTextEditor({
     const [tabBarFileKeys, setTabBarFileKeys] = useState<string[]>([]);
     const [activeTabFileIndex, setActiveTabFileIndex] = useState<any>(undefined);
     const [typewriterTextWidths, setTypewriterTextWidths] = useState<{ [key: string]: any }>({});
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     useEffect(() => {
         if (!tabBarFileKeys.length) {
@@ -83,6 +84,7 @@ export default function MNgoTextEditor({
             setActiveTabFileIndex(tabBarFileKeys.length);
             setTabBarFileKeys([...tabBarFileKeys, srcKey]);
         }
+        setIsSidebarOpen(false);
     }
 
     function handleTabBarItemCloseClick(e: any, index: number) {
@@ -145,10 +147,19 @@ export default function MNgoTextEditor({
                 </div>
 
                 <div className='titleBarTitle'> {title} - MNgo Text Editor </div>
+
+                <button 
+                    className="sidebarToggleBtn" 
+                    onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+                    aria-label="Toggle sidebar"
+                >
+                    {isSidebarOpen ? "✕" : "☰"}
+                </button>
             </div>
 
             <div className='mainWindow' >
-                <div className='filesListBar' >
+                {isSidebarOpen && <div className="sidebarOverlay" onClick={() => setIsSidebarOpen(false)} />}
+                <div className={`filesListBar ${isSidebarOpen ? 'open' : ''}`} >
                     <div className='filesListBarTitle'>FOLDERS</div>
                     <div className='filesListBarList'>
                         {files?.map((item: any, idx: number) => renderFileOrFolder(idx, item, idx + "_" + item?.type))}

@@ -99,40 +99,29 @@ const FILES_CONTENT = {
 
     "systematic_fte.html": {
         "title": "Senior Frontend Engineer",
-        "content": `<div class="floatRight">December 2023 - Present</div><a href="https://www.systematicventures.com" target="_blank" class="title_a">Systematic Ventures - Remote, India</a><br /><br />
+        "content": `<div class="floatRight">December 2023 - Present</div><a href="https://www.systematicventures.com" target="_blank" class="title_a">Systematic Ventures - Remote</a><br /><br />
             <ul>
-                <li><b>Leading a team of 3 frontend developers</b> to collaborate directly with <b>US-based stakeholders</b> to translate business requirements into scalable technical solutions, owning delivery from <b>scoping through production release</b>.</li>
-                <li>Integrated <b>Cursor</b> in our <b>Development, PRD Technical Plan & Code Review</b> workflow to improve & speed up the feature delivery and code standard and maintainability.</li>
-                <li>Added features like <b>Agent, AI Enhance, Profile Share, Simplify Signup, Analytics, PDF Export, Product Tour, Deal Terms, Advanced Search, Public & Private Profile, Easy Onboarding</b>, etc.</li>
-                <li>
-                    <a>Impact:</a>
-                    <ul>
-                        <li><b>Agentic Coding</b> using Cursor reduces <a>feature delivery man-days by 50%</a>.</li>
-                        <li><b>Agent & AI Enhance</b> significantly eases investors research effort.</li>
-                        <li>Signup process <a>speeds up by 2x</a> by data pre-population and SSO of <b>Simplify Signup & Easy Onboarding</b> feature.</li>
-                    </ul>
-                </li>
-                <li><b>Technologies:</b> JavaScript, TypeScript, React.js, Next.js, Posthog, Cursor, Netlify, etc.</li>
+                <li><b>Frontend Ownership:</b> Lead and own the frontend team of the core product, collaborating directly with US-based stakeholders to scope, build, and deploy technical solutions. Architected complex frontend modules including dynamic layouts (<a>Profile Share</a>), multi-step forms (<a>Simplify Signup, Onboarding</a>), advanced client-side data filtering (<a>Advanced Search</a>) and AI Enhance & Chat.</li>
+                <li><b>AI Workflow Innovation:</b> Integrated Agentic Coding Workflows (<a>Cursor</a>) into the dev lifecycle, accelerating feature delivery timeline.</li>
+                <li><b>Performance Optimization:</b> Implemented strategic code-splitting and lazy-loaded heavy modules (<a>AI Score Charts/Insights</a>), shrinking initial JS payloads and optimizing network delivery costs. Managed client-side access levels by writing reusable rules and wrapper guards to separate Public & Private Profile data, NDA Signing workflows, and restricted Deal Rooms safely.</li>
+                <li><b>Improved User Experience:</b> Engineered zero-lag UI rendering using API caching (react-query), predictive skeleton loaders, de-prioritizing non-critical scripts, paginated data delivery to achieve sub-second loading speeds.</li>
+                <li><b>Saved Infra Cost:</b> Offloaded heavy data processing to the client side for complex data tables sorting/filtering and dynamic PDF exports protecting backend microservices from performance spikes.</li>
+                <li><b>Business Impact:</b> Doubled user registration metrics (<a>2x growth</a>) via data pre-population and SSO authentication.</li>
+
+                <li><b>Technologies:</b> JavaScript, TypeScript, React.js, Next.js, Posthog, Cursor, Netlify, Figma, Notion, etc.</li>
             </ul>
         `
     },
     "byjus_fte.html": {
         "title": "Senior Software Engineer",
-        "content": `<div class="floatRight">August 2020 - November 2023</div><a href="https://www.byjus.com/" target="_blank" class="title_a">Byjus - Remote, India</a><br /><br />
+        "content": `<div class="floatRight">August 2020 - November 2023</div><a href="https://www.byjus.com/" target="_blank" class="title_a">Byju's - Bangalore, India</a><br /><br />
             <ul>
-                <li>Worked in Byju's Exam Prep (BEP) team and <b>managing 2 juniors</b> to deliver monthly product requirements.</li>
-                <li>Led the <b>Subjective Assessment</b> team's Web to revamp the platform, prepared <a>LLD/HLD</a> of its Frontend and set up its repo from scratch.</li>
-                <li>Developed an <b>Annotate over image component</b>, worked on the Correction SDK and converted a monolith to frontend only project.</li>
-                <li><a>Led 3 juniors</a> to complete Print, Upload & Report SDK & Admin Portal.</li>
-                <li>
-                    <a>Impact:</a>
-                    <ul>
-                        <li><b>Revamped multiple portals</b> of Subjective Assessment to a <b>react npm package (sdk)</b> that our client can directly integrate in their system. This <a>saved our Frontend infra cost</a>, as instead of using infra for 6 different portals, we now have only 2.</li>
-                        <li>Worked on <b>Web performance and optimisation</b> of marketing page Toppr Codr and achieved a Performance <a>Web Vital Score of 95</a>.</li>
-                        <li>Worked on <b>Signup Flow Improvement</b> task in BEP to break the flow into mandatory & optional, which marginally increases our signup.</li>
-                    </ul>
-                </li>
-                <li><b>Technologies:</b> JavaScript, typeScript, React.js, Tailwind CSS, Next.js, Node.js, Redux, Redux-Saga, Firebase, socket, vercel, AWS, etc</li>
+                <li><b>Team Leadership:</b> Led a frontend team of 4 SDEs to systematically deliver monthly product requirements for Byju's Exam Prep (BEP).</li>
+                <li><b>Infrastructure Migration:</b> Co-led the Subjective Assessment team to revamp legacy infrastructure into a modular React.js SDK saving our infrastructure operational costs by 50%, single-handedly executing the LLD/HLD and repository setup from scratch.</li>
+                <li><b>Performance Optimization:</b> Achieved a Performance Web Vital Score of 95 through aggressive frontend optimizations.</li>
+                <li><b>Built In-house Annotation Component:</b> Developed an Annotate Image component, integrated it into Correction SDK and converted a monolith to frontend-only service.</li>
+                <li><b>Conversion Growth:</b> Redesigned and modularized the signup flow driving a marginal increase in signups.</li>
+                 <li><b>Technologies:</b> JavaScript, typeScript, React.js, Tailwind CSS, Next.js, Node.js, Redux, Redux-Saga, Firebase, socket, vercel, AWS, etc</li>
             </ul>
         `
     },
@@ -397,12 +386,11 @@ const FILES_CONTENT = {
         "title": "Skills & Interests",
         "content": `
             <ul>
-                <li><b>General:</b> Web Application Development, Mobile Application Development, API Development, Agentic Coding Workflows (AI)</li>
-                <li><b>Primary Skills:</b> JavaScript, TypeScript, React.js, Next.js, Tailwind CSS, Redux, Redux-Saga, HTML, CSS</li>
-                <li><b>Secondary Skills:</b> Node.js, Java, Python, React-Native, jQuery, GraphQL, Web-Socket, REST API, express.js, socket.io, kafka, Bootstrap</li>
-                <li><b>Database:</b> MySQL, mongoDB, Firebase</li>
-                <li><b>Tools:</b> Cursor, Git, Vercel, Netlify, Posthog, Datadog, GTM, AWS, Android Studio, Heroku, cPanel, Google Cloud Platform Compute Engine</li>
+                <li><b>Primary Skills:</b> JavaScript, TypeScript, React.js, Next.js, Node.js, Tailwind CSS, Redux, Redux-Saga, HTML, CSS, Python</li>
+                <li><b>Secondary Skills:</b> Java, React Native, jQuery, GraphQL, REST API, WebSockets, Firebase, MySQL, MongoDB, express.js, socket.io, kafka, Bootstrap</li>
+                <li><b>Tools:</b> Cursor, Git, Vercel, Netlify, Posthog, Datadog, GTM, Figma, Notion, Asana, Github, Gitlab, Jira, Confluence, Claude Code, AWS, Android Studio, Heroku, cPanel, Google Cloud Platform</li>
                 <li><b>Operating System:</b> Linux, Mac OS, Windows</li>
+                <li><b>Soft Skills:</b> Async Collaboration, End-to-End Ownership, Problem Solving, Cross-functional Teamwork, Team Coordination, Leadership</li>
             </ul>`
     },
     "por.html": {

@@ -316,22 +316,84 @@ body {
     }
 }
 
+.sidebarToggleBtn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #9a9a98;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 10px;
+    line-height: 1;
+    user-select: none;
+}
+
+.sidebarOverlay {
+    display: none;
+}
+
 @media screen and (max-width:800px) {
+    .sidebarToggleBtn {
+        display: block;
+        position: absolute;
+        right: 15px;
+    }
+
+    .sidebarOverlay {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(2px);
+        z-index: 99;
+    }
+
     .mainWindow {
-        flex-direction: column
+        position: relative;
+        flex-direction: column;
     }
 
     .filesListBar {
-        min-width: 100vw !important;
-        max-width: 100vw !important;
-        height: 35vh !important;
-        background: 0 0;
-        padding: 0
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 250px !important;
+        max-width: 250px !important;
+        height: 100% !important;
+        background: #181915 !important;
+        box-shadow: 4px 0 15px rgba(0, 0, 0, 0.6);
+        z-index: 100;
+        padding: 15px !important;
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .filesListBar.open {
+        transform: translateX(0);
     }
 
     .fileWindow {
         min-width: 100vw !important;
         max-width: 100vw !important;
-        height: 75vh !important
+        height: 100% !important;
+    }
+
+    .fileContainer {
+        margin: 15px !important;
+    }
+
+    .fileContent {
+        margin-left: 10px !important;
+    }
+
+    .floatRight {
+        float: none !important;
+        display: block;
+        margin-bottom: 5px;
+        color: #9a9a98;
+        font-size: 12px;
     }
 }
