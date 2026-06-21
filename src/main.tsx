@@ -48,7 +48,7 @@ const FILES = [
             {
                 "type": "folder", "srcKey": "other_projects",
                 "files": [
-                    { "type": "file", "srcKey": "interview_web_app.html" },
+                    { "type": "file", "srcKey": "interview_prep_web_app.html" },
                     { "type": "file", "srcKey": "machine_coding_interview_questions.html" },
                     { "type": "file", "srcKey": "text_editor_npm_package.html" },
                     { "type": "file", "srcKey": "react_image_annotate_npm_package.html" },
@@ -406,12 +406,12 @@ const FILES_CONTENT = {
                 <li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/machineCoding">https://github.com/adityasuman2025/machineCoding</a></li>
             </ul>`
     },
-    "interview_web_app.html": {
-        "title": "Interview Web App",
+    "interview_prep_web_app.html": {
+        "title": "Interview Prep Web App",
         "content": `<ul>
-                <li>Developed an <b>Interview Web App</b> that can be used to practice frequently asked interview questions.</li>
-                <li>A web application designed for practicing common and <b>well-known interview questions</b> across various topics. Users can engage in quiz sessions to prepare for interviews and enhance their learning by tackling frequently asked questions.</li>
-                <li>This platform serves as a valuable resource for honing <b>interview skills</b> and gaining proficiency in diverse subject areas.</li>
+                <li>Developed an <b>Interview Prep Web App</b> designed for practicing common and frequently asked interview questions.</li>
+                <li>Features interactive practice sessions across various topics, enabling users to test their knowledge, track their preparation, and study core concepts effectively.</li>
+                <li>Provides a polished user interface with categories, detailed explanations, and timer to boost preparation and learning.</li>
                 <li><b>Technologies:</b> TypeScript, JavaScript, React.js, TailwindCSS</li>
                 <li></li>
                 <li><b>Demo:</b> <a target="_blank" href="https://interview.adityas.site">https://interview.adityas.site</a></li>
