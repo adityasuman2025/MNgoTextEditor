@@ -521,7 +521,7 @@ const FILES_CONTENT = {
     "resume.html": {
         "title": "Resume",
         "content": `<div style="text-align: center;">
-                <a class="resumeBtn" target="_blank" href="https://drive.google.com/file/d/1LqXZ4zlcoT_hm1QKgUxqbF_zzRHQEq68/view?usp=sharing">Download Resume</a>
+                <a class="resumeBtn" target="_blank" href="https://drive.google.com/file/d/188SFndXm2iyIWWGCpGAIh1K_Gh37O8nb/view?usp=share_link">Download Resume</a>
             </div>`
     },
     "follow_me.html": {
