@@ -38,6 +38,7 @@ const MNgoTextEditor = memo(({
             if (container && aboutMeContent) {
                 container.classList.add('typing');
                 const lines = splitHtmlIntoLines(aboutMeContent);
+                const delay = Math.max(10, Math.floor(1000 / lines.length));
                 let currentLineIndex = 0;
                 container.innerHTML = "";
 
@@ -55,14 +56,18 @@ const MNgoTextEditor = memo(({
                         printNextLine();
                     } else {
                         if (line.startsWith("<li>")) {
-                            const ul = container!.querySelector('ul');
-                            if (ul) ul.innerHTML += line;
-                            else container!.innerHTML += line;
+                            const uls = container!.querySelectorAll('ul');
+                            if (uls.length > 0) {
+                                const lastUl = uls[uls.length - 1];
+                                lastUl.innerHTML += line;
+                            } else {
+                                container!.innerHTML += line;
+                            }
                         } else {
                             container!.innerHTML += line;
                         }
                         currentLineIndex++;
-                        timeoutId = setTimeout(printNextLine, 200);
+                        timeoutId = setTimeout(printNextLine, delay);
                     }
                 }
                 printNextLine();
@@ -182,6 +187,7 @@ const MNgoTextEditor = memo(({
                                     title={filesContent?.[typeWriterFileKey]?.title || ""}
                                     resumeHtml={resumeHtml}
                                     version={packageJson.version}
+                                    initialContent={filesContent?.[typeWriterFileKey]?.content || ""}
                                 />
                             )}
                         </div>

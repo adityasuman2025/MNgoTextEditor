@@ -4,7 +4,8 @@ import { TerminalViewProps } from '../types';
 export const TerminalView = memo(({
     title,
     resumeHtml,
-    version
+    version,
+    initialContent
 }: TerminalViewProps) => {
     // Generate a consistent simulated last login date
     const lastLogin = "Wed Jul  1 17:59:34 on ttys001";
@@ -22,6 +23,7 @@ export const TerminalView = memo(({
                 id="typewriter-container"
                 className="fileContent terminal-content"
                 aria-live="polite"
+                dangerouslySetInnerHTML={initialContent ? { __html: initialContent } : undefined}
             />
             <div
                 className="terminal-footer"

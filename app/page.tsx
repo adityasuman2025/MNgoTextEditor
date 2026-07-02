@@ -1,7 +1,4 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { MNgoTextEditor } from "./lib";
-import packageJson from '../package.json';
+import { MNgoTextEditor } from "../library/dist/index.js";
 
 const FILES = [
     {
@@ -69,6 +66,38 @@ const FILES = [
     },
 ];
 const FILES_CONTENT = {
+    "home.html": {
+        "title": "Home",
+        "content": `
+            <i>&bull; Brief About Me</i><br/>
+            I am a passionate <a>Senior Frontend & Full Stack Engineer</a> with <a>5.5+ years</a> of experience crafting high-performance web applications. I graduated from <a>IIT Patna</a> and specialize in building scalable frontend architectures and backend APIs.<br/><br/>
+
+            <i>&bull; Why Hire Me?</i><br/>
+            <ul>
+                <li><b>End-to-End Ownership</b>: Extensive experience building & owning complete frontend and end-to-end features (frontend UI components + backend APIs) from technical scoping to production release across different time zones.</li>
+                <li><b>AI-Accelerated Workflows</b>: Highly proficient in utilizing modern agentic developer tools (Cursor, Antigravity) to fast-track technical planning, development, testing & code review.</li>
+                <li><b>Performant & Modular Engineering</b>: Deep expertise in crafting scalable, optimal, modular, and extensible code using custom hooks, HOCs, and state stores. Expertly apply performance optimization techniques (lazy/dynamic loading, preventing unnecessary re-renders, debounce, throttling, memoization) and improve user experience via API caching, keyboard accessibility, perceptive skeleton loaders, pagination, and deprioritizing non-critical scripts.</li>
+                <li><b>Business Impact & Infra Cost</b>: Proven ability to design solutions that cut infrastructure overhead, minimize performance spikes, maintain 95+ Web Vital scores, and boost user retention & satisfaction.</li>
+            </ul>
+            <br/>
+
+            <i>&bull; Tech Stack</i><br/>
+            <ul>
+                <li><b>Frontend</b>: React.js, Next.js, TypeScript, JavaScript, Tailwind CSS, Redux/Redux-Saga, HTML5/CSS3</li>
+                <li><b>Backend & Databases</b>: Node.js, Express, MongoDB, SQL, MySQL, REST API, WebSockets, Firebase</li>
+                <li><b>Tools & OS</b>: Cursor, Git, Vercel, Netlify, Figma</li>
+            </ul>
+            <br/>
+
+            <i>&bull; Strengths & Soft Skills</i><br/>
+            <ul>
+                <li><b>Ownership</b>: High accountability for code quality, technical planning, and feature delivery from scoping to production.</li>
+                <li><b>Collaboration</b>: Exceptional asynchronous communication skills for distributed global teams.</li>
+                <li><b>Cross-functional Teamwork</b>: Seamless collaboration with product managers, designers, and engineering peers to build technical solutions.</li>
+                <li><b>Adaptability</b>: Fast learner of new paradigms, architectures, and automated dev tools.</li>
+            </ul>`
+    },
+
     "about_me.html": {
         "title": "About Me",
         "content": `Hi There, I am <a>Aditya Suman</a> from India.<br/>
@@ -98,7 +127,9 @@ const FILES_CONTENT = {
                 <li>Senior Secondary Schooling, <b>Magadh University</b> – 70.4% (2014 - 2016)</li>
                 <li>Secondary Schooling, CBSE, <b>R.P.S Public School, Bihar Sharif,</b> CGPA- 10/10 (2013 - 2014)</li>
             </ul>`
-    }, "systematic_fte.html": {
+    },
+
+    "systematic_fte.html": {
         "title": "Senior Frontend Engineer",
         "content": `<div class="floatRight">December 2023 - Present</div><a href="https://www.systematicventures.com" target="_blank" class="title_a">Systematic Ventures - Remote</a><br /><br />
             <ul>
@@ -531,7 +562,7 @@ const FILES_CONTENT = {
         "title": "Info",
         "content": `<div>
                 @adityasuman profile<br />
-                <b>version:</b> ${packageJson.version}<br />
+                <b>version:</b> 3.x.x<br />
                 <b>latest release:</b> 20 June 2026<br />
                 <b>first release:</b> 15 March 2017<br />
                 <b>developer:</b> Aditya Suman<br />
@@ -544,11 +575,11 @@ const FILES_CONTENT = {
     },
 }
 
-function App() {
+export default function App() {
     return (
         <MNgoTextEditor
             title={"adityasuman"}
-            typeWriterFileKey={"about_me.html"}
+            typeWriterFileKey={"home.html"}
             resumeFileKey={"resume.html"}
             files={FILES}
             filesContent={FILES_CONTENT}
@@ -557,5 +588,3 @@ function App() {
         />
     )
 };
-
-ReactDOM.createRoot(document.getElementById('root')!).render(<App />);

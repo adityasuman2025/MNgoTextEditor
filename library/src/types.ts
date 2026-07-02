@@ -43,6 +43,7 @@ export interface TerminalViewProps {
     title: string;
     resumeHtml: string;
     version: string;
+    initialContent?: string;
 }
 
 export interface MNgoTextEditorProps {

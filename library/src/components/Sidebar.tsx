@@ -4,9 +4,12 @@ import { ICON_HEIGHT, NODE_TYPES } from '../constants';
 import folderIcon from '../img/folder.svg';
 import fileIcon from '../img/file.svg';
 
-const renderIcon = (src: string) => (
-    <img alt="icon" className="fileIcon" width={ICON_HEIGHT} height={ICON_HEIGHT} src={src} />
-);
+const renderIcon = (src: any) => {
+    const srcPath = typeof src === 'object' && src !== null && 'src' in src ? src.src : src;
+    return (
+        <img alt="icon" className="fileIcon" width={ICON_HEIGHT} height={ICON_HEIGHT} src={srcPath} />
+    );
+};
 
 export const Sidebar = memo(({
     isSidebarOpen,

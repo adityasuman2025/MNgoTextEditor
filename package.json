@@ -1,45 +1,24 @@
 {
-    "name": "mngo-text-editor",
-    "private": false,
-    "version": "3.17.02",
-    "sideEffects": false,
+    "name": "portfolio-website",
+    "private": true,
+    "version": "1.0.0",
     "type": "module",
-    "homepage": "./",
-    "files": [
-        "dist",
-        "README.md"
-    ],
-    "main": "./dist/index.cjs.js",
-    "module": "./dist/index.es.js",
-    "types": "./dist/index.d.ts",
-    "exports": {
-        ".": {
-            "import": "./dist/index.es.js",
-            "require": "./dist/index.cjs.js"
-        },
-        "./dist/style.css": "./dist/style.css"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:adityasuman2025/MNgoTextEditor.git"
-    },
     "scripts": {
-        "start": "vite",
-        "build": "tsc && IS_DEPL=true GENERATE_SOURCEMAP=false vite build",
-        "lib-build": "tsc && vite build",
-        "build-publish": "npm run lib-build && npm publish",
-        "demo": "cd demo && rm -rf node_modules && npm install && npm start"
+        "start": "npm run lib-build && next dev",
+        "build": "npm run lib-build && next build",
+        "build-start": "npm run build && next start",
+        "lib-build": "cd library && npm run lib-build",
+        "lib-publish": "cd library && npm publish"
     },
-    "dependencies": {},
+    "dependencies": {
+        "next": "^16.2.10",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
     "devDependencies": {
         "@types/node": "^20.9.2",
         "@types/react": "^18.2.37",
         "@types/react-dom": "^18.2.15",
-        "@vitejs/plugin-react": "^4.2.0",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "typescript": "^5.2.2",
-        "vite": "^5.0.0",
-        "vite-plugin-css-injected-by-js": "^3.3.0"
+        "typescript": "^5.2.2"
     }
 }

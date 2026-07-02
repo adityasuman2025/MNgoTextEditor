@@ -125,22 +125,6 @@ function App() {
 
 ---
 
-## Available Scripts
-
-In the project development workspace, you can run:
-
-### `npm start`
-Runs the Next.js portfolio website locally in development mode (`next dev`).
-
-### `npm run build`
-Compiles the static Next.js portfolio website into production HTML (`next build`).
-
-### `npm run lib-build`
-Bundles and compiles the library components and TypeScript declarations into `library/dist/`.
-
-### `npm run lib-publish`
-Builds the library and publishes the `library/` package to NPM.
-
 ## License
 
 All rights reserved under MNgo / MIT.
