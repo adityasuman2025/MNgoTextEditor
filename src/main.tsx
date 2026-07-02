@@ -98,9 +98,7 @@ const FILES_CONTENT = {
                 <li>Senior Secondary Schooling, <b>Magadh University</b> – 70.4% (2014 - 2016)</li>
                 <li>Secondary Schooling, CBSE, <b>R.P.S Public School, Bihar Sharif,</b> CGPA- 10/10 (2013 - 2014)</li>
             </ul>`
-    },
-
-    "systematic_fte.html": {
+    }, "systematic_fte.html": {
         "title": "Senior Frontend Engineer",
         "content": `<div class="floatRight">December 2023 - Present</div><a href="https://www.systematicventures.com" target="_blank" class="title_a">Systematic Ventures - Remote</a><br /><br />
             <ul>
@@ -110,8 +108,7 @@ const FILES_CONTENT = {
                 <li><b>Improved User Experience:</b> Engineered zero-lag UI rendering using API caching (react-query), predictive skeleton loaders, de-prioritizing non-critical scripts, paginated data delivery to achieve sub-second loading speeds.</li>
                 <li><b>Saved Infra Cost:</b> Offloaded heavy data processing to the client side for complex data tables sorting/filtering and dynamic PDF exports protecting backend microservices from performance spikes.</li>
                 <li><b>Business Impact:</b> Doubled user registration metrics (<a>2x growth</a>) via data pre-population and SSO authentication.</li>
-
-                <li><b>Technologies:</b> JavaScript, TypeScript, React.js, Next.js, Posthog, Cursor, Netlify, Figma, Notion, etc.</li>
+                <li><b>Technologies:</b> React.js, Next.js, Node.js, MongoDB, JavaScript, TypeScript, REST API, Posthog, Netlify, Cursor</li>
             </ul>`
     },
     "byjus_fte.html": {
@@ -123,7 +120,7 @@ const FILES_CONTENT = {
                 <li><b>Performance Optimization:</b> Achieved a Performance Web Vital Score of 95 through aggressive frontend optimizations.</li>
                 <li><b>Built In-house Annotation Component:</b> Developed an Annotate Image component, integrated it into Correction SDK and converted a monolith to frontend-only service.</li>
                 <li><b>Conversion Growth:</b> Redesigned and modularized the signup flow driving a marginal increase in signups.</li>
-                 <li><b>Technologies:</b> JavaScript, typeScript, React.js, Tailwind CSS, Next.js, Node.js, Redux, Redux-Saga, Firebase, socket, vercel, AWS, etc</li>
+                <li><b>Technologies:</b> React.js, Node.js, MongoDB, Next.js, JavaScript, TypeScript, Tailwind CSS, Redux, Redux-Saga, REST API, WebSockets,Firebase, socket, vercel, AWS, etc</li>
             </ul>`
     },
     "mlcertific_intern.html": {
@@ -555,6 +552,8 @@ function App() {
             resumeFileKey={"resume.html"}
             files={FILES}
             filesContent={FILES_CONTENT}
+            metaTitle={"Aditya Suman | Senior Software Engineer | IIT Patna"}
+            metaDescription={"Software Engineer with 5+ years of experience developing scalable and high-performance web applications using React.js, Next.js, JavaScript, TypeScript. Alumnus of IIT Patna."}
         />
     )
 };

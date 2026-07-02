@@ -8,7 +8,6 @@ import { Sidebar } from './components/Sidebar';
 import { TabBar } from './components/TabBar';
 import { TerminalView } from './components/TerminalView';
 import packageJson from '../../package.json';
-
 const MNgoTextEditor = memo(({
     titleBarHeight = DEFAULT_PROPS.TITLE_BAR_HEIGHT,
     tabBarHeight = DEFAULT_PROPS.TAB_BAR_HEIGHT,
@@ -18,6 +17,8 @@ const MNgoTextEditor = memo(({
     resumeFileKey = DEFAULT_PROPS.RESUME_FILE_KEY,
     files = [],
     filesContent = {},
+    metaTitle,
+    metaDescription,
 }: MNgoTextEditorProps) => {
     const [tabBarFileKeys, setTabBarFileKeys] = useState<string[]>([]);
     const [activeTabFileIndex, setActiveTabFileIndex] = useState<number | undefined>(undefined);
@@ -73,6 +74,37 @@ const MNgoTextEditor = memo(({
         };
     }, [tabBarFileKeys, filesContent, typeWriterFileKey]);
 
+    const activeTabFileData = useMemo(() => {
+        const activeKey = tabBarFileKeys?.[activeTabFileIndex ?? -1];
+        return activeKey ? filesContent?.[activeKey] || { title: "", content: "" } : { title: "", content: "" };
+    }, [tabBarFileKeys, activeTabFileIndex, filesContent]);
+
+    useEffect(() => {
+        if (!metaTitle && !metaDescription) return;
+
+        if (activeTabFileData && activeTabFileData.title) {
+            if (metaTitle) {
+                document.title = `${activeTabFileData.title} | ${metaTitle}`;
+            }
+            if (metaDescription) {
+                const metaDesc = document.querySelector('meta[name="description"]');
+                if (metaDesc) {
+                    metaDesc.setAttribute("content", `${activeTabFileData.title} - ${metaDescription}`);
+                }
+            }
+        } else {
+            if (metaTitle) {
+                document.title = metaTitle;
+            }
+            if (metaDescription) {
+                const metaDesc = document.querySelector('meta[name="description"]');
+                if (metaDesc) {
+                    metaDesc.setAttribute("content", metaDescription);
+                }
+            }
+        }
+    }, [activeTabFileData, metaTitle, metaDescription]);
+
     const handleFileClick = useCallback((srcKey: string) => {
         setTabBarFileKeys(prev => {
             if (prev.includes(srcKey)) {
@@ -102,10 +134,7 @@ const MNgoTextEditor = memo(({
         setActiveTabFileIndex(index);
     }, []);
 
-    const activeTabFileData = useMemo(() => {
-        const activeKey = tabBarFileKeys?.[activeTabFileIndex ?? -1];
-        return activeKey ? filesContent?.[activeKey] || { title: "", content: "" } : { title: "", content: "" };
-    }, [tabBarFileKeys, activeTabFileIndex, filesContent]);
+
 
     return (
         <div

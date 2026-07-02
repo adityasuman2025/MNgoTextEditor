@@ -54,4 +54,6 @@ export interface MNgoTextEditorProps {
     resumeFileKey?: string;
     files?: FileNode[];
     filesContent?: FilesContentMap;
+    metaTitle?: string;
+    metaDescription?: string;
 }
