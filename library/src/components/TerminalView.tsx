@@ -7,14 +7,8 @@ export const TerminalView = memo(({
     version,
     initialContent
 }: TerminalViewProps) => {
-    // Generate a consistent simulated last login date
-    const lastLogin = "Wed Jul  1 17:59:34 on ttys001";
-
     return (
         <section className="terminal-body" aria-label="Terminal Output">
-            <div className="terminal-system-info">
-                Last login: {lastLogin}
-            </div>
 
             <div className="terminal-header">
                 <span className="terminal-accent">$</span> cat {title?.toLowerCase()?.replace(" ", "_") || "about_me"}.html
