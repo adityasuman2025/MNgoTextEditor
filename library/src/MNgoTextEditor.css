@@ -73,22 +73,29 @@ body {
     transition: transform 0.2s;
 }
 
-.titleBarBtns:hover .closBtn,
-.titleBarBtns:hover .miniBtn,
-.titleBarBtns:hover .maxiBtn {
-    transform: scale(1.1);
-}
 
 .closBtn {
     background: #ff5f56;
+}
+
+.closBtn:hover {
+    transform: scale(1.1);
 }
 
 .miniBtn {
     background: #ffbd2e;
 }
 
+.miniBtn:hover {
+    transform: scale(1.1);
+}
+
 .maxiBtn {
     background: #27c93f;
+}
+
+.maxiBtn:hover {
+    transform: scale(1.1);
 }
 
 .titleBarTitle {
@@ -324,14 +331,14 @@ body {
     color: #38bdf8 !important;
     text-decoration: underline;
     text-underline-offset: 3px;
-    transition: all 0.2s;
-    display: inline-block;
+    transition: color 0.2s;
     font-weight: 600;
+    transform: none !important;
 }
 
 .fileContent a:hover {
     color: #7dd3fc !important;
-    transform: translateY(-1px);
+    transform: none !important;
 }
 
 .fileContent b {

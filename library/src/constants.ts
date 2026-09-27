@@ -1,9 +1,11 @@
 export const ICON_HEIGHT = 20;
 
 export const NODE_TYPES = {
-    FILE: 'file' as const,
-    FOLDER: 'folder' as const,
-};
+    FILE: 'file',
+    FOLDER: 'folder',
+} as const;
+
+export type NodeType = typeof NODE_TYPES[keyof typeof NODE_TYPES];
 
 export const DEFAULT_PROPS = {
     TITLE_BAR_HEIGHT: '25px',

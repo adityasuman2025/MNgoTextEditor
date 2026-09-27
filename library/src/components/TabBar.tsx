@@ -19,13 +19,13 @@ export const TabBar = memo(({
             const handleKeyDownClose = (e: React.KeyboardEvent) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
-                    handleTabBarItemCloseClick(e as any, index);
+                    handleTabBarItemCloseClick(e, index);
                 }
             };
 
             return (
                 <div
-                    key={`${fileKey}_${index}`}
+                    key={fileKey}
                     className={isActive ? 'tabBarItem active' : 'tabBarItem'}
                     onClick={() => handleTabBarItemClick(index)}
                     onKeyDown={handleKeyDownTab}

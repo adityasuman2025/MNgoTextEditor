@@ -1,8 +1,10 @@
 {
     "name": "mngo-text-editor",
     "private": false,
-    "version": "3.17.6",
-    "sideEffects": false,
+    "version": "3.17.8",
+    "sideEffects": [
+        "dist/*"
+    ],
     "type": "module",
     "files": [
         "dist",
@@ -15,8 +17,7 @@
         ".": {
             "import": "./dist/index.js",
             "require": "./dist/index.cjs.js"
-        },
-        "./style.css": "./dist/style.css"
+        }
     },
     "repository": {
         "type": "git",
@@ -27,16 +28,16 @@
         "prepublishOnly": "npm run lib-build"
     },
     "peerDependencies": {
-        "react": ">=16.8.0",
-        "react-dom": ">=16.8.0"
+        "react": ">=18.0.0 || ^19.0.0",
+        "react-dom": ">=18.0.0 || ^19.0.0"
     },
     "devDependencies": {
-        "@types/react": "^18.2.37",
-        "@types/react-dom": "^18.2.15",
-        "@vitejs/plugin-react": "^4.2.0",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "typescript": "^5.2.2",
-        "vite": "^5.0.0"
+        "@types/react": "^19.3.0",
+        "@types/react-dom": "^19.3.0",
+        "@vitejs/plugin-react": "^6.1.1",
+        "react": "^19.3.0",
+        "react-dom": "^19.3.0",
+        "typescript": "^7.0.2",
+        "vite": "^8.3.1"
     }
 }

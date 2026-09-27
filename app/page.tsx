@@ -1,70 +1,138 @@
-import { MNgoTextEditor } from "../library/dist/index.js";
+import { MNgoTextEditor, FileNode } from "../library/dist/index.js";
+// import { MNgoTextEditor, FileNode } from "../library/src";
 
-const FILES = [
-    {
-        "type": "folder", "srcKey": "adityasuman", "defaultOpen": true,
-        "files": [
-            { "type": "file", "srcKey": "about_me.html" },
-            { "type": "file", "srcKey": "contact_me.html" },
-            { "type": "file", "srcKey": "education.html" },
-            {
-                "type": "folder", "srcKey": "work_experience",
-                "files": [
-                    { "type": "file", "srcKey": "systematic_fte.html" },
-                    { "type": "file", "srcKey": "byjus_fte.html" },
-                    { "type": "file", "srcKey": "mlcertific_intern.html" },
-                    { "type": "file", "srcKey": "upbringo_intern.html" },
-                    { "type": "file", "srcKey": "isro_intern.html" },
-                    { "type": "file", "srcKey": "oxyvin_intern.html" },
-                    { "type": "file", "srcKey": "ngcn_intern.html" },
-                    { "type": "file", "srcKey": "catchfreedeal.html" }
-                ],
-            },
-            {
-                "type": "folder", "name": "academic_projects", "srcKey": "academic_projects",
-                "files": [
-                    { "type": "file", "srcKey": "btp.html" },
-                    { "type": "file", "srcKey": "feedback_module.html" },
-                    { "type": "file", "srcKey": "gate_security_app.html" },
-                    { "type": "file", "srcKey": "key_issue_app.html" },
-                    { "type": "file", "srcKey": "thesis_module.html" },
-                    { "type": "file", "srcKey": "acad_result.html" },
-                    { "type": "file", "srcKey": "exam_attendance.html" },
-                    { "type": "file", "srcKey": "pdf_module.html" },
-                    { "type": "file", "srcKey": "pda_module.html" },
-                    { "type": "file", "srcKey": "rs_board.html" },
-                    { "type": "file", "srcKey": "attendance_upload.html" },
-                    { "type": "file", "srcKey": "contribute_module.html" },
-                    { "type": "file", "srcKey": "noticeboard.html" },
-                    { "type": "file", "srcKey": "ipr_module.html" },
-                    { "type": "file", "srcKey": "forms_module.html" },
-                    { "type": "file", "srcKey": "wifi_attend.html" },
-                    { "type": "file", "srcKey": "calc.html" }
-                ],
-            },
-            {
-                "type": "folder", "srcKey": "other_projects",
-                "files": [
-                    { "type": "file", "srcKey": "interview_prep_web_app.html" },
-                    { "type": "file", "srcKey": "machine_coding_interview_questions.html" },
-                    { "type": "file", "srcKey": "text_editor_npm_package.html" },
-                    { "type": "file", "srcKey": "react_image_annotate_npm_package.html" },
-                    { "type": "file", "srcKey": "secure_pdf_viewer_npm_package.html" },
-                    { "type": "file", "srcKey": "chat_web_app.html" },
-                    { "type": "file", "srcKey": "qr_mobile_app.html" },
-                    { "type": "file", "srcKey": "anwesha_2k18.html" },
-                    { "type": "file", "srcKey": "iitp_motor.html" },
-                ],
-            },
-            { "type": "file", "srcKey": "achievements.html" },
-            { "type": "file", "srcKey": "skills_n_intr.html" },
-            { "type": "file", "srcKey": "por.html" },
-            { "type": "file", "srcKey": "resume.html" },
-            { "type": "file", "srcKey": "follow_me.html" },
-            { "type": "file", "srcKey": "info.html" },
-        ]
+const FILES: Record<string, FileNode> = {
+    // Root folder
+    adityasuman: {
+        type: "folder",
+        id: "adityasuman",
+        defaultOpen: true,
+        parentId: null,
+        childrenIds: [
+            "about_me.html",
+            "contact_me.html",
+            "education.html",
+            "work_experience",
+            "academic_projects",
+            "other_projects",
+            "achievements.html",
+            "skills_n_intr.html",
+            "por.html",
+            "resume.html",
+            "follow_me.html",
+            "info.html",
+        ],
     },
-];
+
+    // Direct items under adityasuman
+    "about_me.html": { type: "file", id: "about_me.html", parentId: "adityasuman" },
+    "contact_me.html": { type: "file", id: "contact_me.html", parentId: "adityasuman" },
+    "education.html": { type: "file", id: "education.html", parentId: "adityasuman" },
+
+    // Work Experience
+    work_experience: {
+        type: "folder",
+        id: "work_experience",
+        parentId: "adityasuman",
+        childrenIds: [
+            "systematic_fte.html",
+            "byjus_fte.html",
+            "mlcertific_intern.html",
+            "upbringo_intern.html",
+            "isro_intern.html",
+            "oxyvin_intern.html",
+            "ngcn_intern.html",
+            "catchfreedeal.html",
+        ],
+    },
+    "systematic_fte.html": { type: "file", id: "systematic_fte.html", parentId: "work_experience" },
+    "byjus_fte.html": { type: "file", id: "byjus_fte.html", parentId: "work_experience" },
+    "mlcertific_intern.html": { type: "file", id: "mlcertific_intern.html", parentId: "work_experience" },
+    "upbringo_intern.html": { type: "file", id: "upbringo_intern.html", parentId: "work_experience" },
+    "isro_intern.html": { type: "file", id: "isro_intern.html", parentId: "work_experience" },
+    "oxyvin_intern.html": { type: "file", id: "oxyvin_intern.html", parentId: "work_experience" },
+    "ngcn_intern.html": { type: "file", id: "ngcn_intern.html", parentId: "work_experience" },
+    "catchfreedeal.html": { type: "file", id: "catchfreedeal.html", parentId: "work_experience" },
+
+    // Academic Projects
+    academic_projects: {
+        type: "folder",
+        id: "academic_projects",
+        parentId: "adityasuman",
+        childrenIds: [
+            "btp.html",
+            "feedback_module.html",
+            "gate_security_app.html",
+            "key_issue_app.html",
+            "thesis_module.html",
+            "acad_result.html",
+            "exam_attendance.html",
+            "pdf_module.html",
+            "pda_module.html",
+            "rs_board.html",
+            "attendance_upload.html",
+            "contribute_module.html",
+            "noticeboard.html",
+            "ipr_module.html",
+            "forms_module.html",
+            "wifi_attend.html",
+            "calc.html",
+        ],
+    },
+    "btp.html": { type: "file", id: "btp.html", parentId: "academic_projects" },
+    "feedback_module.html": { type: "file", id: "feedback_module.html", parentId: "academic_projects" },
+    "gate_security_app.html": { type: "file", id: "gate_security_app.html", parentId: "academic_projects" },
+    "key_issue_app.html": { type: "file", id: "key_issue_app.html", parentId: "academic_projects" },
+    "thesis_module.html": { type: "file", id: "thesis_module.html", parentId: "academic_projects" },
+    "acad_result.html": { type: "file", id: "acad_result.html", parentId: "academic_projects" },
+    "exam_attendance.html": { type: "file", id: "exam_attendance.html", parentId: "academic_projects" },
+    "pdf_module.html": { type: "file", id: "pdf_module.html", parentId: "academic_projects" },
+    "pda_module.html": { type: "file", id: "pda_module.html", parentId: "academic_projects" },
+    "rs_board.html": { type: "file", id: "rs_board.html", parentId: "academic_projects" },
+    "attendance_upload.html": { type: "file", id: "attendance_upload.html", parentId: "academic_projects" },
+    "contribute_module.html": { type: "file", id: "contribute_module.html", parentId: "academic_projects" },
+    "noticeboard.html": { type: "file", id: "noticeboard.html", parentId: "academic_projects" },
+    "ipr_module.html": { type: "file", id: "ipr_module.html", parentId: "academic_projects" },
+    "forms_module.html": { type: "file", id: "forms_module.html", parentId: "academic_projects" },
+    "wifi_attend.html": { type: "file", id: "wifi_attend.html", parentId: "academic_projects" },
+    "calc.html": { type: "file", id: "calc.html", parentId: "academic_projects" },
+
+    // Other Projects
+    other_projects: {
+        type: "folder",
+        id: "other_projects",
+        parentId: "adityasuman",
+        childrenIds: [
+            "interview_prep_web_app.html",
+            "machine_coding_interview_questions.html",
+            "text_editor_npm_package.html",
+            "react_image_annotate_npm_package.html",
+            "secure_pdf_viewer_npm_package.html",
+            "chat_web_app.html",
+            "qr_mobile_app.html",
+            "anwesha_2k18.html",
+            "iitp_motor.html",
+        ],
+    },
+    "interview_prep_web_app.html": { type: "file", id: "interview_prep_web_app.html", parentId: "other_projects" },
+    "machine_coding_interview_questions.html": { type: "file", id: "machine_coding_interview_questions.html", parentId: "other_projects" },
+    "text_editor_npm_package.html": { type: "file", id: "text_editor_npm_package.html", parentId: "other_projects" },
+    "react_image_annotate_npm_package.html": { type: "file", id: "react_image_annotate_npm_package.html", parentId: "other_projects" },
+    "secure_pdf_viewer_npm_package.html": { type: "file", id: "secure_pdf_viewer_npm_package.html", parentId: "other_projects" },
+    "chat_web_app.html": { type: "file", id: "chat_web_app.html", parentId: "other_projects" },
+    "qr_mobile_app.html": { type: "file", id: "qr_mobile_app.html", parentId: "other_projects" },
+    "anwesha_2k18.html": { type: "file", id: "anwesha_2k18.html", parentId: "other_projects" },
+    "iitp_motor.html": { type: "file", id: "iitp_motor.html", parentId: "other_projects" },
+
+    // Additional direct items under adityasuman
+    "achievements.html": { type: "file", id: "achievements.html", parentId: "adityasuman" },
+    "skills_n_intr.html": { type: "file", id: "skills_n_intr.html", parentId: "adityasuman" },
+    "por.html": { type: "file", id: "por.html", parentId: "adityasuman" },
+    "resume.html": { type: "file", id: "resume.html", parentId: "adityasuman" },
+    "follow_me.html": { type: "file", id: "follow_me.html", parentId: "adityasuman" },
+    "info.html": { type: "file", id: "info.html", parentId: "adityasuman" },
+};
+
 const FILES_CONTENT = {
     "home.html": {
         "title": "Home",
@@ -583,8 +651,6 @@ export default function App() {
             resumeFileKey={"resume.html"}
             files={FILES}
             filesContent={FILES_CONTENT}
-            metaTitle={"Aditya Suman | Senior Software Engineer | IIT Patna"}
-            metaDescription={"Software Engineer with 5+ years of experience developing scalable and high-performance web applications using React.js, Next.js, JavaScript, TypeScript. Alumnus of IIT Patna."}
         />
     )
 };

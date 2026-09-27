@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 import plugin from '@vitejs/plugin-react';
 import { resolve } from 'path';
-import pkg from './package.json';
+import pkg from './package.json' with { type: 'json' };
 
 const devDependencies = pkg.devDependencies || {};
 const dependencies = (pkg as any).dependencies || {};
@@ -16,7 +16,7 @@ export default defineConfig({
     ],
     build: {
         lib: {
-            entry: resolve(__dirname, 'src', 'index.ts'),
+            entry: resolve(import.meta.dirname, 'src', 'index.ts'),
             formats: ['es', 'cjs'],
             fileName: (ext) => ext === 'es' ? 'index.js' : 'index.cjs.js',
         },

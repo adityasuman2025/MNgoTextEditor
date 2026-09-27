@@ -14,10 +14,10 @@ This library is available on npm at [mngo-text-editor](https://www.npmjs.com/pac
 
 ## Features
 - **Aesthetic UI**: Smooth, dark terminal theme with window controls, responsive layout, and clean typography.
-- **Dynamic File Tree**: Interactive sidebar with folder toggles, arrow key keyboard navigation, and file selections.
+- **Pure Flat Explorer**: 100% linear, flat-node architecture with `$O(1)` lookups, keyboard navigation, and indentation.
 - **Typewriter Compiler**: Built-in typewriter HTML parser to simulate compiling and compiling success states.
-- **Highly Modular**: Decoupled component layers fully typed in TypeScript.
-- **A11y (Accessibility)**: Screen-reader friendly DOM landmarks and full keyboard accessibility.
+- **Strictly Typed**: Fully written in TypeScript with strict constants and exported types.
+- **A11y (Accessibility)**: Screen-reader friendly ARIA tree landmarks and full keyboard navigation.
 - **Native Fonts**: Fast loading via native system font stacks.
 
 ---
@@ -27,31 +27,39 @@ This library is available on npm at [mngo-text-editor](https://www.npmjs.com/pac
 | Prop | Type | Default | Description |
 |---|---|---|---|
 | `title` | `string` | `'adityasuman'` | The editor's primary project title shown in the header. |
-| `files` | `FileNode[]` | `[]` | Array describing the sidebar file/folder hierarchy. |
-| `filesContent` | `FilesContentMap` | `{}` | Key-value mapping of file keys to titles and HTML content. |
-| `typeWriterFileKey` | `string` | `'about_me.html'` | The key of the file inside `filesContent` that will be typed out upon initial load. |
-| `resumeFileKey` | `string` | `'resume.html'` | The key of the file containing the resume download button HTML. |
+| `files` | `Record<string, FileNode>` | `{}` | Flat dictionary mapping node IDs to `FileNode` describing the sidebar files and folders. |
+| `filesContent` | `FilesContentMap` | `{}` | Key-value mapping of file IDs to titles and HTML content. |
+| `typeWriterFileKey` | `string` | `'about_me.html'` | The ID of the file inside `filesContent` that will be typed out upon initial load. |
+| `resumeFileKey` | `string` | `'resume.html'` | The ID of the file containing the resume download button HTML. |
 | `titleBarHeight` | `string` | `'25px'` | CSS height of the window title bar. |
 | `tabBarHeight` | `string` | `'30px'` | CSS height of the editor tab bar. |
 | `filesListBarWidth` | `string` | `'280px'` | CSS width of the sidebar folder view. |
-| `metaTitle` | `string` | `undefined` | Optional fallback browser tab title. When a file tab is active, browser document title updates dynamically to `${tabTitle} \| ${metaTitle}`. |
-| `metaDescription` | `string` | `undefined` | Optional fallback page meta description. Updates `<meta name="description">` dynamically based on the active tab context. |
 
 ---
 
 ## TypeScript Type Definitions
 
-Below are the exact TypeScript interfaces for the props used by `mngo-text-editor`:
+Below are the exact TypeScript interfaces and constants exported by `mngo-text-editor`:
+
+### `NODE_TYPES` & `NodeType`
+```typescript
+export const NODE_TYPES = {
+    FILE: 'file',
+    FOLDER: 'folder',
+} as const;
+
+export type NodeType = typeof NODE_TYPES[keyof typeof NODE_TYPES]; // 'file' | 'folder'
+```
 
 ### `FileNode`
-Used to construct the sidebar directory structure dynamically.
+Used to construct the sidebar directory structure using a flat normalized hierarchy.
 ```typescript
 export interface FileNode {
-    type: 'file' | 'folder' | string; // Type of node
-    srcKey: string;                    // Name/Key of the file or folder
-    defaultOpen?: boolean;             // Open by default if it's a folder
-    files?: FileNode[];                // Recursive child nodes (for folders)
-    [key: string]: any;                // Supports additional developer attributes
+    type: NodeType;            // 'file' | 'folder'
+    id: string;                // Unique identifier/filename of the file or folder
+    parentId?: string | null;  // Parent folder id (null for root items)
+    childrenIds?: string[];    // Ordered list of child IDs (for folders)
+    defaultOpen?: boolean;     // Open by default if it's a folder
 }
 ```
 
@@ -59,16 +67,16 @@ export interface FileNode {
 Represents the title and rich HTML layout data of an openable file.
 ```typescript
 export interface FileContent {
-    title: string;                     // HTML Tag title wrapper (e.g. "About Me")
-    content: string;                   // Rich HTML string representing file content
+    title: string;             // HTML Tag title wrapper (e.g. "About Me")
+    content: string;           // Rich HTML string representing file content
 }
 ```
 
 ### `FilesContentMap`
-A map of file keys to their respective titles and contents.
+A map of file IDs to their respective titles and contents.
 ```typescript
 export interface FilesContentMap {
-    [fileKey: string]: FileContent;    // fileKey matches srcKey in FileNode (e.g., "about_me.html")
+    [fileId: string]: FileContent; // fileId matches id in FileNode (e.g., "about_me.html")
 }
 ```
 
@@ -82,23 +90,24 @@ Install the package:
 npm install mngo-text-editor
 ```
 
-Use the component in your React application:
+Use the component in your React application (CSS is automatically injected):
 ```tsx
 import React from 'react';
-import { MNgoTextEditor, FileNode, FilesContentMap } from 'mngo-text-editor';
-import 'mngo-text-editor/style.css'; // Don't forget the CSS bundle!
+import { MNgoTextEditor, FileNode, FilesContentMap, NODE_TYPES } from 'mngo-text-editor';
 
-const FILES: FileNode[] = [
-  {
-    type: "folder",
-    srcKey: "my_project",
+const FILES: Record<string, FileNode> = {
+  // Root folder
+  my_project: {
+    type: NODE_TYPES.FOLDER,
+    id: "my_project",
     defaultOpen: true,
-    files: [
-      { type: "file", srcKey: "about_me.html" },
-      { type: "file", srcKey: "skills.html" }
-    ]
-  }
-];
+    parentId: null,
+    childrenIds: ["about_me.html", "skills.html"]
+  },
+  // Children
+  "about_me.html": { type: NODE_TYPES.FILE, id: "about_me.html", parentId: "my_project" },
+  "skills.html": { type: NODE_TYPES.FILE, id: "skills.html", parentId: "my_project" }
+};
 
 const FILES_CONTENT: FilesContentMap = {
   "about_me.html": {
@@ -129,17 +138,22 @@ function App() {
 
 In the project development workspace, you can run:
 
-### `npm start`
-Runs the Next.js portfolio website locally in development mode (`next dev`).
+### `npm run dev`
+Builds the library and runs the Next.js portfolio website locally in development mode (`next dev`).
 
 ### `npm run build`
-Compiles the static Next.js portfolio website into production HTML (`next build`).
+Builds the library and compiles the static Next.js portfolio website for production (`next build`).
+
+### `npm start`
+Starts the production Next.js server (`next start`).
 
 ### `npm run lib-build`
 Bundles and compiles the library components and TypeScript declarations into `library/dist/`.
 
 ### `npm run lib-publish`
-Builds the library and publishes the `library/` package to NPM.
+Builds and publishes the library package to npm.
+
+---
 
 ## License
 

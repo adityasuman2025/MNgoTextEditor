@@ -1,13 +1,14 @@
 import React from 'react';
+import { NodeType } from './constants';
 
-export type NodeType = 'file' | 'folder';
+export type { NodeType };
 
 export interface FileNode {
-    type: string;
-    srcKey: string;
+    type: NodeType;
+    id: string;
+    parentId?: string | null;
+    childrenIds?: string[];
     defaultOpen?: boolean;
-    files?: FileNode[];
-    [key: string]: any;
 }
 
 export interface FileContent {
@@ -22,27 +23,26 @@ export interface FilesContentMap {
 export interface TitleBarProps {
     title: string;
     isSidebarOpen: boolean;
-    setIsSidebarOpen: (open: boolean) => void;
+    setIsSidebarOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export interface SidebarProps {
     isSidebarOpen: boolean;
-    setIsSidebarOpen: (open: boolean) => void;
-    files: FileNode[];
-    handleFileClick: (srcKey: string) => void;
+    setIsSidebarOpen: React.Dispatch<React.SetStateAction<boolean>>;
+    treeObj: Record<string, FileNode>;
+    handleFileClick: (id: string) => void;
 }
 
 export interface TabBarProps {
     tabBarFileKeys: string[];
     activeTabFileIndex: number | undefined;
     handleTabBarItemClick: (idx: number) => void;
-    handleTabBarItemCloseClick: (e: React.MouseEvent, idx: number) => void;
+    handleTabBarItemCloseClick: (e: React.SyntheticEvent, idx: number) => void;
 }
 
 export interface TerminalViewProps {
     title: string;
     resumeHtml: string;
-    version: string;
     initialContent?: string;
 }
 
@@ -53,8 +53,6 @@ export interface MNgoTextEditorProps {
     title?: string;
     typeWriterFileKey?: string;
     resumeFileKey?: string;
-    files?: FileNode[];
+    files?: Record<string, FileNode>;
     filesContent?: FilesContentMap;
-    metaTitle?: string;
-    metaDescription?: string;
 }

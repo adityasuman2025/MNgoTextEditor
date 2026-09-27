@@ -1,17 +1,4 @@
 import type { Metadata } from 'next';
-import fs from 'fs';
-import path from 'path';
-
-// Inline compiled CSS statically during SSG build to eliminate render-blocking requests
-const getCssContent = () => {
-    try {
-        const cssPath = path.resolve(process.cwd(), 'library/dist/style.css');
-        return fs.readFileSync(cssPath, 'utf8');
-    } catch (e) {
-        return '';
-    }
-};
-const cssContent = getCssContent();
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://adityas.site'),
@@ -77,7 +64,6 @@ export default function RootLayout({
     return (
         <html lang="en">
             <head>
-                <style dangerouslySetInnerHTML={{ __html: cssContent }} />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{

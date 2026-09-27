@@ -9,7 +9,7 @@ export const TitleBar = memo(({
     <header className='titleBar' role="banner">
         <button
             className={`sidebarToggleBtn ${isSidebarOpen ? 'active' : ''}`}
-            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+            onClick={() => setIsSidebarOpen(prev => !prev)}
             aria-label="Toggle sidebar"
             aria-expanded={isSidebarOpen}
         >
