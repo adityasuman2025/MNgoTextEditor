@@ -2,9 +2,7 @@
     "name": "mngo-text-editor",
     "private": false,
     "version": "3.17.8",
-    "sideEffects": [
-        "dist/*"
-    ],
+    "sideEffects": false,
     "type": "module",
     "files": [
         "dist",
