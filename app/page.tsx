@@ -105,8 +105,8 @@ const FILES: Record<string, FileNode> = {
         childrenIds: [
             "interview_prep_web_app.html",
             "machine_coding_interview_questions.html",
-            "text_editor_npm_package.html",
             "react_image_annotate_npm_package.html",
+            "text_editor_npm_package.html",
             "secure_pdf_viewer_npm_package.html",
             "chat_web_app.html",
             "qr_mobile_app.html",
@@ -138,7 +138,7 @@ const FILES_CONTENT = {
         "title": "Home",
         "content": `
             <i>&bull; Brief About Me</i><br/>
-            I am a passionate <a>Senior Frontend & Full Stack Engineer</a> with <a>5.5+ years</a> of experience crafting high-performance web applications. I graduated from <a>IIT Patna</a> and specialize in building scalable frontend architectures and backend APIs.<br/><br/>
+            I am a passionate <a>Senior Frontend & Full Stack Engineer</a> with <a>6+ years</a> of experience crafting high-performance web applications. I graduated from <a>IIT Patna</a> and specialize in building scalable frontend architectures and backend APIs.<br/><br/>
 
             <i>&bull; Why Hire Me?</i><br/>
             <ul>
@@ -151,9 +151,17 @@ const FILES_CONTENT = {
 
             <i>&bull; Tech Stack</i><br/>
             <ul>
-                <li><b>Frontend</b>: React.js, Next.js, TypeScript, JavaScript, Tailwind CSS, Redux/Redux-Saga, HTML5/CSS3</li>
+                <li><b>Frontend</b>: React.js, Next.js, TypeScript, JavaScript, Tailwind CSS, Zustand, Tanstack React Query, Redux, HTML5/CSS3</li>
                 <li><b>Backend & Databases</b>: Node.js, Express, MongoDB, SQL, MySQL, REST API, WebSockets, Firebase</li>
                 <li><b>Tools & OS</b>: Cursor, Git, Vercel, Netlify, Figma</li>
+            </ul>
+            <br/>
+
+            <i>&bull; Featured Projects & Open Source</i><br/>
+            <ul>
+                <li><b>MNgo Interview Prep</b> (<a target="_blank" href="https://interview.adityas.site">interview.adityas.site</a>): A 100% free interview practice platform featuring <b>500+ real-world questions</b> and timed quiz simulations to help engineers build speed, reduce anxiety, and land top tech roles without costly paywalls.</li>
+                <li><b>MNgo Image Annotator</b> (<a target="_blank" href="https://annotate.adityas.site">annotate.adityas.site</a> | <a target="_blank" href="https://www.npmjs.com/package/react-image-annotate-mngo">NPM</a>): An open-source React library that lets users draw, add notes, and place custom shapes/icons directly on images, making bug reporting, design reviews, and diagramming quick and painless.</li>
+                <li><b>MNgo Text Editor</b> (<a target="_blank" href="https://adityas.site">adityas.site</a> | <a target="_blank" href="https://www.npmjs.com/package/mngo-text-editor">NPM</a>): An open-source React component library that turns developer portfolios and resumes into an authentic, interactive Sublime Text-styled interface with tabs, file tree explorer, and typewriter compilation effects.</li>
             </ul>
             <br/>
 
@@ -169,7 +177,7 @@ const FILES_CONTENT = {
     "about_me.html": {
         "title": "About Me",
         "content": `Hi There, I am <a>Aditya Suman</a> from India.<br/>
-            I'm a <b>Senior Frontend Engineer</b> with <a>5.5+ years</a> of experience in building scalable & high-performance web applications utilising <b>JavaScript, TypeScript, React, and Next.js</b> as my core tech stack.<br/>
+            I'm a <b>Senior Frontend Engineer</b> with <a>6+ years</a> of experience in building scalable & high-performance web applications utilising <b>JavaScript, TypeScript, React, and Next.js</b> as my core tech stack.<br/>
             I graduated from <b>IIT Patna</b> in 2020.<br/><br/>
 
             <ul>
@@ -458,10 +466,26 @@ const FILES_CONTENT = {
     "react_image_annotate_npm_package.html": {
         "title": "React Image Annotate NPM Package",
         "content": `<ul>
-                <li>Created a npm package/react library using which user can annotate/markup/write over any image.</li>
-                <li>Annotations of all type are supported like <b>any shape/image, text, hand drawing,</b> etc.</li>
-                <li>One can add <b>annotation feature</b> in their project by installing the package in their react/javascript project.</li>
-                <li><b>Technologies:</b> TypeScript, JavaScript, React.js, TailwindCSS</li>
+                <li>Created and published <b>react-image-annotate-mngo</b>, a high-performance, plug-and-play React library that lets users draw, type notes, and highlight diagrams directly on any image or screenshot.</li>
+                <li><b>The Problem It Solves:</b> Reviewing designs, explaining bug reports, and drawing technical workflows usually requires expensive third-party tools or external screenshot software. This library allows any web app to embed an interactive, full-featured image markup studio in seconds.</li>
+                <li><b>Key Features & Capabilities:</b>
+                    <ul>
+                        <li><b>Easy Drawing & Text:</b> Smooth freehand sketching with a digital pen and click-anywhere text boxes to leave clear notes and feedback directly on images.</li>
+                        <li><b>Intuitive Controls:</b> Freely rotate items 360°, resize from corners, drag to reposition, or quickly duplicate using standard keyboard shortcuts (<code>Ctrl+C</code> / <code>Ctrl+V</code>).</li>
+                        <li><b>Mistake-Proof Editing:</b> Full 30-step Undo and Redo (<code>Ctrl+Z</code> / <code>Ctrl+Y</code>) so users can experiment freely without fear of losing their edits.</li>
+                    </ul>
+                </li>
+                <li><b>Engineering Highlights & Real-World Impact:</b>
+                    <ul>
+                        <li><b>Buttery-Smooth 60/120 FPS Performance:</b> Uses direct graphics acceleration during drag, resize, and rotation gestures, completely bypassing slow screen recalculations. The result is fluid, zero-lag movement even on low-end laptops or smartphones.</li>
+                        <li><b>Pinpoint Accuracy Across All Screens:</b> Automatically calculates dynamic scale factors so annotations stay perfectly aligned to image details whether viewed on a 4K desktop monitor, laptop, or mobile screen.</li>
+                        <li><b>Smart Hybrid Rendering:</b> Combines high-frequency canvas drawing for natural digital pen strokes with native interactive elements for selectable, editable text and shapes.</li>
+                        <li><b>Universal Touch & Stylus Support:</b> Works seamlessly across mouse, trackpad, touchscreen, and digital styluses (like Apple Pencil) with unified gesture detection.</li>
+                        <li><b>Zero Input Delay with Fine-Grained Updates:</b> Moving or editing one single label doesn't refresh the rest of the canvas, keeping the application snappy even with dozens of active annotations.</li>
+                        <li><b>Effortless Plug-and-Play Integration:</b> Synchronizes data two-way with the host application and supports view-only (readonly) modes for flexible integration into audit logs, QA dashboards, and form builders.</li>
+                    </ul>
+                </li>
+                <li><b>Technologies:</b> React.js, TypeScript, JavaScript, TailwindCSS, useSyncExternalStore</li>
                 <li></li>
                 <li><b>Demo:</b> <a target="_blank" href="https://annotate.adityas.site">https://annotate.adityas.site</a></li>
                 <li><b>NPM Package:</b> <a target="_blank" href="https://www.npmjs.com/package/react-image-annotate-mngo">https://www.npmjs.com/package/react-image-annotate-mngo</a></li>
@@ -481,10 +505,18 @@ const FILES_CONTENT = {
     "text_editor_npm_package.html": {
         "title": "Text Editor NPM Package",
         "content": `<ul>
-                <li>Created a npm package/library and a personalized stylesheet to mimic the design of <b>Sublime Text Editor</b>.</li>
-                <li>One can easily create his <b>web profile</b> by installing the package in their react/javascript project.</li>
-                <li>Implemented this library to develop my <a target="_blank" href="https://adityas.site">web profile.</a></li>
-                <li><b>Technologies:</b> TypeScript, JavaScript, React.js</li>
+                <li>Created and published <b>mngo-text-editor</b>, an open-source React component library that enables developers to present their web portfolio and resume inside an interactive, authentic <b>Sublime Text Editor</b> interface.</li>
+                <li><b>The Problem It Solves:</b> Most developer portfolio websites look generic or require building complex desktop-like navigation and file trees from scratch. This library provides a ready-made, eye-catching theme that immediately resonates with tech recruiters and engineering managers.</li>
+                <li><b>Key Features & Capabilities:</b>
+                    <ul>
+                        <li><b>Authentic Code Editor Look & Feel:</b> Complete with native window controls, draggable tabs, line numbers, and dark theme aesthetics true to Sublime Text.</li>
+                        <li><b>Interactive File & Folder Tree:</b> A fast, hierarchical explorer supporting nested folders, keyboard navigation, and instant file switching.</li>
+                        <li><b>Animated Typewriter Effect:</b> Built-in typewriter animation that simulates live code compilation upon opening the profile.</li>
+                        <li><b>Zero Configuration & Auto-Injected Styles:</b> Works straight out of the box with zero CSS setup or build tooling adjustments required by the consumer app.</li>
+                    </ul>
+                </li>
+                <li><b>Real-World Impact:</b> Powers this personal portfolio (<a target="_blank" href="https://adityas.site">adityas.site</a>) and empowers other engineers to build and deploy distinctive, memorable portfolio websites on NPM with just a few lines of code.</li>
+                <li><b>Technologies:</b> React.js, TypeScript, JavaScript, CSS3</li>
                 <li></li>
                 <li><b>Demo:</b> <a target="_blank" href="https://adityas.site">https://adityas.site</a></li>
                 <li><b>NPM Package:</b> <a target="_blank" href="https://www.npmjs.com/package/mngo-text-editor">https://www.npmjs.com/package/mngo-text-editor</a></li>
@@ -505,13 +537,30 @@ const FILES_CONTENT = {
     "interview_prep_web_app.html": {
         "title": "Interview Prep Web App",
         "content": `<ul>
-                <li>Developed an <b>Interview Prep Web App</b> designed for practicing common and frequently asked interview questions.</li>
-                <li>Features interactive practice sessions across various topics, enabling users to test their knowledge, track their preparation, and study core concepts effectively.</li>
-                <li>Provides a polished user interface with categories, detailed explanations, and timer to boost preparation and learning.</li>
-                <li><b>Technologies:</b> TypeScript, JavaScript, React.js, TailwindCSS</li>
+                <li>Created <b>MNgo Interview Prep</b>, a high-performance, fullstack preparation platform designed to help software engineers confidently practice and crack technical interviews at top tech companies and startups.</li>
+                <li><b>The Problem It Solves:</b> Quality interview preparation is often locked behind steep monthly paywalls, scattered across confusing blogs, or focused purely on theory rather than real interview questions asked by top hiring teams.</li>
+                <li><b>Key Features & Capabilities:</b>
+                    <ul>
+                        <li><b>500+ Curated Real-World Questions:</b> Covers 11+ high-demand areas—from JavaScript, React internals, and Data Structures to Web Performance, Security, and System Design—complete with practical answers, code snippets, and common interviewer follow-up questions.</li>
+                        <li><b>Dual Practice & Timed Quiz Modes:</b> Learn at your own pace with in-depth explanations in Practice Mode, or simulate real-world high-pressure interviews with a live countdown timer in Quiz Mode to build speed and reduce test anxiety.</li>
+                        <li><b>Smart Progress Tracking:</b> Visually tracks questions answered and topics completed, making it easy for candidates to spot weak areas and focus their preparation time where it matters most.</li>
+                        <li><b>Distraction-Free Experience:</b> Clean mobile-responsive layout, Dark/Light theme toggle for late-night study sessions, and 1-click Google login.</li>
+                    </ul>
+                </li>
+                <li><b>Engineering Highlights & Real-World Impact:</b>
+                    <ul>
+                        <li><b>Instant Navigation with Smart Data Caching:</b> Implemented client-side caching and background data sync (TanStack Query + Async Storage), allowing learners to jump between questions and topics with zero delay or loading spinners—even on slow network connections.</li>
+                        <li><b>Decoupled Fullstack Microservices:</b> Separated the user authentication service from the interview content engine on the backend, ensuring high platform availability, fast database queries, and zero downtime during high-traffic interview seasons.</li>
+                        <li><b>Bite-Sized Fast Delivery:</b> Utilizes paginated API retrieval so the browser downloads lightweight question batches on demand rather than forcing a heavy upfront data load, saving user mobile data and keeping interaction instantaneous.</li>
+                        <li><b>Frictionless One-Click Access:</b> Seamless Google OAuth integration and secure cookie sessions eliminate tedious sign-up forms, letting users jump straight into learning while saving their solved history.</li>
+                        <li><b>100% Free Forever:</b> Eliminates costly $30-$50/month subscription barriers, leveling the playing field for developers from all backgrounds to land top-tier tech jobs.</li>
+                    </ul>
+                </li>
+                <li><b>Technologies:</b> Next.js, React.js, TypeScript, TailwindCSS, TanStack Query, Node.js, Express.js, MongoDB, Redis, JWT, Google OAuth</li>
                 <li></li>
                 <li><b>Demo:</b> <a target="_blank" href="https://interview.adityas.site">https://interview.adityas.site</a></li>
-                <li><b>GitHub Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoInterview">https://github.com/adityasuman2025/MNgoInterview</a></li>
+                <li><b>Frontend Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoInterviewPrep">https://github.com/adityasuman2025/MNgoInterviewPrep</a></li>
+                <li><b>Backend Repository:</b> <a target="_blank" href="https://github.com/adityasuman2025/MNgoInterviewPrepBackend">https://github.com/adityasuman2025/MNgoInterviewPrepBackend</a></li>
             </ul>`
     },
     "chat_web_app.html": {
@@ -598,9 +647,9 @@ const FILES_CONTENT = {
     "skills_n_intr.html": {
         "title": "Skills & Interests",
         "content": `<ul>
-                <li><b>Primary Skills:</b> JavaScript, TypeScript, React.js, Next.js, Node.js, Tailwind CSS, Redux, Redux-Saga, HTML, CSS, Python</li>
-                <li><b>Secondary Skills:</b> Java, React Native, jQuery, GraphQL, REST API, WebSockets, Firebase, MySQL, MongoDB, express.js, socket.io, kafka, Bootstrap</li>
-                <li><b>Tools:</b> Cursor, Git, Vercel, Netlify, Posthog, Datadog, GTM, Figma, Notion, Asana, Github, Gitlab, Jira, Confluence, Claude Code, AWS, Android Studio, Heroku, cPanel, Google Cloud Platform</li>
+                <li><b>Primary Skills:</b> JavaScript, TypeScript, React.js, Next.js, Node.js, Express.js, Tailwind CSS, TanStack Query, Zustand, Redux, HTML, CSS, Redis, Python</li>
+                <li><b>Secondary Skills:</b> React Native, jQuery, GraphQL, REST API, WebSockets, Firebase, MySQL, MongoDB, socket.io, kafka, Java, Bootstrap</li>
+                <li><b>Tools:</b> Cursor, Git, Vercel, Netlify, Posthog, Datadog, GTM, Figma, Notion, Asana, Github, Gitlab, Jira, Confluence, Claude Code, AWS, Android Studio, Heroku, Google Cloud Platform</li>
                 <li><b>Operating System:</b> Linux, Mac OS, Windows</li>
                 <li><b>Soft Skills:</b> Async Collaboration, End-to-End Ownership, Problem Solving, Cross-functional Teamwork, Team Coordination, Leadership</li>
             </ul>`

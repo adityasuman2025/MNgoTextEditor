@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
     metadataBase: new URL('https://adityas.site'),
     title: 'Aditya Suman | Senior Software Engineer | IIT Patna',
-    description: 'Senior Software Engineer with 5+ years of experience building high-performance, responsive web applications using React, Next.js, and TypeScript. Alumnus of IIT Patna.',
+    description: 'Senior Software Engineer with 6+ years of experience building high-performance, responsive web applications using React, Next.js, and TypeScript. Alumnus of IIT Patna.',
     keywords: 'Aditya Suman, IIT Patna, Senior Software Engineer, React Developer, Next.js Developer, TypeScript Engineer, Frontend Specialist, Fullstack Developer',
     authors: [{ name: 'Aditya Suman', url: 'https://adityas.site' }],
     creator: 'Aditya Suman',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         locale: 'en_US',
         url: 'https://adityas.site',
         title: 'Aditya Suman | Senior Software Engineer | IIT Patna',
-        description: 'Senior Software Engineer with 5+ years of experience building high-performance, responsive web applications using React, Next.js, and TypeScript.',
+        description: 'Senior Software Engineer with 6+ years of experience building high-performance, responsive web applications using React, Next.js, and TypeScript.',
         siteName: 'Aditya Suman Portfolio',
         images: [
             {
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     twitter: {
         card: 'summary',
         title: 'Aditya Suman | Senior Software Engineer | IIT Patna',
-        description: 'Senior Software Engineer with 5+ years of experience building high-performance web applications using React, Next.js, and TypeScript.',
+        description: 'Senior Software Engineer with 6+ years of experience building high-performance web applications using React, Next.js, and TypeScript.',
         images: ['https://adityas.site/xxxs.png'],
     },
     icons: {
@@ -81,7 +81,7 @@ export default function RootLayout({
                                 },
                                 "url": "https://adityas.site",
                                 "image": "https://adityas.site/xxxs.png",
-                                "description": "Senior Software Engineer with 5+ years of experience specializing in React, Next.js, and TypeScript.",
+                                "description": "Senior Software Engineer with 6+ years of experience specializing in React, Next.js, and TypeScript.",
                                 "sameAs": [
                                     "https://github.com/adityasuman2025",
                                     "https://www.linkedin.com/in/adityasuman2025"
@@ -99,8 +99,11 @@ export default function RootLayout({
                                     "Full Stack Development",
                                     "Frontend Development",
                                     "Web Applications",
+                                    "Technical Interview Preparation",
+                                    "System Design & Architecture",
                                     "Agentic AI Coding",
                                     "NPM Libraries",
+                                    "react-image-annotate-mngo",
                                     "Sublime Text Editor Clone"
                                 ]
                             }
